@@ -14,6 +14,10 @@
 		714FB9931E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9911E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld */; };
 		714FB9951E3FBACD00FC6A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714FB9941E3FBACD00FC6A95 /* Assets.xcassets */; };
 		714FB9981E3FBACD00FC6A95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714FB9961E3FBACD00FC6A95 /* LaunchScreen.storyboard */; };
+		714FB9A71E3FBE7E00FC6A95 /* Location+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9A01E3FBE7E00FC6A95 /* Location+CoreDataClass.m */; };
+		714FB9A81E3FBE7E00FC6A95 /* Location+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9A21E3FBE7E00FC6A95 /* Location+CoreDataProperties.m */; };
+		714FB9A91E3FBE7E00FC6A95 /* Run+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9A41E3FBE7E00FC6A95 /* Run+CoreDataClass.m */; };
+		714FB9AA1E3FBE7E00FC6A95 /* Run+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9A61E3FBE7E00FC6A95 /* Run+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,14 @@
 		714FB9941E3FBACD00FC6A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		714FB9971E3FBACD00FC6A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		714FB9991E3FBACD00FC6A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		714FB99F1E3FBE7E00FC6A95 /* Location+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataClass.h"; sourceTree = "<group>"; };
+		714FB9A01E3FBE7E00FC6A95 /* Location+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataClass.m"; sourceTree = "<group>"; };
+		714FB9A11E3FBE7E00FC6A95 /* Location+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataProperties.h"; sourceTree = "<group>"; };
+		714FB9A21E3FBE7E00FC6A95 /* Location+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataProperties.m"; sourceTree = "<group>"; };
+		714FB9A31E3FBE7E00FC6A95 /* Run+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Run+CoreDataClass.h"; sourceTree = "<group>"; };
+		714FB9A41E3FBE7E00FC6A95 /* Run+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Run+CoreDataClass.m"; sourceTree = "<group>"; };
+		714FB9A51E3FBE7E00FC6A95 /* Run+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Run+CoreDataProperties.h"; sourceTree = "<group>"; };
+		714FB9A61E3FBE7E00FC6A95 /* Run+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Run+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +56,14 @@
 		714FB9791E3FBACD00FC6A95 = {
 			isa = PBXGroup;
 			children = (
+				714FB99F1E3FBE7E00FC6A95 /* Location+CoreDataClass.h */,
+				714FB9A01E3FBE7E00FC6A95 /* Location+CoreDataClass.m */,
+				714FB9A11E3FBE7E00FC6A95 /* Location+CoreDataProperties.h */,
+				714FB9A21E3FBE7E00FC6A95 /* Location+CoreDataProperties.m */,
+				714FB9A31E3FBE7E00FC6A95 /* Run+CoreDataClass.h */,
+				714FB9A41E3FBE7E00FC6A95 /* Run+CoreDataClass.m */,
+				714FB9A51E3FBE7E00FC6A95 /* Run+CoreDataProperties.h */,
+				714FB9A61E3FBE7E00FC6A95 /* Run+CoreDataProperties.m */,
 				714FB9841E3FBACD00FC6A95 /* WorldTourRun */,
 				714FB9831E3FBACD00FC6A95 /* Products */,
 			);
@@ -154,10 +174,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714FB9A91E3FBE7E00FC6A95 /* Run+CoreDataClass.m in Sources */,
+				714FB9A81E3FBE7E00FC6A95 /* Location+CoreDataProperties.m in Sources */,
 				714FB9931E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld in Sources */,
+				714FB9AA1E3FBE7E00FC6A95 /* Run+CoreDataProperties.m in Sources */,
 				714FB98D1E3FBACD00FC6A95 /* ViewController.m in Sources */,
 				714FB98A1E3FBACD00FC6A95 /* AppDelegate.m in Sources */,
 				714FB9871E3FBACD00FC6A95 /* main.m in Sources */,
+				714FB9A71E3FBE7E00FC6A95 /* Location+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +338,7 @@
 				714FB99E1E3FBACD00FC6A95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
