@@ -10,9 +10,11 @@
 #import "RunDetailVC.h"
 #import "Run+CoreDataClass.h"
 
-static NSString * const detailSegueName = @"RunDetails";
+static NSString * const detailSegue = @"RunDetails";
 
 @interface NewRunVC ()
+
+@property (nonatomic, strong) Run *run;
 
 @property (nonatomic, weak) IBOutlet UILabel *welcomeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
@@ -51,6 +53,32 @@ static NSString * const detailSegueName = @"RunDetails";
     
     self.startButton.hidden = YES;
     self.welcomeLabel.hidden = YES;
+}
+
+- (IBAction)stopPressed:(id)sender {
+    
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:@"Message" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //
+    }];
+    
+    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self performSegueWithIdentifier:detailSegue sender:nil];
+    }];
+    
+    UIAlertAction *discardAction = [UIAlertAction actionWithTitle:@"Discard" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }];
+    
+    [actionSheet addAction:cancelAction];
+    [actionSheet addAction:saveAction];
+    [actionSheet addAction:discardAction];
+    [self presentViewController:actionSheet animated:YES completion:NULL];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [[segue destinationViewController] setRun:self.run];
 }
 
 @end
