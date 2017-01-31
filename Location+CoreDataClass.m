@@ -7,7 +7,7 @@
 //
 
 #import "Location+CoreDataClass.h"
-#import "Run.h"
+#import "Run+CoreDataClass.h"
 @implementation Location
 
 @end

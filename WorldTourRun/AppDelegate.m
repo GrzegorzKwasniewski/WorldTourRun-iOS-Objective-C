@@ -16,7 +16,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    UINavigationController *navigationCOntroller = (UINavigationController *)self.window.rootViewController;
+    StartScreenVC *controller = (StartScreenVC *)navigationCOntroller.topViewController;
+    controller.managedObjectContext = self.managedObjectContext;
+    
     return YES;
 }
 

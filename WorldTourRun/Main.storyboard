@@ -49,7 +49,7 @@
                                     <color key="titleColor" red="0.040853522717952728" green="0.37480330467224121" blue="0.99835759401321411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="roJ-HL-4Zn" kind="presentation" id="5dW-pV-8MS"/>
+                                    <segue destination="roJ-HL-4Zn" kind="show" id="5dW-pV-8MS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfv-s8-dOk">
@@ -172,28 +172,11 @@
                     <toolbarItems/>
                     <connections>
                         <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
-                        <segue destination="vC3-pB-5Vb" kind="relationship" relationship="detailViewController" id="Tll-UG-LXB"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1556" y="-603"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="r7l-gg-dq7">
-            <objects>
-                <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="GKi-kA-LjT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-873" y="108"/>
         </scene>
         <!--New Run-->
         <scene sceneID="RU6-gN-jfK">
@@ -262,7 +245,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <segue destination="JEX-9P-axG" kind="presentation" identifier="RunDetails" id="p0o-vZ-YGd"/>
+                        <segue destination="JEX-9P-axG" kind="show" identifier="RunDetails" id="HsD-PQ-BiJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkZ-LV-Z6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -270,7 +253,4 @@
             <point key="canvasLocation" x="-54" y="107"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="p0o-vZ-YGd"/>
-    </inferredMetricsTieBreakers>
 </document>
