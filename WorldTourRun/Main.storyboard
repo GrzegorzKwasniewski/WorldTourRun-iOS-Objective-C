@@ -181,7 +181,7 @@
         <!--New Run-->
         <scene sceneID="RU6-gN-jfK">
             <objects>
-                <viewController title="New Run" id="roJ-HL-4Zn" sceneMemberID="viewController">
+                <viewController title="New Run" id="roJ-HL-4Zn" customClass="NewRunVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RFO-xC-DqT"/>
                         <viewControllerLayoutGuide type="bottom" id="AGf-AK-Agt"/>
@@ -245,6 +245,11 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="distanceLabel" destination="yUz-5U-O8x" id="TQI-yL-JGF"/>
+                        <outlet property="paceLabel" destination="X2V-B9-9tK" id="kqd-HM-eGa"/>
+                        <outlet property="startButton" destination="ohO-Ja-6zG" id="c1p-ac-7aB"/>
+                        <outlet property="stopButton" destination="bdk-g0-mwv" id="72C-JX-iYm"/>
+                        <outlet property="timeLabel" destination="GJh-su-4dt" id="AHJ-sz-qFT"/>
                         <segue destination="JEX-9P-axG" kind="show" identifier="RunDetails" id="HsD-PQ-BiJ"/>
                     </connections>
                 </viewController>

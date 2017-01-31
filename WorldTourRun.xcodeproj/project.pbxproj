@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7BA1E407B39002A909C /* NewRunVC.m */; };
+		7141F7BE1E4119DE002A909C /* RunDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7BD1E4119DE002A909C /* RunDetailVC.m */; };
 		714FB9871E3FBACD00FC6A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9861E3FBACD00FC6A95 /* main.m */; };
 		714FB98A1E3FBACD00FC6A95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9891E3FBACD00FC6A95 /* AppDelegate.m */; };
-		714FB98D1E3FBACD00FC6A95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB98C1E3FBACD00FC6A95 /* ViewController.m */; };
+		714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB98C1E3FBACD00FC6A95 /* StartScreenVC.m */; };
 		714FB9931E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9911E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld */; };
 		714FB9951E3FBACD00FC6A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714FB9941E3FBACD00FC6A95 /* Assets.xcassets */; };
 		714FB9981E3FBACD00FC6A95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714FB9961E3FBACD00FC6A95 /* LaunchScreen.storyboard */; };
@@ -22,12 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7141F7B91E407B39002A909C /* NewRunVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRunVC.h; sourceTree = "<group>"; };
+		7141F7BA1E407B39002A909C /* NewRunVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRunVC.m; sourceTree = "<group>"; };
+		7141F7BC1E4119DE002A909C /* RunDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunDetailVC.h; sourceTree = "<group>"; };
+		7141F7BD1E4119DE002A909C /* RunDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunDetailVC.m; sourceTree = "<group>"; };
 		714FB9821E3FBACD00FC6A95 /* WorldTourRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTourRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714FB9861E3FBACD00FC6A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		714FB9881E3FBACD00FC6A95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		714FB9891E3FBACD00FC6A95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		714FB98B1E3FBACD00FC6A95 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		714FB98C1E3FBACD00FC6A95 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		714FB98B1E3FBACD00FC6A95 /* StartScreenVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartScreenVC.h; sourceTree = "<group>"; };
+		714FB98C1E3FBACD00FC6A95 /* StartScreenVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartScreenVC.m; sourceTree = "<group>"; };
 		714FB9921E3FBACD00FC6A95 /* WorldTourRun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WorldTourRun.xcdatamodel; sourceTree = "<group>"; };
 		714FB9941E3FBACD00FC6A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		714FB9971E3FBACD00FC6A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,8 +114,12 @@
 		714FB9AE1E3FBFAC00FC6A95 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				714FB98B1E3FBACD00FC6A95 /* ViewController.h */,
-				714FB98C1E3FBACD00FC6A95 /* ViewController.m */,
+				714FB98B1E3FBACD00FC6A95 /* StartScreenVC.h */,
+				714FB98C1E3FBACD00FC6A95 /* StartScreenVC.m */,
+				7141F7B91E407B39002A909C /* NewRunVC.h */,
+				7141F7BA1E407B39002A909C /* NewRunVC.m */,
+				7141F7BC1E4119DE002A909C /* RunDetailVC.h */,
+				7141F7BD1E4119DE002A909C /* RunDetailVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -221,8 +231,10 @@
 				714FB9A91E3FBE7E00FC6A95 /* Run+CoreDataClass.m in Sources */,
 				714FB9A81E3FBE7E00FC6A95 /* Location+CoreDataProperties.m in Sources */,
 				714FB9931E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld in Sources */,
+				7141F7BE1E4119DE002A909C /* RunDetailVC.m in Sources */,
 				714FB9AA1E3FBE7E00FC6A95 /* Run+CoreDataProperties.m in Sources */,
-				714FB98D1E3FBACD00FC6A95 /* ViewController.m in Sources */,
+				714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */,
+				7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */,
 				714FB98A1E3FBACD00FC6A95 /* AppDelegate.m in Sources */,
 				714FB9871E3FBACD00FC6A95 /* main.m in Sources */,
 				714FB9A71E3FBE7E00FC6A95 /* Location+CoreDataClass.m in Sources */,
