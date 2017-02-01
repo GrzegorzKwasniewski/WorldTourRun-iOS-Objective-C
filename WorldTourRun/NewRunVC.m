@@ -78,6 +78,7 @@ static NSString * const detailSegue = @"RunDetails";
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // this will set Run details on RunDetailVC
     [[segue destinationViewController] setRun:self.run];
 }
 

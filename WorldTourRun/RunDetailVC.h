@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Run;
+
 @interface RunDetailVC : UIViewController
+
+@property (strong, nonatomic) Run *run;
 
 @end

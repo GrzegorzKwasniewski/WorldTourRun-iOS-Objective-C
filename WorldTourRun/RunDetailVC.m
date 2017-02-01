@@ -7,12 +7,21 @@
 //
 
 #import "RunDetailVC.h"
+#import <MapKit/MapKit.h>
 
 @interface RunDetailVC ()
+
+@property (nonatomic, weak) IBOutlet MKMapView *mapView;
+@property (nonatomic, weak) IBOutlet UILabel *dateLabel;
+@property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
+@property (nonatomic, weak) IBOutlet UILabel *paceLabel;
+@property (nonatomic, weak) IBOutlet UILabel *timeLabel;
 
 @end
 
 @implementation RunDetailVC
+
+# pragma mark View State
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,14 +33,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark Custom Functions
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setRun:(Run *)run {
+    if (_run != run) {
+        _run = run;
+        
+    }
 }
-*/
 
 @end

@@ -96,7 +96,7 @@
         <!--Detail-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
-                <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController title="Detail" id="JEX-9P-axG" customClass="RunDetailVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
@@ -160,6 +160,13 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="DMF-yd-Rr5" id="NK7-tm-uiP"/>
+                        <outlet property="distanceLabel" destination="xXO-Ba-HOk" id="eA7-68-bb6"/>
+                        <outlet property="mapView" destination="Mck-7m-oPZ" id="RGj-ow-Gb0"/>
+                        <outlet property="paceLabel" destination="tc2-Lp-tfK" id="xhx-Yi-nZ4"/>
+                        <outlet property="timeLabel" destination="DuQ-Wn-jdH" id="pN9-KN-cFV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
