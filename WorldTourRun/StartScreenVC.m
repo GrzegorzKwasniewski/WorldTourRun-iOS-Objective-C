@@ -7,6 +7,7 @@
 //
 
 #import "StartScreenVC.h"
+#import "NewRunVC.h"
 
 @interface StartScreenVC ()
 
@@ -25,5 +26,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+// pass managed contex for CoreData
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UIViewController *nextVC = [segue destinationViewController];
+    if ([nextVC isKindOfClass:[NewRunVC class]]) {
+        ((NewRunVC *) nextVC).managedObjectContext = self.managedObjectContext;
+    }
+}
 
 @end

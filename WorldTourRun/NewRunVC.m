@@ -9,12 +9,21 @@
 #import "NewRunVC.h"
 #import "RunDetailVC.h"
 #import "Run+CoreDataClass.h"
+#import <CoreLocation/CoreLocation.h>
+#import "Location+CoreDataClass.h"
 
 static NSString * const detailSegue = @"RunDetails";
 
-@interface NewRunVC ()
+@interface NewRunVC () <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) Run *run;
+
+@property NSNumber *distance;
+@property NSInteger *seconds;
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) NSMutableArray *loactions;
+@property (nonatomic, strong) NSTimer *timer;
 
 @property (nonatomic, weak) IBOutlet UILabel *welcomeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
