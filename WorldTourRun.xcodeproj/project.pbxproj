@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7BA1E407B39002A909C /* NewRunVC.m */; };
 		7141F7BE1E4119DE002A909C /* RunDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7BD1E4119DE002A909C /* RunDetailVC.m */; };
+		7141F7EA1E437753002A909C /* AdMobDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7E91E437753002A909C /* AdMobDemo.m */; };
+		7141F7EC1E437F09002A909C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7141F7EB1E437F09002A909C /* GoogleService-Info.plist */; };
 		714FB9871E3FBACD00FC6A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9861E3FBACD00FC6A95 /* main.m */; };
 		714FB98A1E3FBACD00FC6A95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9891E3FBACD00FC6A95 /* AppDelegate.m */; };
 		714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB98C1E3FBACD00FC6A95 /* StartScreenVC.m */; };
@@ -31,6 +33,9 @@
 		7141F7BA1E407B39002A909C /* NewRunVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRunVC.m; sourceTree = "<group>"; };
 		7141F7BC1E4119DE002A909C /* RunDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunDetailVC.h; sourceTree = "<group>"; };
 		7141F7BD1E4119DE002A909C /* RunDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunDetailVC.m; sourceTree = "<group>"; };
+		7141F7E81E437753002A909C /* AdMobDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobDemo.h; sourceTree = "<group>"; };
+		7141F7E91E437753002A909C /* AdMobDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdMobDemo.m; sourceTree = "<group>"; };
+		7141F7EB1E437F09002A909C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		714FB9821E3FBACD00FC6A95 /* WorldTourRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTourRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714FB9861E3FBACD00FC6A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		714FB9881E3FBACD00FC6A95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +110,7 @@
 				714FB9891E3FBACD00FC6A95 /* AppDelegate.m */,
 				714FB9941E3FBACD00FC6A95 /* Assets.xcassets */,
 				714FB9991E3FBACD00FC6A95 /* Info.plist */,
+				7141F7EB1E437F09002A909C /* GoogleService-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -127,6 +133,8 @@
 				7141F7BA1E407B39002A909C /* NewRunVC.m */,
 				7141F7BC1E4119DE002A909C /* RunDetailVC.h */,
 				7141F7BD1E4119DE002A909C /* RunDetailVC.m */,
+				7141F7E81E437753002A909C /* AdMobDemo.h */,
+				7141F7E91E437753002A909C /* AdMobDemo.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -157,8 +165,8 @@
 		714FB9B11E3FC00F00FC6A95 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				714FB9961E3FBACD00FC6A95 /* LaunchScreen.storyboard */,
 				714FB9B21E3FE9B500FC6A95 /* Main.storyboard */,
+				714FB9961E3FBACD00FC6A95 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -206,7 +214,7 @@
 				TargetAttributes = {
 					714FB9811E3FBACD00FC6A95 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = R35N4L2G2B;
+						DevelopmentTeam = 7K692Z62S3;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -240,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				714FB9981E3FBACD00FC6A95 /* LaunchScreen.storyboard in Resources */,
+				7141F7EC1E437F09002A909C /* GoogleService-Info.plist in Resources */,
 				714FB9951E3FBACD00FC6A95 /* Assets.xcassets in Resources */,
 				714FB9B31E3FE9B500FC6A95 /* Main.storyboard in Resources */,
 			);
@@ -309,6 +318,7 @@
 				7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */,
 				714FB98A1E3FBACD00FC6A95 /* AppDelegate.m in Sources */,
 				714FB9871E3FBACD00FC6A95 /* main.m in Sources */,
+				7141F7EA1E437753002A909C /* AdMobDemo.m in Sources */,
 				714FB9A71E3FBE7E00FC6A95 /* Location+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,7 +430,7 @@
 			baseConfigurationReference = E413F6C04DE9F3AC703E51D8 /* Pods-WorldTourRun.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R35N4L2G2B;
+				DEVELOPMENT_TEAM = 7K692Z62S3;
 				INFOPLIST_FILE = WorldTourRun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRun;
@@ -433,7 +443,7 @@
 			baseConfigurationReference = 5B36972AAB13C475A239AF3A /* Pods-WorldTourRun.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R35N4L2G2B;
+				DEVELOPMENT_TEAM = 7K692Z62S3;
 				INFOPLIST_FILE = WorldTourRun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRun;

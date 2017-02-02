@@ -15,7 +15,7 @@ Copyright 2016 Google Inc.
 
 ## Google-Mobile-Ads-SDK
 
-Copyright 2011 Google Inc. All Rights Reserved.
+Copyright 2016 Google
 
 ## GoogleInterchangeUtilities
 

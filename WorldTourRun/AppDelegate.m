@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+@import Firebase;
+
 @interface AppDelegate ()
 
 @end
@@ -20,6 +22,9 @@
     UINavigationController *navigationCOntroller = (UINavigationController *)self.window.rootViewController;
     StartScreenVC *controller = (StartScreenVC *)navigationCOntroller.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+    
+    [FIRApp configure];
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-3940256099942544~1458002511"];
     
     return YES;
 }

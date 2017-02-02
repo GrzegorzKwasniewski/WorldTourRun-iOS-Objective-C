@@ -19,7 +19,6 @@
 		4610BB4E5807BB20D3118110C3E046F3 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		4BF4E33174FF830D8A2D9C1255804E68 /* Pods-WorldTourRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WorldTourRun.release.xcconfig"; sourceTree = "<group>"; };
 		6DE37D4EA218D32FB90CBF3BADE63661 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		75549E04C72A11571A5850146B6C5927 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		7B271D29FE48F7EDAD9513A7782F2A05 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		7E1CC2E70B7FB9BE4759B288FB9F4F01 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
 		7FFA0D7C201B0C9A71E8CC93DDF48231 /* Pods-WorldTourRun-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WorldTourRun-resources.sh"; sourceTree = "<group>"; };
@@ -29,6 +28,7 @@
 		D27273C086D6647A882461D4D7EE3CB8 /* Pods-WorldTourRun-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WorldTourRun-acknowledgements.plist"; sourceTree = "<group>"; };
 		E2FCFA521BAC936751EB30D9F647F592 /* Pods-WorldTourRun-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WorldTourRun-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EC8CC7BCA62B59BA81473AF28E86A77C /* Pods-WorldTourRun-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WorldTourRun-frameworks.sh"; sourceTree = "<group>"; };
+		FB10DC896DFA4452D62EC00950365261 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		FEB6E792B54F2F2481A0CA256B951A3F /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,10 +143,10 @@
 			);
 			sourceTree = "<group>";
 		};
-		8F8A62EFFA783ACA77A75027B93823BF /* Frameworks */ = {
+		877EE1D2E6B8349A7F92B8FCA9CF8B22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				75549E04C72A11571A5850146B6C5927 /* GoogleMobileAds.framework */,
+				FB10DC896DFA4452D62EC00950365261 /* GoogleMobileAds.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 		E6AEB67C1070A701D463FDCAE3278C04 /* Google-Mobile-Ads-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				8F8A62EFFA783ACA77A75027B93823BF /* Frameworks */,
+				877EE1D2E6B8349A7F92B8FCA9CF8B22 /* Frameworks */,
 			);
 			path = "Google-Mobile-Ads-SDK";
 			sourceTree = "<group>";
