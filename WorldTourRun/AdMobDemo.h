@@ -12,6 +12,6 @@
 
 @interface AdMobDemo : UIViewController
 
-@property (nonatomic, weak) IBOutlet GADBannerView *bannerView;
+
 
 @end

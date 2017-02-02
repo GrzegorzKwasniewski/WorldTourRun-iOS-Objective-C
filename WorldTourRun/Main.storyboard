@@ -68,8 +68,19 @@
                                     <color key="titleColor" red="0.040853522717952728" green="0.37480330467224121" blue="0.99835759401321411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jha-K4-48R" customClass="GADBannerView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="1hl-Ml-epF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="whA-xz-AEm" firstAttribute="top" secondItem="Jha-K4-48R" secondAttribute="bottom" id="LpV-sp-52F"/>
+                            <constraint firstItem="Jha-K4-48R" firstAttribute="leading" secondItem="8N9-0a-G01" secondAttribute="leading" id="Ovl-vY-YrQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Jha-K4-48R" secondAttribute="trailing" id="cPa-uz-hD8"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="YFL-Fo-gPf"/>
@@ -88,10 +99,13 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="IDS-ME-dLf"/>
+                    <connections>
+                        <outlet property="bannerView" destination="Jha-K4-48R" id="ZMk-mM-lLy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="teU-eq-dUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="-630"/>
+            <point key="canvasLocation" x="708" y="-630.13493253373315"/>
         </scene>
         <!--Detail-->
         <scene sceneID="yUG-lL-AsK">
@@ -256,34 +270,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkZ-LV-Z6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-54" y="107"/>
-        </scene>
-        <!--Ad Mob Demo-->
-        <scene sceneID="7Ph-Kb-ZE6">
-            <objects>
-                <viewController id="iE3-J0-BPq" customClass="AdMobDemo" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LIT-Ci-SQq"/>
-                        <viewControllerLayoutGuide type="bottom" id="GbA-sX-W7x"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Twj-bH-qB1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jha-K4-48R" customClass="GADBannerView">
-                                <frame key="frameInset" minX="51" minY="239" width="273" height="188"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="bannerView" destination="Jha-K4-48R" id="q3U-TS-xTO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="grr-w3-Wpe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-55.200000000000003" y="765.96701649175418"/>
         </scene>
     </scenes>
 </document>
