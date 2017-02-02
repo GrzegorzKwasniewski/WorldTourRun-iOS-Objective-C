@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7BA1E407B39002A909C /* NewRunVC.m */; };
 		7141F7BE1E4119DE002A909C /* RunDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7BD1E4119DE002A909C /* RunDetailVC.m */; };
+		7141F7EA1E437753002A909C /* AdMobDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7E91E437753002A909C /* AdMobDemo.m */; };
+		7141F7EE1E43C5B4002A909C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7141F7ED1E43C5B4002A909C /* GoogleService-Info.plist */; };
 		714FB9871E3FBACD00FC6A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9861E3FBACD00FC6A95 /* main.m */; };
 		714FB98A1E3FBACD00FC6A95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9891E3FBACD00FC6A95 /* AppDelegate.m */; };
 		714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB98C1E3FBACD00FC6A95 /* StartScreenVC.m */; };
@@ -21,13 +23,19 @@
 		714FB9AA1E3FBE7E00FC6A95 /* Run+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9A61E3FBE7E00FC6A95 /* Run+CoreDataProperties.m */; };
 		714FB9AD1E3FBF0A00FC6A95 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714FB9AC1E3FBF0A00FC6A95 /* MapKit.framework */; };
 		714FB9B31E3FE9B500FC6A95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714FB9B21E3FE9B500FC6A95 /* Main.storyboard */; };
+		E24A9D858FF30E0CD2B902D9 /* libPods-WorldTourRun.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5251D5EF45FAD95ECD4D1E21 /* libPods-WorldTourRun.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5251D5EF45FAD95ECD4D1E21 /* libPods-WorldTourRun.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldTourRun.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B36972AAB13C475A239AF3A /* Pods-WorldTourRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldTourRun.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorldTourRun/Pods-WorldTourRun.release.xcconfig"; sourceTree = "<group>"; };
 		7141F7B91E407B39002A909C /* NewRunVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRunVC.h; sourceTree = "<group>"; };
 		7141F7BA1E407B39002A909C /* NewRunVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRunVC.m; sourceTree = "<group>"; };
 		7141F7BC1E4119DE002A909C /* RunDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunDetailVC.h; sourceTree = "<group>"; };
 		7141F7BD1E4119DE002A909C /* RunDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunDetailVC.m; sourceTree = "<group>"; };
+		7141F7E81E437753002A909C /* AdMobDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobDemo.h; sourceTree = "<group>"; };
+		7141F7E91E437753002A909C /* AdMobDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdMobDemo.m; sourceTree = "<group>"; };
+		7141F7ED1E43C5B4002A909C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		714FB9821E3FBACD00FC6A95 /* WorldTourRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTourRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714FB9861E3FBACD00FC6A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		714FB9881E3FBACD00FC6A95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,6 +56,7 @@
 		714FB9A61E3FBE7E00FC6A95 /* Run+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Run+CoreDataProperties.m"; path = "../Run+CoreDataProperties.m"; sourceTree = "<group>"; };
 		714FB9AC1E3FBF0A00FC6A95 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		714FB9B21E3FE9B500FC6A95 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E413F6C04DE9F3AC703E51D8 /* Pods-WorldTourRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldTourRun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldTourRun/Pods-WorldTourRun.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				714FB9AD1E3FBF0A00FC6A95 /* MapKit.framework in Frameworks */,
+				E24A9D858FF30E0CD2B902D9 /* libPods-WorldTourRun.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +78,7 @@
 				714FB9841E3FBACD00FC6A95 /* WorldTourRun */,
 				714FB9831E3FBACD00FC6A95 /* Products */,
 				714FB9AB1E3FBF0A00FC6A95 /* Frameworks */,
+				815384D090D0C49DD4F4DFD6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +110,7 @@
 				714FB9891E3FBACD00FC6A95 /* AppDelegate.m */,
 				714FB9941E3FBACD00FC6A95 /* Assets.xcassets */,
 				714FB9991E3FBACD00FC6A95 /* Info.plist */,
+				7141F7ED1E43C5B4002A909C /* GoogleService-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -107,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				714FB9AC1E3FBF0A00FC6A95 /* MapKit.framework */,
+				5251D5EF45FAD95ECD4D1E21 /* libPods-WorldTourRun.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,6 +133,8 @@
 				7141F7BA1E407B39002A909C /* NewRunVC.m */,
 				7141F7BC1E4119DE002A909C /* RunDetailVC.h */,
 				7141F7BD1E4119DE002A909C /* RunDetailVC.m */,
+				7141F7E81E437753002A909C /* AdMobDemo.h */,
+				7141F7E91E437753002A909C /* AdMobDemo.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -150,10 +165,19 @@
 		714FB9B11E3FC00F00FC6A95 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				714FB9961E3FBACD00FC6A95 /* LaunchScreen.storyboard */,
 				714FB9B21E3FE9B500FC6A95 /* Main.storyboard */,
+				714FB9961E3FBACD00FC6A95 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		815384D090D0C49DD4F4DFD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E413F6C04DE9F3AC703E51D8 /* Pods-WorldTourRun.debug.xcconfig */,
+				5B36972AAB13C475A239AF3A /* Pods-WorldTourRun.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 714FB99C1E3FBACD00FC6A95 /* Build configuration list for PBXNativeTarget "WorldTourRun" */;
 			buildPhases = (
+				A80C95F1C6D280CA2E4A4E28 /* [CP] Check Pods Manifest.lock */,
 				714FB97E1E3FBACD00FC6A95 /* Sources */,
 				714FB97F1E3FBACD00FC6A95 /* Frameworks */,
 				714FB9801E3FBACD00FC6A95 /* Resources */,
+				67127D08EC9641D95A6C6BB2 /* [CP] Embed Pods Frameworks */,
+				9DD6FF6BB96A249EB488AA67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,7 +214,7 @@
 				TargetAttributes = {
 					714FB9811E3FBACD00FC6A95 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = R35N4L2G2B;
+						DevelopmentTeam = 7K692Z62S3;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -221,12 +248,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				714FB9981E3FBACD00FC6A95 /* LaunchScreen.storyboard in Resources */,
+				7141F7EE1E43C5B4002A909C /* GoogleService-Info.plist in Resources */,
 				714FB9951E3FBACD00FC6A95 /* Assets.xcassets in Resources */,
 				714FB9B31E3FE9B500FC6A95 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67127D08EC9641D95A6C6BB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorldTourRun/Pods-WorldTourRun-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DD6FF6BB96A249EB488AA67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorldTourRun/Pods-WorldTourRun-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A80C95F1C6D280CA2E4A4E28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		714FB97E1E3FBACD00FC6A95 /* Sources */ = {
@@ -242,6 +318,7 @@
 				7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */,
 				714FB98A1E3FBACD00FC6A95 /* AppDelegate.m in Sources */,
 				714FB9871E3FBACD00FC6A95 /* main.m in Sources */,
+				7141F7EA1E437753002A909C /* AdMobDemo.m in Sources */,
 				714FB9A71E3FBE7E00FC6A95 /* Location+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,9 +427,10 @@
 		};
 		714FB99D1E3FBACD00FC6A95 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E413F6C04DE9F3AC703E51D8 /* Pods-WorldTourRun.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R35N4L2G2B;
+				DEVELOPMENT_TEAM = 7K692Z62S3;
 				INFOPLIST_FILE = WorldTourRun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRun;
@@ -362,9 +440,10 @@
 		};
 		714FB99E1E3FBACD00FC6A95 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B36972AAB13C475A239AF3A /* Pods-WorldTourRun.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R35N4L2G2B;
+				DEVELOPMENT_TEAM = 7K692Z62S3;
 				INFOPLIST_FILE = WorldTourRun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRun;

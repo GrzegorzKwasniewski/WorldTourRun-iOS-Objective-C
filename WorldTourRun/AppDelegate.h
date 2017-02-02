@@ -10,6 +10,8 @@
 #import <CoreData/CoreData.h>
 #import "StartScreenVC.h"
 
+@import GoogleMobileAds;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

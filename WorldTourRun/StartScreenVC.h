@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@import GoogleMobileAds;
+
 @interface StartScreenVC : UIViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+@property (nonatomic, weak) IBOutlet GADBannerView *bannerView;
 
 @end
 
