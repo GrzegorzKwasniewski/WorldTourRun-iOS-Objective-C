@@ -35,10 +35,9 @@
 
 #pragma mark Custom Functions
 
-- (void)setRun:(Run *)run {
-    if (_run != run) {
-        _run = run;
-        
+- (void)setRun:(Run *)userRun {
+    if (_userRun != userRun) {
+        _userRun = userRun;
     }
 }
 

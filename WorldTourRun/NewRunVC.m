@@ -12,17 +12,17 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Location+CoreDataClass.h"
 
-static NSString * const detailSegue = @"RunDetails";
+static NSString * const detailSegue = @"userRunDetails";
 
 @interface NewRunVC () <CLLocationManagerDelegate>
 
-@property (nonatomic, strong) Run *run;
+@property (nonatomic, strong) Run *userRun;
 
-@property NSNumber *distance;
-@property NSInteger *seconds;
+@property float distance;
+@property int seconds;
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
-@property (nonatomic, strong) NSMutableArray *loactions;
+@property (nonatomic, strong) NSMutableArray *runLocations;
 @property (nonatomic, strong) NSTimer *timer;
 
 @property (nonatomic, weak) IBOutlet UILabel *welcomeLabel;
@@ -40,6 +40,8 @@ static NSString * const detailSegue = @"RunDetails";
     [super viewDidLoad];
 
 }
+
+#pragma mark - View State
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
@@ -62,6 +64,51 @@ static NSString * const detailSegue = @"RunDetails";
     
     self.startButton.hidden = YES;
     self.welcomeLabel.hidden = YES;
+    
+    self.seconds = 0;
+    self.distance = 0;
+    self.runLocations =  [NSMutableArray array];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+    
+    [self updateLocactions];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.timer invalidate];
+}
+
+#pragma mark - Custom Functions
+
+-(void)saveNewRun {
+    
+    Run *userRun = [NSEntityDescription insertNewObjectForEntityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
+    userRun.timestamp = [NSDate date];
+    userRun.duration = self.seconds;
+    userRun.distance = self.distance;
+    
+    NSMutableArray *locationsCollection = [NSMutableArray array];
+    for (CLLocation *location in self.runLocations) {
+        Location *singleLocation = [NSEntityDescription insertNewObjectForEntityForName:@"Location"
+                                                                 inManagedObjectContext:self.managedObjectContext];
+        
+        singleLocation.latitude = location.coordinate.latitude;
+        singleLocation.longitude = location.coordinate.longitude;
+        singleLocation.timestamp = location.timestamp;
+        
+        [locationsCollection addObject:singleLocation];
+    }
+    
+    userRun.locations = [NSOrderedSet orderedSetWithArray:locationsCollection];
+    self.userRun = userRun;
+    
+    // Save To Core Data
+    NSError *error = nil;
+    if (![self.managedObjectContext save:&error]) {
+        abort();
+    }
+    
 }
 
 - (IBAction)stopPressed:(id)sender {
@@ -72,6 +119,7 @@ static NSString * const detailSegue = @"RunDetails";
     }];
     
     UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self saveNewRun];
         [self performSegueWithIdentifier:detailSegue sender:nil];
     }];
     
@@ -86,9 +134,49 @@ static NSString * const detailSegue = @"RunDetails";
     
 }
 
+-(void)updateTimer {
+    self.seconds++;
+    self.timeLabel.text = [NSString stringWithFormat:@"Time: %@", self.seconds]; // move to separate class
+    self.distanceLabel.text =  [NSString stringWithFormat:@"Distane: %@", self.distance];
+    float pace = (self.distance / self.seconds);
+    self.paceLabel.text = [NSString stringWithFormat:@"Pace: %@", pace];
+}
+
+#pragma mark - Location Manager Functions
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+
+    for (CLLocation *singleLoaction in locations) {
+        if (singleLoaction.horizontalAccuracy < 10) { // try with verical
+            if (self.runLocations.count > 0) {
+                self.distance += [singleLoaction distanceFromLocation:self.runLocations.lastObject];
+            }
+            
+            [self.runLocations addObject:singleLoaction];
+            
+        }
+    }
+}
+
+-(void)updateLocactions {
+    if (self.locationManager == nil) {
+        self.locationManager = [[CLLocationManager alloc] init];
+    }
+    
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    self.locationManager.activityType = CLActivityTypeFitness;
+    
+    self.locationManager.distanceFilter = 15;
+    
+    [self.locationManager startUpdatingLocation];
+}
+
+#pragma mark - Segue
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // this will set Run details on RunDetailVC
-    [[segue destinationViewController] setRun:self.run];
+    [[segue destinationViewController] setUserRun:self.userRun];
 }
 
 @end

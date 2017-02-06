@@ -12,6 +12,6 @@
 
 @interface RunDetailVC : UIViewController
 
-@property (strong, nonatomic) Run *run;
+@property (strong, nonatomic) Run *userRun;
 
 @end

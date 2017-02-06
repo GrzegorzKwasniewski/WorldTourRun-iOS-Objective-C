@@ -11,6 +11,7 @@
 		7141F7BE1E4119DE002A909C /* RunDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7BD1E4119DE002A909C /* RunDetailVC.m */; };
 		7141F7EA1E437753002A909C /* AdMobDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7E91E437753002A909C /* AdMobDemo.m */; };
 		7141F7EE1E43C5B4002A909C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7141F7ED1E43C5B4002A909C /* GoogleService-Info.plist */; };
+		7141F7F21E43CB57002A909C /* HandleMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7F11E43CB57002A909C /* HandleMath.m */; };
 		714FB9871E3FBACD00FC6A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9861E3FBACD00FC6A95 /* main.m */; };
 		714FB98A1E3FBACD00FC6A95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9891E3FBACD00FC6A95 /* AppDelegate.m */; };
 		714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB98C1E3FBACD00FC6A95 /* StartScreenVC.m */; };
@@ -36,6 +37,8 @@
 		7141F7E81E437753002A909C /* AdMobDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobDemo.h; sourceTree = "<group>"; };
 		7141F7E91E437753002A909C /* AdMobDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdMobDemo.m; sourceTree = "<group>"; };
 		7141F7ED1E43C5B4002A909C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7141F7F01E43CB57002A909C /* HandleMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleMath.h; sourceTree = "<group>"; };
+		7141F7F11E43CB57002A909C /* HandleMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleMath.m; sourceTree = "<group>"; };
 		714FB9821E3FBACD00FC6A95 /* WorldTourRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTourRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714FB9861E3FBACD00FC6A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		714FB9881E3FBACD00FC6A95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7141F7EF1E43CB11002A909C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7141F7F01E43CB57002A909C /* HandleMath.h */,
+				7141F7F11E43CB57002A909C /* HandleMath.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		714FB9791E3FBACD00FC6A95 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +109,7 @@
 				714FB9B11E3FC00F00FC6A95 /* Storyboards */,
 				714FB9B01E3FBFCA00FC6A95 /* Model */,
 				714FB9AF1E3FBFC100FC6A95 /* View */,
+				7141F7EF1E43CB11002A909C /* Services */,
 				714FB9851E3FBACD00FC6A95 /* Supporting Files */,
 			);
 			path = WorldTourRun;
@@ -314,6 +327,7 @@
 				714FB9931E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld in Sources */,
 				7141F7BE1E4119DE002A909C /* RunDetailVC.m in Sources */,
 				714FB9AA1E3FBE7E00FC6A95 /* Run+CoreDataProperties.m in Sources */,
+				7141F7F21E43CB57002A909C /* HandleMath.m in Sources */,
 				714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */,
 				7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */,
 				714FB98A1E3FBACD00FC6A95 /* AppDelegate.m in Sources */,
