@@ -7,6 +7,7 @@
 //
 
 #import "ScheduleRunsVC.h"
+#import "SheduledRuns+CoreDataClass.h"
 
 @interface ScheduleRunsVC ()
 
@@ -14,8 +15,50 @@
 
 @implementation ScheduleRunsVC
 
+#pragma mark - View State
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+#pragma mark - Custom Functions
+
+-(IBAction)addNewRun:(id)sender {
+    
+    __block NSString *newRunName;
+
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:@"Name Your New Run" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [actionSheet addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        if ([textField.text  isEqual: @""]) {
+            newRunName = @"New Run!!!";
+        } else {
+            newRunName = textField.text;
+        }
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //
+    }];
+    
+    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self saveNewRunWithName:newRunName];
+    }];
+    
+    [actionSheet addAction:cancelAction];
+    [actionSheet addAction:saveAction];
+    [self presentViewController:actionSheet animated:YES completion:NULL];
+}
+
+-(void)saveNewRunWithName:(NSString *)newRunName {
+    
+    SheduledRuns *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"SheduledRuns" inManagedObjectContext:self.managedObjectContext];
+    newRun.name = newRunName;
+
+    NSError *error = nil;
+    if (![self.managedObjectContext save:&error]) {
+        abort();
+    }
     
 }
 

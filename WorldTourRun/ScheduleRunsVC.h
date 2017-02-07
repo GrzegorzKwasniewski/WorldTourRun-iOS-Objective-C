@@ -10,4 +10,6 @@
 
 @interface ScheduleRunsVC : UITableViewController
 
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 @end

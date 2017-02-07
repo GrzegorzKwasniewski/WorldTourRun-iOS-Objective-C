@@ -142,7 +142,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Sheduled Runs" id="ViG-fF-zXh">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AHx-qS-M1a"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AHx-qS-M1a">
+                            <connections>
+                                <action selector="addNewRun:" destination="BZF-6E-bzE" id="mqC-aU-SMA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
