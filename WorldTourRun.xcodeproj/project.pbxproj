@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7139D6A41E4A432A00416D51 /* ScheduleRunsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6A31E4A432A00416D51 /* ScheduleRunsVC.m */; };
+		7139D6A91E4A46E100416D51 /* SheduledRuns+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6A61E4A46E100416D51 /* SheduledRuns+CoreDataClass.m */; };
+		7139D6AA1E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6A81E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m */; };
 		7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7BA1E407B39002A909C /* NewRunVC.m */; };
 		7141F7BE1E4119DE002A909C /* RunDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7BD1E4119DE002A909C /* RunDetailVC.m */; };
 		7141F7EA1E437753002A909C /* AdMobDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7E91E437753002A909C /* AdMobDemo.m */; };
@@ -30,6 +33,12 @@
 /* Begin PBXFileReference section */
 		5251D5EF45FAD95ECD4D1E21 /* libPods-WorldTourRun.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldTourRun.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B36972AAB13C475A239AF3A /* Pods-WorldTourRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldTourRun.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorldTourRun/Pods-WorldTourRun.release.xcconfig"; sourceTree = "<group>"; };
+		7139D6A21E4A432A00416D51 /* ScheduleRunsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleRunsVC.h; sourceTree = "<group>"; };
+		7139D6A31E4A432A00416D51 /* ScheduleRunsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleRunsVC.m; sourceTree = "<group>"; };
+		7139D6A51E4A46E100416D51 /* SheduledRuns+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SheduledRuns+CoreDataClass.h"; sourceTree = "<group>"; };
+		7139D6A61E4A46E100416D51 /* SheduledRuns+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SheduledRuns+CoreDataClass.m"; sourceTree = "<group>"; };
+		7139D6A71E4A46E100416D51 /* SheduledRuns+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SheduledRuns+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7139D6A81E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SheduledRuns+CoreDataProperties.m"; sourceTree = "<group>"; };
 		7141F7B91E407B39002A909C /* NewRunVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRunVC.h; sourceTree = "<group>"; };
 		7141F7BA1E407B39002A909C /* NewRunVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRunVC.m; sourceTree = "<group>"; };
 		7141F7BC1E4119DE002A909C /* RunDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunDetailVC.h; sourceTree = "<group>"; };
@@ -148,6 +157,8 @@
 				7141F7BD1E4119DE002A909C /* RunDetailVC.m */,
 				7141F7E81E437753002A909C /* AdMobDemo.h */,
 				7141F7E91E437753002A909C /* AdMobDemo.m */,
+				7139D6A21E4A432A00416D51 /* ScheduleRunsVC.h */,
+				7139D6A31E4A432A00416D51 /* ScheduleRunsVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -162,6 +173,10 @@
 		714FB9B01E3FBFCA00FC6A95 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7139D6A51E4A46E100416D51 /* SheduledRuns+CoreDataClass.h */,
+				7139D6A61E4A46E100416D51 /* SheduledRuns+CoreDataClass.m */,
+				7139D6A71E4A46E100416D51 /* SheduledRuns+CoreDataProperties.h */,
+				7139D6A81E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m */,
 				714FB99F1E3FBE7E00FC6A95 /* Location+CoreDataClass.h */,
 				714FB9A01E3FBE7E00FC6A95 /* Location+CoreDataClass.m */,
 				714FB9A11E3FBE7E00FC6A95 /* Location+CoreDataProperties.h */,
@@ -324,6 +339,7 @@
 			files = (
 				714FB9A91E3FBE7E00FC6A95 /* Run+CoreDataClass.m in Sources */,
 				714FB9A81E3FBE7E00FC6A95 /* Location+CoreDataProperties.m in Sources */,
+				7139D6AA1E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m in Sources */,
 				714FB9931E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld in Sources */,
 				7141F7BE1E4119DE002A909C /* RunDetailVC.m in Sources */,
 				714FB9AA1E3FBE7E00FC6A95 /* Run+CoreDataProperties.m in Sources */,
@@ -331,9 +347,11 @@
 				714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */,
 				7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */,
 				714FB98A1E3FBACD00FC6A95 /* AppDelegate.m in Sources */,
+				7139D6A91E4A46E100416D51 /* SheduledRuns+CoreDataClass.m in Sources */,
 				714FB9871E3FBACD00FC6A95 /* main.m in Sources */,
 				7141F7EA1E437753002A909C /* AdMobDemo.m in Sources */,
 				714FB9A71E3FBE7E00FC6A95 /* Location+CoreDataClass.m in Sources */,
+				7139D6A41E4A432A00416D51 /* ScheduleRunsVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
