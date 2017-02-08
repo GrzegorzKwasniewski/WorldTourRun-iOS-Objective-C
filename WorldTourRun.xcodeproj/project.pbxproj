@@ -10,6 +10,7 @@
 		7139D6A41E4A432A00416D51 /* ScheduleRunsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6A31E4A432A00416D51 /* ScheduleRunsVC.m */; };
 		7139D6A91E4A46E100416D51 /* SheduledRuns+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6A61E4A46E100416D51 /* SheduledRuns+CoreDataClass.m */; };
 		7139D6AA1E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6A81E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m */; };
+		7139D6AD1E4B188E00416D51 /* CustomAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6AC1E4B188E00416D51 /* CustomAlerts.m */; };
 		7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7BA1E407B39002A909C /* NewRunVC.m */; };
 		7141F7BE1E4119DE002A909C /* RunDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7BD1E4119DE002A909C /* RunDetailVC.m */; };
 		7141F7EA1E437753002A909C /* AdMobDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141F7E91E437753002A909C /* AdMobDemo.m */; };
@@ -39,6 +40,8 @@
 		7139D6A61E4A46E100416D51 /* SheduledRuns+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SheduledRuns+CoreDataClass.m"; sourceTree = "<group>"; };
 		7139D6A71E4A46E100416D51 /* SheduledRuns+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SheduledRuns+CoreDataProperties.h"; sourceTree = "<group>"; };
 		7139D6A81E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SheduledRuns+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7139D6AB1E4B188E00416D51 /* CustomAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlerts.h; sourceTree = "<group>"; };
+		7139D6AC1E4B188E00416D51 /* CustomAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlerts.m; sourceTree = "<group>"; };
 		7141F7B91E407B39002A909C /* NewRunVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRunVC.h; sourceTree = "<group>"; };
 		7141F7BA1E407B39002A909C /* NewRunVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRunVC.m; sourceTree = "<group>"; };
 		7141F7BC1E4119DE002A909C /* RunDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunDetailVC.h; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 		714FB9AF1E3FBFC100FC6A95 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7139D6AB1E4B188E00416D51 /* CustomAlerts.h */,
+				7139D6AC1E4B188E00416D51 /* CustomAlerts.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 				714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */,
 				7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */,
 				714FB98A1E3FBACD00FC6A95 /* AppDelegate.m in Sources */,
+				7139D6AD1E4B188E00416D51 /* CustomAlerts.m in Sources */,
 				7139D6A91E4A46E100416D51 /* SheduledRuns+CoreDataClass.m in Sources */,
 				714FB9871E3FBACD00FC6A95 /* main.m in Sources */,
 				7141F7EA1E437753002A909C /* AdMobDemo.m in Sources */,

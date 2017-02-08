@@ -8,6 +8,7 @@
 
 #import "ScheduleRunsVC.h"
 #import "SheduledRuns+CoreDataClass.h"
+#import "CustomAlerts.h"
 
 @interface ScheduleRunsVC ()
 
@@ -19,47 +20,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveNewRunWithName:) name:SAVE_NEW_RUN_EVENT object:nil];
+
 }
 
 #pragma mark - Custom Functions
 
 -(IBAction)addNewRun:(id)sender {
     
-    __block NSString *newRunName;
-
-    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:@"Name Your New Run" preferredStyle:UIAlertControllerStyleAlert];
-    
-    [actionSheet addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        if ([textField.text  isEqual: @""]) {
-            newRunName = @"New Run!!!";
-        } else {
-            newRunName = textField.text;
-        }
-    }];
-    
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        //
-    }];
-    
-    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self saveNewRunWithName:newRunName];
-    }];
-    
-    [actionSheet addAction:cancelAction];
-    [actionSheet addAction:saveAction];
-    [self presentViewController:actionSheet animated:YES completion:NULL];
+    UIAlertController *alert = [CustomAlerts createAlertWithTitle:@"New Run Event" withMessage:@"Give a name for Your Run" withNotification:SAVE_NEW_RUN_EVENT];
+    [self presentViewController:alert animated:YES completion:NULL];
 }
 
--(void)saveNewRunWithName:(NSString *)newRunName {
+-(void)saveNewRunWithName:(NSNotification *)notification {
     
-    SheduledRuns *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"SheduledRuns" inManagedObjectContext:self.managedObjectContext];
-    newRun.name = newRunName;
-
-    NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
-        abort();
+    if ([notification.name isEqualToString:SAVE_NEW_RUN_EVENT]) {
+        NSString* object = notification.object;
+        SheduledRuns *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"SheduledRuns" inManagedObjectContext:self.managedObjectContext];
+        newRun.name = object;
+        
+        NSError *error = nil;
+        if (![self.managedObjectContext save:&error]) {
+            abort();
+        }
     }
-    
 }
 
 #pragma mark - Table view data source
