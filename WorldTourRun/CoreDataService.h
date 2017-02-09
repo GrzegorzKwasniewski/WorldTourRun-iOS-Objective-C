@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "SheduledRuns+CoreDataClass.h"
 
 extern NSString *const SCHEDULED_RUNS;
 
@@ -16,5 +17,7 @@ extern NSString *const SCHEDULED_RUNS;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 -(NSArray *)fetchRequestFromEntity:(NSString *)entity inManagedObjectContext:(NSManagedObjectContext *)context;
+
+-(SheduledRuns *)addNewRunWithName:(NSString *)name inManagedObjectContext:(NSManagedObjectContext *)context;
 
 @end

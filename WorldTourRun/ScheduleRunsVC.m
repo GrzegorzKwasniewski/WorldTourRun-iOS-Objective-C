@@ -44,16 +44,9 @@
 -(void)saveNewRun:(NSNotification *)notification {
     
     if ([notification.name isEqualToString:SAVE_NEW_RUN_EVENT]) {
-        NSString *object = notification.object;
-        SheduledRuns *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"ScheduledRuns" inManagedObjectContext:self.managedObjectContext];
-        newRun.name = object;
+        NSString *runName = notification.object;
+        [self.scheduledRuns addObject: [self.cdService addNewRunWithName:runName inManagedObjectContext:self.managedObjectContext]];
         
-        NSError *error = nil;
-        if (![self.managedObjectContext save:&error]) {
-            abort();
-        }
-        
-        [self.scheduledRuns addObject:newRun];
         NSUInteger row = [self.scheduledRuns count] - 1;
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
         [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];

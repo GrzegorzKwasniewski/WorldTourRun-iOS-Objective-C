@@ -29,4 +29,17 @@ NSString *const SCHEDULED_RUNS = @"ScheduledRuns";
     return fetchResults;
 }
 
+-(SheduledRuns *)addNewRunWithName:(NSString *)name inManagedObjectContext:(NSManagedObjectContext *)context {
+    
+    SheduledRuns *newRun = [NSEntityDescription insertNewObjectForEntityForName:SCHEDULED_RUNS inManagedObjectContext:context];
+    newRun.name = name;
+    
+    NSError *error = nil;
+    if (![context save:&error]) {
+        abort();
+    }
+    
+    return newRun;
+}
+
 @end
