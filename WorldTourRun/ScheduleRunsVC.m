@@ -25,10 +25,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveNewRun:) name:SAVE_NEW_RUN_EVENT object:nil];
     
-    self.sheduledRuns = [self.cdService fetchRequestFromEntity:SCHEDULED_RUNS inManagedObjectContext:self.managedObjectContext];
-    
-    NSManagedObject *name = [self.sheduledRuns lastObject];
-    NSString *string = [name valueForKey:@"name"];
+    self.scheduledRuns = [self.cdService fetchRequestFromEntity:SCHEDULED_RUNS inManagedObjectContext:self.managedObjectContext];
     
 }
 
@@ -55,30 +52,41 @@
         if (![self.managedObjectContext save:&error]) {
             abort();
         }
+        
+        [self.scheduledRuns addObject:newRun];
+        NSUInteger row = [self.scheduledRuns count] - 1;
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.scheduledRuns count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    static NSString *kIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kIdentifier forIndexPath:indexPath];
+    
+    NSManagedObject *name = [self.scheduledRuns objectAtIndex:indexPath.row];
+    NSString *string = [name valueForKey:@"name"];
+
+    cell.backgroundColor = [UIColor greenColor];
+    cell.textLabel.text = string;
+
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

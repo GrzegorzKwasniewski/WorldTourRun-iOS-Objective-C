@@ -10,18 +10,18 @@
 
 @implementation CoreDataService
 
-NSString *const SCHEDULED_RUNS = @"SCHEDULED_RUNS";
+NSString *const SCHEDULED_RUNS = @"ScheduledRuns";
 
--(NSArray *)fetchRequestFromEntity:(NSString *)entity inManagedObjectContext:(NSManagedObjectContext *)context {
+-(NSMutableArray *)fetchRequestFromEntity:(NSString *)entity inManagedObjectContext:(NSManagedObjectContext *)context {
     
-    NSArray * fetchResults;
+    NSMutableArray * fetchResults;
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entity];
     
     NSError *error = nil;
-    fetchResults = [context executeFetchRequest:request error:&error];
+    fetchResults = [[context executeFetchRequest:request error:&error] mutableCopy];
     if (!fetchResults) {
-        NSLog(@"Error fetching Employee objects: %@", error);
+        NSLog(@"Error fetching objects: %@", error);
         abort();
         return nil;
     }

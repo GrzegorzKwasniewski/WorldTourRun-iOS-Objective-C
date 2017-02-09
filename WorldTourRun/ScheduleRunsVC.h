@@ -14,6 +14,6 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) CoreDataService *cdService;
-@property (strong, nonatomic) NSArray *sheduledRuns;
+@property (strong, nonatomic) NSMutableArray *scheduledRuns;
 
 @end
