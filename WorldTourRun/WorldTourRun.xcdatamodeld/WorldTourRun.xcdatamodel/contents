@@ -12,12 +12,12 @@
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="locations" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Location" inverseName="run" inverseEntity="Location" syncable="YES"/>
     </entity>
-    <entity name="SheduledRuns" representedClassName="SheduledRuns" syncable="YES">
+    <entity name="ScheduledRuns" representedClassName="SheduledRuns" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Location" positionX="-54" positionY="18" width="128" height="105"/>
         <element name="Run" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="SheduledRuns" positionX="-63" positionY="36" width="128" height="60"/>
+        <element name="ScheduledRuns" positionX="-63" positionY="36" width="128" height="60"/>
     </elements>
 </model>

@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoreDataService.h"
+#import "CustomAlerts.h"
 
 @interface ScheduleRunsVC : UITableViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) CoreDataService *cdService;
+@property (strong, nonatomic) NSArray *sheduledRuns;
 
 @end

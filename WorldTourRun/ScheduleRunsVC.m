@@ -8,7 +8,7 @@
 
 #import "ScheduleRunsVC.h"
 #import "SheduledRuns+CoreDataClass.h"
-#import "CustomAlerts.h"
+
 
 @interface ScheduleRunsVC ()
 
@@ -20,8 +20,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveNewRunWithName:) name:SAVE_NEW_RUN_EVENT object:nil];
+    
+    self.cdService = [[CoreDataService alloc]init];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveNewRun:) name:SAVE_NEW_RUN_EVENT object:nil];
+    
+    self.sheduledRuns = [self.cdService fetchRequestFromEntity:SCHEDULED_RUNS inManagedObjectContext:self.managedObjectContext];
+    
+    NSManagedObject *name = [self.sheduledRuns lastObject];
+    NSString *string = [name valueForKey:@"name"];
+    
+}
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Custom Functions
@@ -32,11 +44,11 @@
     [self presentViewController:alert animated:YES completion:NULL];
 }
 
--(void)saveNewRunWithName:(NSNotification *)notification {
+-(void)saveNewRun:(NSNotification *)notification {
     
     if ([notification.name isEqualToString:SAVE_NEW_RUN_EVENT]) {
-        NSString* object = notification.object;
-        SheduledRuns *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"SheduledRuns" inManagedObjectContext:self.managedObjectContext];
+        NSString *object = notification.object;
+        SheduledRuns *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"ScheduledRuns" inManagedObjectContext:self.managedObjectContext];
         newRun.name = object;
         
         NSError *error = nil;
