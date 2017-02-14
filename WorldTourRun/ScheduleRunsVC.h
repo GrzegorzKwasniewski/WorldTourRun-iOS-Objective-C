@@ -10,10 +10,16 @@
 #import "CoreDataService.h"
 #import "CustomAlerts.h"
 
+@import EventKit;
+
 @interface ScheduleRunsVC : UITableViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) CoreDataService *cdService;
 @property (strong, nonatomic) NSMutableArray *scheduledRuns;
+
+@property (strong, nonatomic) EKCalendar *calendar;
+@property (strong, nonatomic) EKEventStore *eventStore;
+@property (nonatomic) BOOL isEventStoreAccessGranted;
 
 @end

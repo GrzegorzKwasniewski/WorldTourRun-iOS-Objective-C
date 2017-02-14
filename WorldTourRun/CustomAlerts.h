@@ -12,6 +12,7 @@ extern NSString *const SAVE_NEW_RUN_EVENT;
 
 @interface CustomAlerts : UIAlertController
 
++(UIAlertController *)createAlertWithTitle:(NSString *)title withMessage:(NSString *)message;
 +(UIAlertController *)createAlertWithTitle:(NSString *)title withMessage:(NSString *)message withNotification:(NSString *) notification;
 
 @end

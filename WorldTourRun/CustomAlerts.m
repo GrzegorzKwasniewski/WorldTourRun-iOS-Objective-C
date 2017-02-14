@@ -20,28 +20,41 @@ NSString *const SAVE_NEW_RUN_EVENT = @"SAVE_NEW_RUN_EVENT";
     
     __block NSString *textFiledValue;
     
-    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertView = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     
-    [actionSheet addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+    [alertView addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
     }];
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
     }];
     
     UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        if ([actionSheet.textFields[0].text  isEqual: @""]) {
+        if ([alertView.textFields[0].text  isEqual: @""]) {
             textFiledValue = @"Default Name";
         } else {
-            textFiledValue = actionSheet.textFields[0].text;
+            textFiledValue = alertView.textFields[0].text;
         }
         
         [[NSNotificationCenter defaultCenter] postNotificationName:notification object:textFiledValue];
     }];
     
-    [actionSheet addAction:cancelAction];
-    [actionSheet addAction:saveAction];
+    [alertView addAction:cancelAction];
+    [alertView addAction:saveAction];
     
-    return actionSheet;
+    return alertView;
+}
+
++(UIAlertController *)createAlertWithTitle:(NSString *)title withMessage:(NSString *)message {
+    
+    UIAlertController *alertView = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    
+    [alertView addAction:cancelAction];
+    
+    return alertView;
 }
 
 @end
