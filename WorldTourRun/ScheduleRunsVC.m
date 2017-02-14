@@ -66,17 +66,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *kIdentifier = @"Cell";
+    static NSString *cellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     NSManagedObject *name = [self.scheduledRuns objectAtIndex:indexPath.row];
-    NSString *string = [name valueForKey:@"name"];
+    NSString *scheduledRunName = [name valueForKey:@"name"];
 
     cell.backgroundColor = [UIColor greenColor];
-    cell.textLabel.text = string;
+    cell.textLabel.text = scheduledRunName;
 
-    
     return cell;
 }
 
