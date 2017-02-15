@@ -20,4 +20,6 @@ extern NSString *const SCHEDULED_RUNS;
 
 -(SheduledRuns *)addNewRunWithName:(NSString *)name inManagedObjectContext:(NSManagedObjectContext *)context;
 
+-(void)deleteRun:(NSManagedObject *)object inManagedObjectContext:(NSManagedObjectContext *)context;
+
 @end

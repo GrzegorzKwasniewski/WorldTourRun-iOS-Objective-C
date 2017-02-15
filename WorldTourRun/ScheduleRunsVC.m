@@ -35,26 +35,6 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#pragma mark - Custom Functions
-
--(IBAction)addNewRun:(id)sender {
-    
-    UIAlertController *alert = [CustomAlerts createAlertWithTitle:@"New Run Event" withMessage:@"Give a name for Your Run" withNotification:SAVE_NEW_RUN_EVENT];
-    [self presentViewController:alert animated:YES completion:NULL];
-}
-
--(void)saveNewRun:(NSNotification *)notification {
-    
-    if ([notification.name isEqualToString:SAVE_NEW_RUN_EVENT]) {
-        NSString *runName = notification.object;
-        [self.scheduledRuns addObject: [self.cdService addNewRunWithName:runName inManagedObjectContext:self.managedObjectContext]];
-        
-        NSUInteger row = [self.scheduledRuns count] - 1;
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
-        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -79,6 +59,42 @@
     cell.textLabel.text = scheduledRunName;
 
     return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        [self.cdService deleteRun:[self.scheduledRuns objectAtIndex:indexPath.row] inManagedObjectContext:self.managedObjectContext];
+        
+        [self.scheduledRuns removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+
+#pragma mark - Custom Functions
+
+-(IBAction)addNewRun:(id)sender {
+    
+    UIAlertController *alert = [CustomAlerts createAlertWithTitle:@"New Run Event" withMessage:@"Give a name for Your Run" withNotification:SAVE_NEW_RUN_EVENT];
+    [self presentViewController:alert animated:YES completion:NULL];
+}
+
+-(void)saveNewRun:(NSNotification *)notification {
+    
+    if ([notification.name isEqualToString:SAVE_NEW_RUN_EVENT]) {
+        NSString *runName = notification.object;
+        [self.scheduledRuns addObject: [self.cdService addNewRunWithName:runName inManagedObjectContext:self.managedObjectContext]];
+        
+        NSUInteger row = [self.scheduledRuns count] - 1;
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+        [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 // lazy initializer

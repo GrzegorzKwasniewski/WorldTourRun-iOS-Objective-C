@@ -42,4 +42,14 @@ NSString *const SCHEDULED_RUNS = @"ScheduledRuns";
     return newRun;
 }
 
+-(void)deleteRun:(NSManagedObject *)object inManagedObjectContext:(NSManagedObjectContext *)context {
+    
+    [context deleteObject:object];
+    
+    NSError *error = nil;
+    if (![context save:&error]) {
+        abort();
+    }
+}
+
 @end
