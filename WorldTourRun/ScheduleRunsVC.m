@@ -131,4 +131,28 @@
     }
 }
 
+-(EKCalendar *)calendarWithReminders {
+    if (!_calendarWithReminders) {
+        NSArray *calendars = [self.eventStore calendarsForEntityType:EKEntityTypeReminder];
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", @"ScheduledRuns"];
+        NSArray *filterdCalendars = [calendars filteredArrayUsingPredicate:predicate];
+        
+        if ([filterdCalendars count]) {
+            _calendarWithReminders = [filterdCalendars firstObject];
+        } else {
+            _calendarWithReminders = [EKCalendar calendarForEntityType:EKEntityTypeReminder eventStore:self.eventStore];
+            _calendarWithReminders.title = @"ScheduledRuns";
+            _calendarWithReminders.source = self.eventStore.defaultCalendarForNewReminders.source;
+            
+            NSError *calendarError = nil;
+            BOOL calendarSuccess = [self.eventStore saveCalendar:_calendarWithReminders commit:YES error:&calendarError];
+            if (!calendarError) {
+                // show alert with error
+            }
+        }
+    }
+    return _calendarWithReminders;
+}
+
 @end

@@ -18,7 +18,7 @@
 @property (strong, nonatomic) CoreDataService *cdService;
 @property (strong, nonatomic) NSMutableArray *scheduledRuns;
 
-@property (strong, nonatomic) EKCalendar *calendar;
+@property (strong, nonatomic) EKCalendar *calendarWithReminders;
 @property (strong, nonatomic) EKEventStore *eventStore;
 @property (nonatomic) BOOL isEventStoreAccessGranted;
 
