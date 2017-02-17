@@ -53,10 +53,18 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     NSManagedObject *name = [self.scheduledRuns objectAtIndex:indexPath.row];
-    NSString *scheduledRunName = [name valueForKey:@"name"];
+    self.scheduledRunName = [name valueForKey:@"name"];
 
     cell.backgroundColor = [UIColor greenColor];
-    cell.textLabel.text = scheduledRunName;
+    cell.textLabel.text = self.scheduledRunName;
+    
+    UIButton *reminderButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    reminderButton.frame = CGRectMake(0.0, 0.0, 100.0, 30.0);
+    [reminderButton setTitle:@"Reminde me" forState:UIControlStateNormal];
+    
+    [reminderButton addTarget:self action:@selector(addRemainder) forControlEvents:UIControlEventTouchUpInside];
+    
+    cell.accessoryView = reminderButton;
 
     return cell;
 }
@@ -81,7 +89,7 @@
 
 -(IBAction)addNewRun:(id)sender {
     
-    UIAlertController *alert = [CustomAlerts createAlertWithTitle:@"New Run Event" withMessage:@"Give a name for Your Run" withNotification:SAVE_NEW_RUN_EVENT];
+    UIAlertController *alert = [CustomAlerts createAlertWithTitle:@"New Run Event" withMessage:@"Give Your Run a name" withNotification:SAVE_NEW_RUN_EVENT];
     [self presentViewController:alert animated:YES completion:NULL];
 }
 
@@ -135,14 +143,14 @@
     if (!_calendarWithReminders) {
         NSArray *calendars = [self.eventStore calendarsForEntityType:EKEntityTypeReminder];
         
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", @"ScheduledRuns"];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", @"Scheduled Runs"];
         NSArray *filterdCalendars = [calendars filteredArrayUsingPredicate:predicate];
         
         if ([filterdCalendars count]) {
             _calendarWithReminders = [filterdCalendars firstObject];
         } else {
             _calendarWithReminders = [EKCalendar calendarForEntityType:EKEntityTypeReminder eventStore:self.eventStore];
-            _calendarWithReminders.title = @"ScheduledRuns";
+            _calendarWithReminders.title = @"Scheduled Runs";
             _calendarWithReminders.source = self.eventStore.defaultCalendarForNewReminders.source;
             
             NSError *calendarError = nil;
@@ -153,6 +161,30 @@
         }
     }
     return _calendarWithReminders;
+}
+
+-(void)addRemainder {
+    
+    // TODO: Try to add date later
+    
+    if (!self.isEventStoreAccessGranted) {
+        return;
+    }
+    
+    EKReminder *runRemainder = [EKReminder reminderWithEventStore:self.eventStore];
+    runRemainder.title = self.scheduledRunName;
+    runRemainder.calendar = self.calendarWithReminders;
+    
+    NSError *error = nil;
+    BOOL success = [self.eventStore saveReminder:runRemainder commit:YES error:&error];
+    if (!success) {
+        // handle error
+    }
+    
+    NSString *message = (success) ? @"Reminder for Your Run was added!" : @"Something went wrong. Reminder was not added.";
+    
+    UIAlertController *alert = [CustomAlerts createAlertWithTitle:message withMessage:@""];
+    [self presentViewController:alert animated:YES completion:NULL];
 }
 
 @end

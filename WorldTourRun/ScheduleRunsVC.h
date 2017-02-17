@@ -22,4 +22,6 @@
 @property (strong, nonatomic) EKEventStore *eventStore;
 @property (nonatomic) BOOL isEventStoreAccessGranted;
 
+@property (strong, nonatomic) NSString *scheduledRunName;
+
 @end
