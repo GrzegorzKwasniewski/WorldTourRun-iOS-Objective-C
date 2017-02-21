@@ -23,5 +23,7 @@
 @property (nonatomic) BOOL isEventStoreAccessGranted;
 
 @property (strong, nonatomic) NSString *scheduledRunName;
+@property (copy, nonatomic) NSArray *runReminders;
+
 
 @end

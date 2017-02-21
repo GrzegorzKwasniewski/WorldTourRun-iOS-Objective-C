@@ -29,6 +29,8 @@
     
     self.scheduledRuns = [self.cdService fetchRequestFromEntity:SCHEDULED_RUNS inManagedObjectContext:self.managedObjectContext];
     
+    [self getRunReminders];
+    
 }
 
 - (void)dealloc {
@@ -186,5 +188,22 @@
     UIAlertController *alert = [CustomAlerts createAlertWithTitle:message withMessage:@""];
     [self presentViewController:alert animated:YES completion:NULL];
 }
+
+- (void)getRunReminders {
+    if (self.isEventStoreAccessGranted) {
+
+        NSPredicate *predicate =
+        [self.eventStore predicateForRemindersInCalendars:@[self.calendarWithReminders]];
+        
+        [self.eventStore fetchRemindersMatchingPredicate:predicate completion:^(NSArray *reminders) {
+
+            self.runReminders = reminders;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        }];
+    }
+}
+
 
 @end
