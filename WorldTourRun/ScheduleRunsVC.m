@@ -96,6 +96,28 @@
     }
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    NSManagedObject *name = [self.scheduledRuns objectAtIndex:indexPath.row];
+    self.scheduledRunName = [name valueForKey:@"name"];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", self.scheduledRunName];
+    
+    NSArray *results = [self.runReminders filteredArrayUsingPredicate:predicate];
+    EKReminder *reminder = [results firstObject];
+    reminder.completed = !reminder.isCompleted;
+    
+    NSError *error;
+    [self.eventStore saveReminder:reminder commit:YES error:&error];
+    if (error) {
+        // Handle error
+    }
+    
+    cell.imageView.image = (reminder.isCompleted) ? [UIImage imageNamed:@"pixel_1"] : [UIImage imageNamed:@"pixel_2"];
+}
+
 
 #pragma mark - Custom Functions
 
