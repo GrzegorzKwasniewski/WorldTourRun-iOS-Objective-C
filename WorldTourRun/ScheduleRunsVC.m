@@ -30,7 +30,9 @@
     self.scheduledRuns = [self.cdService fetchRequestFromEntity:SCHEDULED_RUNS inManagedObjectContext:self.managedObjectContext];
     
     [self getRunReminders];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(getRunReminders)
+                                                 name:EKEventStoreChangedNotification object:nil];
 }
 
 - (void)dealloc {
@@ -60,14 +62,22 @@
     cell.backgroundColor = [UIColor greenColor];
     cell.textLabel.text = self.scheduledRunName;
     
-    UIButton *reminderButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    reminderButton.frame = CGRectMake(0.0, 0.0, 100.0, 30.0);
-    [reminderButton setTitle:@"Reminde me" forState:UIControlStateNormal];
-    
-    [reminderButton addTarget:self action:@selector(addRemainder) forControlEvents:UIControlEventTouchUpInside];
-    
-    cell.accessoryView = reminderButton;
-
+    if (![self isRunReminderSet:self.scheduledRunName]) {
+        UIButton *reminderButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        reminderButton.frame = CGRectMake(0.0, 0.0, 100.0, 30.0);
+        [reminderButton setTitle:@"Reminde me" forState:UIControlStateNormal];
+        
+        [reminderButton addTarget:self action:@selector(addRemainder) forControlEvents:UIControlEventTouchUpInside];
+        
+        cell.accessoryView = reminderButton;
+    } else {
+        cell.accessoryView = nil;
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", self.scheduledRunName];
+        NSArray *reminders = [self.runReminders filteredArrayUsingPredicate:predicate];
+        EKReminder *reminder = [reminders firstObject];
+        cell.imageView.image = (reminder.isCompleted) ? [UIImage imageNamed:@"pixel_1"] : [UIImage imageNamed:@"pixel_2"];
+    }
     return cell;
 }
 
@@ -205,5 +215,10 @@
     }
 }
 
+- (BOOL)isRunReminderSet:(NSString *)item {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", item];
+    NSArray *filteredArray = [self.runReminders filteredArrayUsingPredicate:predicate];
+    return (self.isEventStoreAccessGranted && [filteredArray count]);
+}
 
 @end
