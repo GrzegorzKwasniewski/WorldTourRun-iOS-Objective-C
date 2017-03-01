@@ -53,7 +53,7 @@ static NSString * const detailSegue = @"userRunDetails";
     self.timeLabel.hidden = YES;
     self.distanceLabel.hidden = YES;
     self.paceLabel.hidden = YES;
-    self.startButton.hidden = YES;
+    self.stopButton.hidden = YES;
 }
 
 -(IBAction)startPressed:(id)sender {
@@ -136,7 +136,7 @@ static NSString * const detailSegue = @"userRunDetails";
 
 -(void)updateTimer {
     self.seconds++;
-    self.timeLabel.text = [NSString stringWithFormat:@"Time: %@", self.seconds]; // move to separate class
+    //self.timeLabel.text = [NSString stringWithFormat:@"Time: %@", self.seconds]; // move to separate class
     self.distanceLabel.text =  [NSString stringWithFormat:@"Distane: %@", self.distance];
     float pace = (self.distance / self.seconds);
     self.paceLabel.text = [NSString stringWithFormat:@"Pace: %@", pace];

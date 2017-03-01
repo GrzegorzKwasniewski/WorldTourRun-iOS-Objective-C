@@ -8,6 +8,7 @@
 
 #import "StartScreenVC.h"
 #import "NewRunVC.h"
+#import "ScheduleRunsVC.h"
 
 @interface StartScreenVC ()
 
@@ -34,6 +35,9 @@
     UIViewController *nextVC = [segue destinationViewController];
     if ([nextVC isKindOfClass:[NewRunVC class]]) {
         ((NewRunVC *) nextVC).managedObjectContext = self.managedObjectContext;
+    } else if ([nextVC isKindOfClass:[ScheduleRunsVC class]]) {
+        ((ScheduleRunsVC *) nextVC).managedObjectContext = self.managedObjectContext;
+        NSLog(@"REDAME");
     }
 }
 
