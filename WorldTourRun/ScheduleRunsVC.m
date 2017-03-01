@@ -89,8 +89,15 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
+        // delte from Core Data
         [self.cdService deleteRun:[self.scheduledRuns objectAtIndex:indexPath.row] inManagedObjectContext:self.managedObjectContext];
         
+        // delte from reminders
+        NSManagedObject *run = [self.scheduledRuns objectAtIndex:indexPath.row];
+        NSString *name = [run valueForKey:@"name"];
+        [self deleteRunReminder:name];
+        
+        // delete from array
         [self.scheduledRuns removeObjectAtIndex:indexPath.row];
         [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
@@ -236,6 +243,30 @@
         }];
     }
 }
+
+- (void)deleteRunReminder:(NSString *)run {
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", run];
+    NSArray *runs = [self.runReminders filteredArrayUsingPredicate:predicate];
+    
+    if ([runs count]) {
+        [runs enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
+            NSError *error = nil;
+
+            BOOL success = [self.eventStore removeReminder:object commit:NO error:&error];
+            if (!success) {
+                // Handle error
+            }
+        }];
+        
+        NSError *commitError = nil;
+        BOOL success = [self.eventStore commit:&commitError];
+        if (!success) {
+            // Handle error.
+        }
+    }
+}
+
 
 - (BOOL)isRunReminderSet:(NSString *)item {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", item];
