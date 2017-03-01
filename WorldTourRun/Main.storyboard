@@ -311,7 +311,7 @@
                         <outlet property="startButton" destination="ohO-Ja-6zG" id="c1p-ac-7aB"/>
                         <outlet property="stopButton" destination="bdk-g0-mwv" id="72C-JX-iYm"/>
                         <outlet property="timeLabel" destination="GJh-su-4dt" id="AHJ-sz-qFT"/>
-                        <segue destination="JEX-9P-axG" kind="show" identifier="RunDetails" id="HsD-PQ-BiJ"/>
+                        <segue destination="JEX-9P-axG" kind="show" identifier="userRunDetails" id="HsD-PQ-BiJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkZ-LV-Z6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
