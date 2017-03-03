@@ -8,14 +8,17 @@
 
 #import "RunDetailVC.h"
 #import <MapKit/MapKit.h>
+#import "Run+CoreDataClass.h"
+#import "Location+CoreDataClass.h"
+#import "ToString.h"
 
 @interface RunDetailVC ()
 
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
-@property (nonatomic, weak) IBOutlet UILabel *dateLabel;
-@property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
-@property (nonatomic, weak) IBOutlet UILabel *paceLabel;
-@property (nonatomic, weak) IBOutlet UILabel *timeLabel;
+@property (nonatomic, weak) IBOutlet UILabel *date;
+@property (nonatomic, weak) IBOutlet UILabel *distance;
+@property (nonatomic, weak) IBOutlet UILabel *pace;
+@property (nonatomic, weak) IBOutlet UILabel *time;
 
 @end
 
@@ -39,6 +42,16 @@
     if (_userRun != userRun) {
         _userRun = userRun;
     }
+}
+
+-(void)setView {
+    self.distance.text = [ToString stringFromDistance:(float)self.userRun.distance];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    self.date.text = [dateFormatter stringFromDate:self.userRun.timestamp];
+    
+    self.time.text = [NSString stringWithFormat:@"Time: %@", [ToString stringFromSecondCount:(int)self.userRun.duration usingLongFormat:YES]];
 }
 
 @end

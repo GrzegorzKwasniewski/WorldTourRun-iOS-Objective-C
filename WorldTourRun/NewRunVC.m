@@ -11,6 +11,7 @@
 #import "Run+CoreDataClass.h"
 #import <CoreLocation/CoreLocation.h>
 #import "Location+CoreDataClass.h"
+#import "ToString.h"
 
 static NSString * const detailSegue = @"userRunDetails";
 
@@ -38,6 +39,7 @@ static NSString * const detailSegue = @"userRunDetails";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.locationManager requestWhenInUseAuthorization];
 
 }
 
@@ -113,6 +115,8 @@ static NSString * const detailSegue = @"userRunDetails";
 
 - (IBAction)stopPressed:(id)sender {
     
+    [self.locationManager stopUpdatingLocation];
+    
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:@"Message" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         //
@@ -136,18 +140,16 @@ static NSString * const detailSegue = @"userRunDetails";
 
 -(void)updateTimer {
     self.seconds++;
-    //self.timeLabel.text = [NSString stringWithFormat:@"Time: %@", self.seconds]; // move to separate class
-    self.distanceLabel.text =  [NSString stringWithFormat:@"Distane: %@", self.distance];
-    float pace = (self.distance / self.seconds);
-    self.paceLabel.text = [NSString stringWithFormat:@"Pace: %@", pace];
+    self.timeLabel.text = [NSString stringWithFormat:@"Time: %@", [ToString stringFromSecondCount:self.seconds usingLongFormat:NO]];
+    self.distanceLabel.text =  [NSString stringWithFormat:@"Distane: %@", [ToString stringFromDistance:self.distance]];
+    self.paceLabel.text = [NSString stringWithFormat:@"Pace: %@", [ToString stringFromAvgPace:self.distance overTime:self.seconds]];
 }
 
 #pragma mark - Location Manager Functions
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
-
     for (CLLocation *singleLoaction in locations) {
-        if (singleLoaction.horizontalAccuracy < 10) { // try with verical
+        if (singleLoaction.horizontalAccuracy < 20) { // try with verical
             if (self.runLocations.count > 0) {
                 self.distance += [singleLoaction distanceFromLocation:self.runLocations.lastObject];
             }
@@ -159,8 +161,14 @@ static NSString * const detailSegue = @"userRunDetails";
 }
 
 -(void)updateLocactions {
+    
     if (self.locationManager == nil) {
         self.locationManager = [[CLLocationManager alloc] init];
+    }
+    
+    // TODO: Move to other place
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
     }
     
     self.locationManager.delegate = self;
