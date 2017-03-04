@@ -131,7 +131,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="53"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hFi-OK-rcm" id="3bJ-el-oNG">
-                                    <frame key="frameInset" width="375" height="53"/>
+                                    <frame key="frameInset" width="375" height="52"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -222,11 +222,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="dateLabel" destination="DMF-yd-Rr5" id="NK7-tm-uiP"/>
-                        <outlet property="distanceLabel" destination="xXO-Ba-HOk" id="eA7-68-bb6"/>
+                        <outlet property="date" destination="DMF-yd-Rr5" id="CPj-AF-rzb"/>
+                        <outlet property="distance" destination="xXO-Ba-HOk" id="RW4-uH-tVX"/>
                         <outlet property="mapView" destination="Mck-7m-oPZ" id="RGj-ow-Gb0"/>
-                        <outlet property="paceLabel" destination="tc2-Lp-tfK" id="xhx-Yi-nZ4"/>
-                        <outlet property="timeLabel" destination="DuQ-Wn-jdH" id="pN9-KN-cFV"/>
+                        <outlet property="pace" destination="tc2-Lp-tfK" id="Lai-hz-Qp7"/>
+                        <outlet property="time" destination="DuQ-Wn-jdH" id="v3U-8J-44d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
@@ -306,11 +306,11 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="distanceLabel" destination="yUz-5U-O8x" id="TQI-yL-JGF"/>
-                        <outlet property="paceLabel" destination="X2V-B9-9tK" id="kqd-HM-eGa"/>
+                        <outlet property="distance" destination="yUz-5U-O8x" id="KER-fC-4tH"/>
+                        <outlet property="pace" destination="X2V-B9-9tK" id="xYY-eY-oC5"/>
                         <outlet property="startButton" destination="ohO-Ja-6zG" id="c1p-ac-7aB"/>
                         <outlet property="stopButton" destination="bdk-g0-mwv" id="72C-JX-iYm"/>
-                        <outlet property="timeLabel" destination="GJh-su-4dt" id="AHJ-sz-qFT"/>
+                        <outlet property="time" destination="GJh-su-4dt" id="JLs-NM-236"/>
                         <segue destination="JEX-9P-axG" kind="show" identifier="userRunDetails" id="HsD-PQ-BiJ"/>
                     </connections>
                 </viewController>

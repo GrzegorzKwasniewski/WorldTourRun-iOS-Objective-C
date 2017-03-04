@@ -19,17 +19,17 @@ static NSString * const detailSegue = @"userRunDetails";
 
 @property (nonatomic, strong) Run *userRun;
 
-@property float distance;
-@property int seconds;
+@property float runDistance;
+@property int runTime;
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) NSMutableArray *runLocations;
 @property (nonatomic, strong) NSTimer *timer;
 
-@property (nonatomic, weak) IBOutlet UILabel *welcomeLabel;
-@property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
-@property (nonatomic, weak) IBOutlet UILabel *paceLabel;
-@property (nonatomic, weak) IBOutlet UILabel *timeLabel;
+@property (nonatomic, weak) IBOutlet UILabel *welcomeMessage;
+@property (nonatomic, weak) IBOutlet UILabel *distance;
+@property (nonatomic, weak) IBOutlet UILabel *pace;
+@property (nonatomic, weak) IBOutlet UILabel *time;
 @property (nonatomic, weak) IBOutlet UIButton *startButton;
 @property (nonatomic, weak) IBOutlet UIButton *stopButton;
 
@@ -49,26 +49,26 @@ static NSString * const detailSegue = @"userRunDetails";
     [super viewWillAppear:YES];
     
     self.startButton.hidden = NO;
-    self.welcomeLabel.hidden = NO;
+    self.welcomeMessage.hidden = NO;
     
-    self.timeLabel.text = @"";
-    self.timeLabel.hidden = YES;
-    self.distanceLabel.hidden = YES;
-    self.paceLabel.hidden = YES;
+    self.time.text = @"";
+    self.time.hidden = YES;
+    self.distance.hidden = YES;
+    self.pace.hidden = YES;
     self.stopButton.hidden = YES;
 }
 
 -(IBAction)startPressed:(id)sender {
-    self.timeLabel.hidden = NO;
-    self.distanceLabel.hidden = NO;
-    self.paceLabel.hidden = NO;
+    self.time.hidden = NO;
+    self.distance.hidden = NO;
+    self.pace.hidden = NO;
     self.stopButton.hidden = NO;
     
     self.startButton.hidden = YES;
-    self.welcomeLabel.hidden = YES;
+    self.welcomeMessage.hidden = YES;
     
-    self.seconds = 0;
-    self.distance = 0;
+    self.runTime = 0;
+    self.runDistance = 0;
     self.runLocations =  [NSMutableArray array];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     
@@ -87,8 +87,8 @@ static NSString * const detailSegue = @"userRunDetails";
     
     Run *userRun = [NSEntityDescription insertNewObjectForEntityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
     userRun.timestamp = [NSDate date];
-    userRun.duration = self.seconds;
-    userRun.distance = self.distance;
+    userRun.duration = self.runTime;
+    userRun.distance = self.runDistance;
     
     NSMutableArray *locationsCollection = [NSMutableArray array];
     for (CLLocation *location in self.runLocations) {
@@ -139,10 +139,10 @@ static NSString * const detailSegue = @"userRunDetails";
 }
 
 -(void)updateTimer {
-    self.seconds++;
-    self.timeLabel.text = [NSString stringWithFormat:@"Time: %@", [ToString stringFromSecondCount:self.seconds usingLongFormat:NO]];
-    self.distanceLabel.text =  [NSString stringWithFormat:@"Distane: %@", [ToString stringFromDistance:self.distance]];
-    self.paceLabel.text = [NSString stringWithFormat:@"Pace: %@", [ToString stringFromAvgPace:self.distance overTime:self.seconds]];
+    self.runTime++;
+    self.time.text = [NSString stringWithFormat:@"Time: %@", [ToString stringFromSecondCount:self.runTime usingLongFormat:NO]];
+    self.distance.text =  [NSString stringWithFormat:@"Distane: %@", [ToString stringFromDistance:self.runDistance]];
+    self.pace.text = [NSString stringWithFormat:@"Pace: %@", [ToString stringFromAvgPace:self.runDistance overTime:self.runTime]];
 }
 
 #pragma mark - Location Manager Functions
@@ -151,7 +151,7 @@ static NSString * const detailSegue = @"userRunDetails";
     for (CLLocation *singleLoaction in locations) {
         if (singleLoaction.horizontalAccuracy < 20) { // try with verical
             if (self.runLocations.count > 0) {
-                self.distance += [singleLoaction distanceFromLocation:self.runLocations.lastObject];
+                self.runDistance += [singleLoaction distanceFromLocation:self.runLocations.lastObject];
             }
             
             [self.runLocations addObject:singleLoaction];
