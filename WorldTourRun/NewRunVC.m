@@ -12,12 +12,15 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Location+CoreDataClass.h"
 #import "ToString.h"
+#import <MapKit/MapKit.h>
 
 static NSString * const detailSegue = @"userRunDetails";
 
-@interface NewRunVC () <CLLocationManagerDelegate>
+@interface NewRunVC () <CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (nonatomic, strong) Run *userRun;
+
+@property (nonatomic, weak) IBOutlet MKMapView *mapView;
 
 @property float runDistance;
 @property int runTime;
@@ -40,6 +43,7 @@ static NSString * const detailSegue = @"userRunDetails";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.locationManager requestWhenInUseAuthorization];
+    self.mapView.delegate = self;
 
 }
 
@@ -56,6 +60,9 @@ static NSString * const detailSegue = @"userRunDetails";
     self.distance.hidden = YES;
     self.pace.hidden = YES;
     self.stopButton.hidden = YES;
+    
+    self.mapView.hidden = YES;
+
 }
 
 -(IBAction)startPressed:(id)sender {
@@ -73,6 +80,8 @@ static NSString * const detailSegue = @"userRunDetails";
     self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     
     [self updateLocactions];
+    
+    self.mapView.hidden = NO;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -148,10 +157,27 @@ static NSString * const detailSegue = @"userRunDetails";
 #pragma mark - Location Manager Functions
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    
     for (CLLocation *singleLoaction in locations) {
-        if (singleLoaction.horizontalAccuracy < 20) { // try with verical
+        
+        NSDate *eventDate = singleLoaction.timestamp;
+        
+        NSTimeInterval timeInterval = [eventDate timeIntervalSinceNow];
+        
+        if (fabs(timeInterval) < 5.0 && singleLoaction.horizontalAccuracy < 20) { // try with verical
+            
             if (self.runLocations.count > 0) {
                 self.runDistance += [singleLoaction distanceFromLocation:self.runLocations.lastObject];
+                
+                CLLocationCoordinate2D coords[2];
+                coords[0] = ((CLLocation *)self.runLocations.lastObject).coordinate;
+                coords[1] = singleLoaction.coordinate;
+                
+                MKCoordinateRegion region =
+                MKCoordinateRegionMakeWithDistance(singleLoaction.coordinate, 500, 500);
+                [self.mapView setRegion:region animated:YES];
+                
+                [self.mapView addOverlay:[MKPolyline polylineWithCoordinates:coords count:2]];
             }
             
             [self.runLocations addObject:singleLoaction];
@@ -178,6 +204,20 @@ static NSString * const detailSegue = @"userRunDetails";
     self.locationManager.distanceFilter = 15;
     
     [self.locationManager startUpdatingLocation];
+}
+
+#pragma mark - Map View Methods
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay
+{
+    if ([overlay isKindOfClass:[MKPolyline class]]) {
+        MKPolyline *polyLine = (MKPolyline *)overlay;
+        MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
+        renderer.strokeColor = [UIColor greenColor];
+        renderer.lineWidth = 10;
+        return renderer;
+    }
+    return nil;
 }
 
 #pragma mark - Segue

@@ -131,7 +131,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="53"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hFi-OK-rcm" id="3bJ-el-oNG">
-                                    <frame key="frameInset" width="375" height="52"/>
+                                    <frame key="frameInset" width="375" height="53"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -266,22 +266,26 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohO-Ja-6zG">
-                                <frame key="frameInset" minX="131" minY="424" width="138" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="startPressed:" destination="roJ-HL-4Zn" eventType="touchUpInside" id="bbS-Of-O9P"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdk-g0-mwv">
-                                <frame key="frameInset" minX="131" minY="482" width="138" height="30"/>
+                                <frame key="frameInset" minX="118" minY="610" width="138" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
                                     <action selector="stopPressed:" destination="roJ-HL-4Zn" eventType="touchUpInside" id="dux-R4-Vb7"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2Bg-s9-t4r">
+                                <frame key="frameInset" minY="269" width="375" height="252"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohO-Ja-6zG">
+                                <frame key="frameInset" minX="118" minY="554" width="138" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startPressed:" destination="roJ-HL-4Zn" eventType="touchUpInside" id="bbS-Of-O9P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -291,8 +295,8 @@
                                 <exclude reference="yUz-5U-O8x"/>
                                 <exclude reference="GJh-su-4dt"/>
                                 <exclude reference="X2V-B9-9tK"/>
-                                <exclude reference="ohO-Ja-6zG"/>
                                 <exclude reference="bdk-g0-mwv"/>
+                                <exclude reference="ohO-Ja-6zG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -300,13 +304,14 @@
                                 <include reference="yUz-5U-O8x"/>
                                 <include reference="GJh-su-4dt"/>
                                 <include reference="X2V-B9-9tK"/>
-                                <include reference="ohO-Ja-6zG"/>
                                 <include reference="bdk-g0-mwv"/>
+                                <include reference="ohO-Ja-6zG"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="distance" destination="yUz-5U-O8x" id="KER-fC-4tH"/>
+                        <outlet property="mapView" destination="2Bg-s9-t4r" id="4UZ-LU-CxU"/>
                         <outlet property="pace" destination="X2V-B9-9tK" id="xYY-eY-oC5"/>
                         <outlet property="startButton" destination="ohO-Ja-6zG" id="c1p-ac-7aB"/>
                         <outlet property="stopButton" destination="bdk-g0-mwv" id="72C-JX-iYm"/>
@@ -316,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkZ-LV-Z6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-54" y="107"/>
+            <point key="canvasLocation" x="-55.200000000000003" y="106.59670164917542"/>
         </scene>
     </scenes>
 </document>
