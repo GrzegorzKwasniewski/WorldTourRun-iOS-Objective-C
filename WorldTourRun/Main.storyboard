@@ -288,6 +288,17 @@
                                     <action selector="startPressed:" destination="roJ-HL-4Zn" eventType="touchUpInside" id="bbS-Of-O9P"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-mJ-FnP">
+                                <frame key="frameInset" minX="206" minY="135" width="153" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVM-Rs-cQH">
+                                <frame key="frameInset" minX="229" minY="164" width="107" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <variation key="default">
@@ -311,8 +322,10 @@
                     </view>
                     <connections>
                         <outlet property="distance" destination="yUz-5U-O8x" id="KER-fC-4tH"/>
+                        <outlet property="height" destination="H4c-mJ-FnP" id="fHK-Af-bS8"/>
                         <outlet property="mapView" destination="2Bg-s9-t4r" id="4UZ-LU-CxU"/>
                         <outlet property="pace" destination="X2V-B9-9tK" id="xYY-eY-oC5"/>
+                        <outlet property="runDifficulty" destination="MVM-Rs-cQH" id="o8E-3N-BeF"/>
                         <outlet property="startButton" destination="ohO-Ja-6zG" id="c1p-ac-7aB"/>
                         <outlet property="stopButton" destination="bdk-g0-mwv" id="72C-JX-iYm"/>
                         <outlet property="time" destination="GJh-su-4dt" id="JLs-NM-236"/>

@@ -24,15 +24,18 @@ static NSString * const detailSegue = @"userRunDetails";
 
 @property float runDistance;
 @property int runTime;
+@property double runHeight;
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) NSMutableArray *runLocations;
 @property (nonatomic, strong) NSTimer *timer;
 
+@property (nonatomic, weak) IBOutlet UIImageView *runDifficulty;
 @property (nonatomic, weak) IBOutlet UILabel *welcomeMessage;
 @property (nonatomic, weak) IBOutlet UILabel *distance;
 @property (nonatomic, weak) IBOutlet UILabel *pace;
 @property (nonatomic, weak) IBOutlet UILabel *time;
+@property (nonatomic, weak) IBOutlet UILabel *height;
 @property (nonatomic, weak) IBOutlet UIButton *startButton;
 @property (nonatomic, weak) IBOutlet UIButton *stopButton;
 
@@ -152,6 +155,7 @@ static NSString * const detailSegue = @"userRunDetails";
     self.time.text = [NSString stringWithFormat:@"Time: %@", [ToString stringFromSecondCount:self.runTime usingLongFormat:NO]];
     self.distance.text =  [NSString stringWithFormat:@"Distane: %@", [ToString stringFromDistance:self.runDistance]];
     self.pace.text = [NSString stringWithFormat:@"Pace: %@", [ToString stringFromAvgPace:self.runDistance overTime:self.runTime]];
+    self.height.text = [NSString stringWithFormat:@"Height: %0.3f", self.runHeight];
 }
 
 #pragma mark - Location Manager Functions
@@ -168,6 +172,11 @@ static NSString * const detailSegue = @"userRunDetails";
             
             if (self.runLocations.count > 0) {
                 self.runDistance += [singleLoaction distanceFromLocation:self.runLocations.lastObject];
+                
+                float heightDifference = self.runHeight - singleLoaction.altitude;
+                
+                // if difference in heights is greater than 0.5 m, than this is hard run
+                self.runDifficulty.image = (heightDifference > 0.5) ? [UIImage imageNamed:@"pixel_1"] : [UIImage imageNamed:@"pixel_2"];
                 
                 CLLocationCoordinate2D coords[2];
                 coords[0] = ((CLLocation *)self.runLocations.lastObject).coordinate;
