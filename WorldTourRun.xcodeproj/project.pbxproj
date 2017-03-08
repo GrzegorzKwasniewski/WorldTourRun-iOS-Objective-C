@@ -29,6 +29,9 @@
 		714FB9AD1E3FBF0A00FC6A95 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714FB9AC1E3FBF0A00FC6A95 /* MapKit.framework */; };
 		714FB9B31E3FE9B500FC6A95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714FB9B21E3FE9B500FC6A95 /* Main.storyboard */; };
 		7171C4961E4C9351005BA23C /* CoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7171C4951E4C9351005BA23C /* CoreDataService.m */; };
+		71FAE4821E6D853D0066803B /* cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71FAE4811E6D853D0066803B /* cities.txt */; };
+		71FAE4881E6D85840066803B /* CityTrophy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4871E6D85840066803B /* CityTrophy.m */; };
+		71FAE48C1E6D86170066803B /* CityTrophyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE48B1E6D86170066803B /* CityTrophyController.m */; };
 		E24A9D858FF30E0CD2B902D9 /* libPods-WorldTourRun.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5251D5EF45FAD95ECD4D1E21 /* libPods-WorldTourRun.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +77,11 @@
 		714FB9B21E3FE9B500FC6A95 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7171C4941E4C9351005BA23C /* CoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataService.h; sourceTree = "<group>"; };
 		7171C4951E4C9351005BA23C /* CoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataService.m; sourceTree = "<group>"; };
+		71FAE4811E6D853D0066803B /* cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities.txt; sourceTree = "<group>"; };
+		71FAE4861E6D85840066803B /* CityTrophy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTrophy.h; sourceTree = "<group>"; };
+		71FAE4871E6D85840066803B /* CityTrophy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTrophy.m; sourceTree = "<group>"; };
+		71FAE48A1E6D86170066803B /* CityTrophyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTrophyController.h; sourceTree = "<group>"; };
+		71FAE48B1E6D86170066803B /* CityTrophyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTrophyController.m; sourceTree = "<group>"; };
 		E413F6C04DE9F3AC703E51D8 /* Pods-WorldTourRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldTourRun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldTourRun/Pods-WorldTourRun.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +134,7 @@
 				714FB9B11E3FC00F00FC6A95 /* Storyboards */,
 				714FB9B01E3FBFCA00FC6A95 /* Model */,
 				714FB9AF1E3FBFC100FC6A95 /* View */,
+				71FAE47E1E6D846A0066803B /* Resources */,
 				7141F7EF1E43CB11002A909C /* Services */,
 				714FB9851E3FBACD00FC6A95 /* Supporting Files */,
 			);
@@ -183,6 +192,7 @@
 		714FB9B01E3FBFCA00FC6A95 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				71FAE4891E6D85CC0066803B /* Awards */,
 				7139D6A51E4A46E100416D51 /* SheduledRuns+CoreDataClass.h */,
 				7139D6A61E4A46E100416D51 /* SheduledRuns+CoreDataClass.m */,
 				7139D6A71E4A46E100416D51 /* SheduledRuns+CoreDataProperties.h */,
@@ -207,6 +217,25 @@
 				714FB9961E3FBACD00FC6A95 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		71FAE47E1E6D846A0066803B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				71FAE4811E6D853D0066803B /* cities.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		71FAE4891E6D85CC0066803B /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				71FAE4861E6D85840066803B /* CityTrophy.h */,
+				71FAE4871E6D85840066803B /* CityTrophy.m */,
+				71FAE48A1E6D86170066803B /* CityTrophyController.h */,
+				71FAE48B1E6D86170066803B /* CityTrophyController.m */,
+			);
+			name = Awards;
 			sourceTree = "<group>";
 		};
 		815384D090D0C49DD4F4DFD6 /* Pods */ = {
@@ -253,6 +282,7 @@
 					714FB9811E3FBACD00FC6A95 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 7K692Z62S3;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -287,6 +317,7 @@
 			files = (
 				714FB9981E3FBACD00FC6A95 /* LaunchScreen.storyboard in Resources */,
 				7141F7EE1E43C5B4002A909C /* GoogleService-Info.plist in Resources */,
+				71FAE4821E6D853D0066803B /* cities.txt in Resources */,
 				714FB9951E3FBACD00FC6A95 /* Assets.xcassets in Resources */,
 				714FB9B31E3FE9B500FC6A95 /* Main.storyboard in Resources */,
 			);
@@ -349,10 +380,12 @@
 			files = (
 				714FB9A91E3FBE7E00FC6A95 /* Run+CoreDataClass.m in Sources */,
 				714FB9A81E3FBE7E00FC6A95 /* Location+CoreDataProperties.m in Sources */,
+				71FAE4881E6D85840066803B /* CityTrophy.m in Sources */,
 				7139D6AA1E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m in Sources */,
 				714FB9931E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld in Sources */,
 				7141F7BE1E4119DE002A909C /* RunDetailVC.m in Sources */,
 				714FB9AA1E3FBE7E00FC6A95 /* Run+CoreDataProperties.m in Sources */,
+				71FAE48C1E6D86170066803B /* CityTrophyController.m in Sources */,
 				7141F7F21E43CB57002A909C /* ToString.m in Sources */,
 				714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */,
 				7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */,
@@ -474,12 +507,16 @@
 			baseConfigurationReference = E413F6C04DE9F3AC703E51D8 /* Pods-WorldTourRun.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7K692Z62S3;
 				INFOPLIST_FILE = WorldTourRun/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WorldTourRun/WorldTourRun-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -488,12 +525,15 @@
 			baseConfigurationReference = 5B36972AAB13C475A239AF3A /* Pods-WorldTourRun.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7K692Z62S3;
 				INFOPLIST_FILE = WorldTourRun/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WorldTourRun/WorldTourRun-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

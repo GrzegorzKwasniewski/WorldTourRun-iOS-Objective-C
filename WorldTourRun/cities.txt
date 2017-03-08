@@ -1,0 +1,1 @@
+[{"id":"1","name":"Moscow","information":"Moscow City","imageName":"moscow.jpg","distance":"0"},{"id":"1","name":"London","information":"London City","imageName":"london.jpg","distance":"0"}]
