@@ -134,7 +134,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="53"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hFi-OK-rcm" id="3bJ-el-oNG">
-                                    <frame key="frameInset" width="375" height="53"/>
+                                    <frame key="frameInset" width="375" height="52"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -236,16 +236,16 @@
             </objects>
             <point key="canvasLocation" x="708" y="107"/>
         </scene>
-        <!--Table View Controller-->
+        <!--TrophiesVC-->
         <scene sceneID="XNm-zZ-rHT">
             <objects>
-                <tableViewController id="RBK-OO-2n8" sceneMemberID="viewController">
+                <tableViewController id="RBK-OO-2n8" customClass="TrophiesVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="5LS-oP-pVM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTrophy" rowHeight="120" id="kJe-SA-qp1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTrophy" rowHeight="120" id="kJe-SA-qp1" customClass="CellTrophy">
                                 <rect key="frame" x="0.0" y="92" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kJe-SA-qp1" id="Qgs-Z2-TPG">
@@ -263,9 +263,19 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMD-tL-4IZ">
+                                            <frame key="frameInset" minX="166" minY="65" width="201" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="name" destination="oWY-26-bMI" id="uai-te-exE"/>
+                                    <outlet property="trophyDescription" destination="GMD-tL-4IZ" id="vs1-fS-Lnx"/>
+                                    <outlet property="trophyImage" destination="ybF-7m-CkT" id="sOa-RT-FIA"/>
                                     <segue destination="SzW-xl-nd3" kind="show" id="3RJ-e5-QJo"/>
                                 </connections>
                             </tableViewCell>

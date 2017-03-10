@@ -9,8 +9,12 @@
 #import "StartScreenVC.h"
 #import "NewRunVC.h"
 #import "ScheduleRunsVC.h"
+#import "TrophiesVC.h"
+#import "CityTrophyController.h"
 
 @interface StartScreenVC ()
+
+@property (strong, nonatomic) NSArray *usersRuns;
 
 @end
 
@@ -24,11 +28,21 @@
     [self.bannerView loadRequest:[GADRequest request]];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
+    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    
+    self.usersRuns = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
 }
+
 
 // pass managed contex for CoreData
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -38,6 +52,8 @@
     } else if ([nextVC isKindOfClass:[ScheduleRunsVC class]]) {
         ((ScheduleRunsVC *) nextVC).managedObjectContext = self.managedObjectContext;
         NSLog(@"REDAME");
+    } else if ([nextVC isKindOfClass:[TrophiesVC class]]) {
+        ((TrophiesVC *) nextVC).trophiesInfo = [[CityTrophyController sharedInstance] trophiesInfo:self.usersRuns];
     }
 }
 
