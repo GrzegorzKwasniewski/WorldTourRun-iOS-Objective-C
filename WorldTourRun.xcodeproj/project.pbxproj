@@ -32,6 +32,9 @@
 		71FAE4821E6D853D0066803B /* cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71FAE4811E6D853D0066803B /* cities.txt */; };
 		71FAE4881E6D85840066803B /* CityTrophy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4871E6D85840066803B /* CityTrophy.m */; };
 		71FAE48C1E6D86170066803B /* CityTrophyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE48B1E6D86170066803B /* CityTrophyController.m */; };
+		71FAE4911E7193CE0066803B /* TrophyStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4901E7193CE0066803B /* TrophyStatus.m */; };
+		71FAE4951E72EA730066803B /* CellTrophy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4941E72EA730066803B /* CellTrophy.m */; };
+		71FAE4981E72EB020066803B /* TrophiesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4971E72EB020066803B /* TrophiesVC.m */; };
 		E24A9D858FF30E0CD2B902D9 /* libPods-WorldTourRun.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5251D5EF45FAD95ECD4D1E21 /* libPods-WorldTourRun.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +85,12 @@
 		71FAE4871E6D85840066803B /* CityTrophy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTrophy.m; sourceTree = "<group>"; };
 		71FAE48A1E6D86170066803B /* CityTrophyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTrophyController.h; sourceTree = "<group>"; };
 		71FAE48B1E6D86170066803B /* CityTrophyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTrophyController.m; sourceTree = "<group>"; };
+		71FAE48F1E7193CE0066803B /* TrophyStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrophyStatus.h; sourceTree = "<group>"; };
+		71FAE4901E7193CE0066803B /* TrophyStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrophyStatus.m; sourceTree = "<group>"; };
+		71FAE4931E72EA730066803B /* CellTrophy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTrophy.h; sourceTree = "<group>"; };
+		71FAE4941E72EA730066803B /* CellTrophy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTrophy.m; sourceTree = "<group>"; };
+		71FAE4961E72EB020066803B /* TrophiesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrophiesVC.h; sourceTree = "<group>"; };
+		71FAE4971E72EB020066803B /* TrophiesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrophiesVC.m; sourceTree = "<group>"; };
 		E413F6C04DE9F3AC703E51D8 /* Pods-WorldTourRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldTourRun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldTourRun/Pods-WorldTourRun.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +185,8 @@
 				7141F7E91E437753002A909C /* AdMobDemo.m */,
 				7139D6A21E4A432A00416D51 /* ScheduleRunsVC.h */,
 				7139D6A31E4A432A00416D51 /* ScheduleRunsVC.m */,
+				71FAE4961E72EB020066803B /* TrophiesVC.h */,
+				71FAE4971E72EB020066803B /* TrophiesVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -183,6 +194,7 @@
 		714FB9AF1E3FBFC100FC6A95 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				71FAE4921E72EA5E0066803B /* Cells */,
 				7139D6AB1E4B188E00416D51 /* CustomAlerts.h */,
 				7139D6AC1E4B188E00416D51 /* CustomAlerts.m */,
 			);
@@ -234,8 +246,19 @@
 				71FAE4871E6D85840066803B /* CityTrophy.m */,
 				71FAE48A1E6D86170066803B /* CityTrophyController.h */,
 				71FAE48B1E6D86170066803B /* CityTrophyController.m */,
+				71FAE48F1E7193CE0066803B /* TrophyStatus.h */,
+				71FAE4901E7193CE0066803B /* TrophyStatus.m */,
 			);
 			name = Awards;
+			sourceTree = "<group>";
+		};
+		71FAE4921E72EA5E0066803B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				71FAE4931E72EA730066803B /* CellTrophy.h */,
+				71FAE4941E72EA730066803B /* CellTrophy.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		815384D090D0C49DD4F4DFD6 /* Pods */ = {
@@ -381,6 +404,7 @@
 				714FB9A91E3FBE7E00FC6A95 /* Run+CoreDataClass.m in Sources */,
 				714FB9A81E3FBE7E00FC6A95 /* Location+CoreDataProperties.m in Sources */,
 				71FAE4881E6D85840066803B /* CityTrophy.m in Sources */,
+				71FAE4911E7193CE0066803B /* TrophyStatus.m in Sources */,
 				7139D6AA1E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m in Sources */,
 				714FB9931E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld in Sources */,
 				7141F7BE1E4119DE002A909C /* RunDetailVC.m in Sources */,
@@ -390,10 +414,12 @@
 				714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */,
 				7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */,
 				7171C4961E4C9351005BA23C /* CoreDataService.m in Sources */,
+				71FAE4951E72EA730066803B /* CellTrophy.m in Sources */,
 				714FB98A1E3FBACD00FC6A95 /* AppDelegate.m in Sources */,
 				7139D6AD1E4B188E00416D51 /* CustomAlerts.m in Sources */,
 				7139D6A91E4A46E100416D51 /* SheduledRuns+CoreDataClass.m in Sources */,
 				714FB9871E3FBACD00FC6A95 /* main.m in Sources */,
+				71FAE4981E72EB020066803B /* TrophiesVC.m in Sources */,
 				7141F7EA1E437753002A909C /* AdMobDemo.m in Sources */,
 				714FB9A71E3FBE7E00FC6A95 /* Location+CoreDataClass.m in Sources */,
 				7139D6A41E4A432A00416D51 /* ScheduleRunsVC.m in Sources */,

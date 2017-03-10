@@ -10,4 +10,7 @@
 
 @interface CityTrophyController : NSObject
 
++ (CityTrophyController *)sharedInstance;
+- (NSArray *)trophiesInfo:(NSArray *)userRuns;
+
 @end
