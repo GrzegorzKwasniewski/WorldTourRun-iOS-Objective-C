@@ -30,6 +30,8 @@
 		714FB9B31E3FE9B500FC6A95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714FB9B21E3FE9B500FC6A95 /* Main.storyboard */; };
 		7171C4961E4C9351005BA23C /* CoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7171C4951E4C9351005BA23C /* CoreDataService.m */; };
 		718FAE721E75499D00E1D5CC /* TrophiesDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE711E75499D00E1D5CC /* TrophiesDetailsVC.m */; };
+		718FAE791E759F0200E1D5CC /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE781E759F0200E1D5CC /* CustomButton.m */; };
+		718FAE7C1E75AECD00E1D5CC /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE7B1E75AECD00E1D5CC /* CustomView.m */; };
 		71FAE4821E6D853D0066803B /* cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71FAE4811E6D853D0066803B /* cities.txt */; };
 		71FAE4881E6D85840066803B /* CityTrophy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4871E6D85840066803B /* CityTrophy.m */; };
 		71FAE48C1E6D86170066803B /* CityTrophyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE48B1E6D86170066803B /* CityTrophyController.m */; };
@@ -83,6 +85,10 @@
 		7171C4951E4C9351005BA23C /* CoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataService.m; sourceTree = "<group>"; };
 		718FAE701E75499D00E1D5CC /* TrophiesDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrophiesDetailsVC.h; sourceTree = "<group>"; };
 		718FAE711E75499D00E1D5CC /* TrophiesDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrophiesDetailsVC.m; sourceTree = "<group>"; };
+		718FAE771E759F0200E1D5CC /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		718FAE781E759F0200E1D5CC /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		718FAE7A1E75AECD00E1D5CC /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		718FAE7B1E75AECD00E1D5CC /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		71FAE4811E6D853D0066803B /* cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities.txt; sourceTree = "<group>"; };
 		71FAE4861E6D85840066803B /* CityTrophy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTrophy.h; sourceTree = "<group>"; };
 		71FAE4871E6D85840066803B /* CityTrophy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTrophy.m; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 		714FB9AF1E3FBFC100FC6A95 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				718FAE731E758FAB00E1D5CC /* UI */,
 				71FAE4921E72EA5E0066803B /* Cells */,
 				7139D6AB1E4B188E00416D51 /* CustomAlerts.h */,
 				7139D6AC1E4B188E00416D51 /* CustomAlerts.m */,
@@ -234,6 +241,17 @@
 				714FB9961E3FBACD00FC6A95 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		718FAE731E758FAB00E1D5CC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				718FAE771E759F0200E1D5CC /* CustomButton.h */,
+				718FAE781E759F0200E1D5CC /* CustomButton.m */,
+				718FAE7A1E75AECD00E1D5CC /* CustomView.h */,
+				718FAE7B1E75AECD00E1D5CC /* CustomView.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		71FAE47E1E6D846A0066803B /* Resources */ = {
@@ -417,6 +435,7 @@
 				718FAE721E75499D00E1D5CC /* TrophiesDetailsVC.m in Sources */,
 				71FAE48C1E6D86170066803B /* CityTrophyController.m in Sources */,
 				7141F7F21E43CB57002A909C /* ToString.m in Sources */,
+				718FAE791E759F0200E1D5CC /* CustomButton.m in Sources */,
 				714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */,
 				7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */,
 				7171C4961E4C9351005BA23C /* CoreDataService.m in Sources */,
@@ -425,6 +444,7 @@
 				7139D6AD1E4B188E00416D51 /* CustomAlerts.m in Sources */,
 				7139D6A91E4A46E100416D51 /* SheduledRuns+CoreDataClass.m in Sources */,
 				714FB9871E3FBACD00FC6A95 /* main.m in Sources */,
+				718FAE7C1E75AECD00E1D5CC /* CustomView.m in Sources */,
 				71FAE4981E72EB020066803B /* TrophiesVC.m in Sources */,
 				7141F7EA1E437753002A909C /* AdMobDemo.m in Sources */,
 				714FB9A71E3FBE7E00FC6A95 /* Location+CoreDataClass.m in Sources */,

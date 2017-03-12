@@ -59,7 +59,7 @@
     NSManagedObject *name = [self.scheduledRuns objectAtIndex:indexPath.row];
     self.scheduledRunName = [name valueForKey:@"name"];
 
-    cell.backgroundColor = [UIColor greenColor];
+    //cell.backgroundColor = [UIColor greenColor];
     cell.textLabel.text = self.scheduledRunName;
     
     if (![self isRunReminderSet:self.scheduledRunName]) {

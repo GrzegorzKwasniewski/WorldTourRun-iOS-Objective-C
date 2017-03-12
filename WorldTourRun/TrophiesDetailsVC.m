@@ -30,9 +30,7 @@
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
-    
-    CGAffineTransform transform = CGAffineTransformMakeRotation(M_PI/8);
-    
+        
     self.trophyName.text = self.trophyStatus.trophy.cityName;
     self.runDistance.text = [ToString stringFromDistance:self.trophyStatus.trophy.distanceToGetTrophy];
     self.dateEarned.text = [NSString stringWithFormat:@"Reached on %@" , [formatter stringFromDate:self.trophyStatus.endedRun.timestamp]];

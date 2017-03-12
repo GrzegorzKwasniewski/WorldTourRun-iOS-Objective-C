@@ -23,6 +23,18 @@
     StartScreenVC *controller = (StartScreenVC *)navigationCOntroller.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:62.00/255.00 green:81.00/255.00 blue:181.00/255.00 alpha:1]];
+    
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+    shadow.shadowOffset = CGSizeMake(0, 1);
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
+                                                           shadow, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"Avenir Next" size:20.0], NSFontAttributeName, nil]];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
     [FIRApp configure];
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-3940256099942544~1458002511"];
     
