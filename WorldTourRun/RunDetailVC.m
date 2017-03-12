@@ -32,7 +32,7 @@
     
     self.mapView.delegate = self;
     
-    self.distance.text = [ToString stringFromDistance:(float)self.userRun.distance];
+    self.distance.text = [NSString stringWithFormat:@"Distance: %@", [ToString stringFromDistance:(float)self.userRun.distance]];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];

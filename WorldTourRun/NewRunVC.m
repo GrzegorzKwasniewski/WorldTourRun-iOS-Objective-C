@@ -62,16 +62,16 @@ static NSString * const detailSegue = @"userRunDetails";
     self.time.hidden = YES;
     self.distance.hidden = YES;
     self.pace.hidden = YES;
+    self.height.hidden = YES;
     self.stopButton.hidden = YES;
     
-    self.mapView.hidden = YES;
-
 }
 
 -(IBAction)startPressed:(id)sender {
     self.time.hidden = NO;
     self.distance.hidden = NO;
     self.pace.hidden = NO;
+    self.height.hidden = NO;
     self.stopButton.hidden = NO;
     
     self.startButton.hidden = YES;
@@ -152,7 +152,7 @@ static NSString * const detailSegue = @"userRunDetails";
 
 -(void)updateTimer {
     self.runTime++;
-    self.time.text = [NSString stringWithFormat:@"Time: %@", [ToString stringFromSecondCount:self.runTime usingLongFormat:NO]];
+    self.time.text = [NSString stringWithFormat:@"%@", [ToString stringFromSecondCount:self.runTime usingLongFormat:NO]];
     self.distance.text =  [NSString stringWithFormat:@"Distane: %@", [ToString stringFromDistance:self.runDistance]];
     self.pace.text = [NSString stringWithFormat:@"Pace: %@", [ToString stringFromAvgPace:self.runDistance overTime:self.runTime]];
     self.height.text = [NSString stringWithFormat:@"Height: %0.3f", self.runHeight];

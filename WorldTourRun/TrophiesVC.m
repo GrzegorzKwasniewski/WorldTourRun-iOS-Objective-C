@@ -16,8 +16,6 @@
 
 @interface TrophiesVC ()
 
-@property (strong, nonatomic) UIColor *blueColor;
-@property (strong, nonatomic) UIColor *orangeColor;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (assign, nonatomic) CGAffineTransform transform;
 
@@ -28,8 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.blueColor = [UIColor colorWithRed:1.0f green:20/255.0 blue:44/255.0 alpha:1.0f];
-    self.orangeColor = [UIColor colorWithRed:0.0f green:146/255.0 blue:78/255.0 alpha:1.0f];
     self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     self.transform = CGAffineTransformMakeRotation(M_PI/8);
@@ -57,16 +53,16 @@
     TrophyStatus *trophyStatus = [self.trophiesInfo objectAtIndex:indexPath.row];
     
     if (trophyStatus.endedRun) {
-        cell.name.textColor = self.orangeColor;
+        cell.name.textColor = [UIColor whiteColor];
         cell.name.text = trophyStatus.trophy.cityName;
-        cell.trophyDescription.textColor = self.orangeColor;
+        cell.trophyDescription.textColor = [UIColor whiteColor];
         cell.trophyDescription.text = [NSString stringWithFormat:@"Earned: %@", [self.dateFormatter stringFromDate:trophyStatus.endedRun.timestamp]];
         cell.trophyImage.image = [UIImage imageNamed:trophyStatus.trophy.cityImageName];
         cell.userInteractionEnabled = YES;
     } else {
-        cell.name.textColor = self.blueColor;
+        cell.name.textColor = [UIColor whiteColor];
         cell.name.text = @"?????";
-        cell.trophyDescription.textColor = self.orangeColor;
+        cell.trophyDescription.textColor = [UIColor whiteColor];
         cell.trophyDescription.text = [NSString stringWithFormat:@"Run %@ to Earn", [ToString stringFromDistance:trophyStatus.trophy.distanceToGetTrophy]];
         cell.trophyImage.image = [UIImage imageNamed:@"question_mark.jpg"];
         cell.userInteractionEnabled = NO;
