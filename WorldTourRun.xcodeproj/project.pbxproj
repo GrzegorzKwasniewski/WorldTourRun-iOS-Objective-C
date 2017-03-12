@@ -29,6 +29,7 @@
 		714FB9AD1E3FBF0A00FC6A95 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714FB9AC1E3FBF0A00FC6A95 /* MapKit.framework */; };
 		714FB9B31E3FE9B500FC6A95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714FB9B21E3FE9B500FC6A95 /* Main.storyboard */; };
 		7171C4961E4C9351005BA23C /* CoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7171C4951E4C9351005BA23C /* CoreDataService.m */; };
+		718FAE721E75499D00E1D5CC /* TrophiesDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE711E75499D00E1D5CC /* TrophiesDetailsVC.m */; };
 		71FAE4821E6D853D0066803B /* cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71FAE4811E6D853D0066803B /* cities.txt */; };
 		71FAE4881E6D85840066803B /* CityTrophy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4871E6D85840066803B /* CityTrophy.m */; };
 		71FAE48C1E6D86170066803B /* CityTrophyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE48B1E6D86170066803B /* CityTrophyController.m */; };
@@ -80,6 +81,8 @@
 		714FB9B21E3FE9B500FC6A95 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7171C4941E4C9351005BA23C /* CoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataService.h; sourceTree = "<group>"; };
 		7171C4951E4C9351005BA23C /* CoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataService.m; sourceTree = "<group>"; };
+		718FAE701E75499D00E1D5CC /* TrophiesDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrophiesDetailsVC.h; sourceTree = "<group>"; };
+		718FAE711E75499D00E1D5CC /* TrophiesDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrophiesDetailsVC.m; sourceTree = "<group>"; };
 		71FAE4811E6D853D0066803B /* cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities.txt; sourceTree = "<group>"; };
 		71FAE4861E6D85840066803B /* CityTrophy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTrophy.h; sourceTree = "<group>"; };
 		71FAE4871E6D85840066803B /* CityTrophy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTrophy.m; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 				7139D6A31E4A432A00416D51 /* ScheduleRunsVC.m */,
 				71FAE4961E72EB020066803B /* TrophiesVC.h */,
 				71FAE4971E72EB020066803B /* TrophiesVC.m */,
+				718FAE701E75499D00E1D5CC /* TrophiesDetailsVC.h */,
+				718FAE711E75499D00E1D5CC /* TrophiesDetailsVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 				714FB9931E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld in Sources */,
 				7141F7BE1E4119DE002A909C /* RunDetailVC.m in Sources */,
 				714FB9AA1E3FBE7E00FC6A95 /* Run+CoreDataProperties.m in Sources */,
+				718FAE721E75499D00E1D5CC /* TrophiesDetailsVC.m in Sources */,
 				71FAE48C1E6D86170066803B /* CityTrophyController.m in Sources */,
 				7141F7F21E43CB57002A909C /* ToString.m in Sources */,
 				714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */,

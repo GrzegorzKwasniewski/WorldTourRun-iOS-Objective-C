@@ -12,6 +12,7 @@
 #import "CellTrophy.h"
 #import "ToString.h"
 #import "Run+CoreDataClass.h"
+#import "TrophiesDetailsVC.h"
 
 @interface TrophiesVC ()
 
@@ -72,6 +73,15 @@
     }
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue destinationViewController] isKindOfClass:[TrophiesDetailsVC class]]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        TrophyStatus *trophyStatus = [self.trophiesInfo objectAtIndex:indexPath.row];
+        [(TrophiesDetailsVC *)[segue destinationViewController] setTrophyStatus:trophyStatus];
+    }
 }
 
 @end
