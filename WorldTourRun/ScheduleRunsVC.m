@@ -8,7 +8,7 @@
 
 #import "ScheduleRunsVC.h"
 #import "SheduledRuns+CoreDataClass.h"
-
+#import "BackgroundView.h"
 
 @interface ScheduleRunsVC ()
 
@@ -20,6 +20,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"README: %f", CGRectGetMaxY(self.view.bounds));
+    
+    // TODO: Can I use dependency injection here?
+    BackgroundView *back = [[BackgroundView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height / 2, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self.view addSubview:back];
+    [self.view sendSubviewToBack:back];
     
     [self checkForAuthorizationStatus];
     
