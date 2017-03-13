@@ -6,12 +6,17 @@
 //  Copyright © 2017 Grzegorz Kwaśniewski. All rights reserved.
 //
 
-#import "RunDetailVC.h"
 #import <MapKit/MapKit.h>
+#import <Social/Social.h>
+
+#import "RunDetailVC.h"
 #import "Run+CoreDataClass.h"
 #import "Location+CoreDataClass.h"
 #import "ToString.h"
 #import "CustomAlerts.h"
+#import "Strategy.h"
+#import "TwitterStrategy.h"
+#import "FacebookStrategy.h"
 
 @interface RunDetailVC () <MKMapViewDelegate>
 
@@ -20,6 +25,10 @@
 @property (nonatomic, weak) IBOutlet UILabel *distance;
 @property (nonatomic, weak) IBOutlet UILabel *pace;
 @property (nonatomic, weak) IBOutlet UILabel *time;
+
+@property (nonatomic, strong) Strategy *socialMediaStrategy;
+@property (nonatomic, strong) SLComposeViewController * socialMediaSheet;
+@property (nonatomic, strong) UIAlertController *alert;
 
 @end
 
@@ -46,12 +55,33 @@
     [self configureMapView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark Custom Functions
+
+-(IBAction)shareWithTwitter:(id)sender {
+
+    self.socialMediaStrategy = [[TwitterStrategy alloc] init];
+    [self shareOnSocialMediaWith:self.socialMediaStrategy];
+    
 }
 
-#pragma mark Custom Functions
+-(IBAction)shareWithFacebook:(id)sender {
+    
+    self.socialMediaStrategy = [[FacebookStrategy alloc] init];
+    [self shareOnSocialMediaWith:self.socialMediaStrategy];
+    
+}
+
+-(void)shareOnSocialMediaWith:(Strategy *)strategy {
+    
+    self.socialMediaSheet = [strategy createSheetWith:self.userRun];
+    
+    if (self.socialMediaSheet) {
+        [self presentViewController:self.socialMediaSheet animated:YES completion:nil];
+    } else {
+        self.alert = [CustomAlerts createAlertWithTitle:@"There is no account" withMessage:@"You need to assign account in Your settings"];
+        [self presentViewController:self.alert animated:YES completion:NULL];
+    }
+}
 
 - (void)setRun:(Run *)userRun {
     if (_userRun != userRun) {

@@ -21,8 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"README: %f", CGRectGetMaxY(self.view.bounds));
-    
     // TODO: Can I use dependency injection here?
     BackgroundView *back = [[BackgroundView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height / 2, self.view.bounds.size.width, self.view.bounds.size.height)];
     
@@ -67,7 +65,6 @@
     NSManagedObject *name = [self.scheduledRuns objectAtIndex:indexPath.row];
     self.scheduledRunName = [name valueForKey:@"name"];
 
-    //cell.backgroundColor = [UIColor greenColor];
     cell.textLabel.text = self.scheduledRunName;
     
     if (![self isRunReminderSet:self.scheduledRunName]) {
@@ -230,7 +227,7 @@
         // handle error
     }
     
-    NSString *message = (success) ? @"Reminder for Your Run was added!" : @"Something went wrong. Reminder was not added.";
+    NSString *message = (success) ? @"Reminder for Your Run was added!" : @"Something went wrong :( Reminder was not added.";
     
     UIAlertController *alert = [CustomAlerts createAlertWithTitle:message withMessage:@""];
     [self presentViewController:alert animated:YES completion:NULL];

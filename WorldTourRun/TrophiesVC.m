@@ -17,7 +17,6 @@
 @interface TrophiesVC ()
 
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
-@property (assign, nonatomic) CGAffineTransform transform;
 
 @end
 
@@ -28,7 +27,6 @@
     
     self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-    self.transform = CGAffineTransformMakeRotation(M_PI/8);
 }
 
 - (void)didReceiveMemoryWarning {

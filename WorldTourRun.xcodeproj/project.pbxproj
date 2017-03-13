@@ -33,6 +33,9 @@
 		718FAE791E759F0200E1D5CC /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE781E759F0200E1D5CC /* CustomButton.m */; };
 		718FAE7C1E75AECD00E1D5CC /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE7B1E75AECD00E1D5CC /* CustomView.m */; };
 		718FAE7F1E75E57100E1D5CC /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE7E1E75E57100E1D5CC /* BackgroundView.m */; };
+		718FAE871E772AF900E1D5CC /* Strategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE861E772AF900E1D5CC /* Strategy.m */; };
+		718FAE8A1E772C2000E1D5CC /* TwitterStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE891E772C2000E1D5CC /* TwitterStrategy.m */; };
+		718FAE8D1E77369100E1D5CC /* FacebookStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE8C1E77369100E1D5CC /* FacebookStrategy.m */; };
 		71FAE4821E6D853D0066803B /* cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71FAE4811E6D853D0066803B /* cities.txt */; };
 		71FAE4881E6D85840066803B /* CityTrophy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4871E6D85840066803B /* CityTrophy.m */; };
 		71FAE48C1E6D86170066803B /* CityTrophyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE48B1E6D86170066803B /* CityTrophyController.m */; };
@@ -92,6 +95,12 @@
 		718FAE7B1E75AECD00E1D5CC /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		718FAE7D1E75E57100E1D5CC /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
 		718FAE7E1E75E57100E1D5CC /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		718FAE851E772AF900E1D5CC /* Strategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Strategy.h; sourceTree = "<group>"; };
+		718FAE861E772AF900E1D5CC /* Strategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Strategy.m; sourceTree = "<group>"; };
+		718FAE881E772C2000E1D5CC /* TwitterStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterStrategy.h; sourceTree = "<group>"; };
+		718FAE891E772C2000E1D5CC /* TwitterStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterStrategy.m; sourceTree = "<group>"; };
+		718FAE8B1E77369100E1D5CC /* FacebookStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookStrategy.h; sourceTree = "<group>"; };
+		718FAE8C1E77369100E1D5CC /* FacebookStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookStrategy.m; sourceTree = "<group>"; };
 		71FAE4811E6D853D0066803B /* cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities.txt; sourceTree = "<group>"; };
 		71FAE4861E6D85840066803B /* CityTrophy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTrophy.h; sourceTree = "<group>"; };
 		71FAE4871E6D85840066803B /* CityTrophy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTrophy.m; sourceTree = "<group>"; };
@@ -126,6 +135,12 @@
 				7141F7F11E43CB57002A909C /* ToString.m */,
 				7171C4941E4C9351005BA23C /* CoreDataService.h */,
 				7171C4951E4C9351005BA23C /* CoreDataService.m */,
+				718FAE851E772AF900E1D5CC /* Strategy.h */,
+				718FAE861E772AF900E1D5CC /* Strategy.m */,
+				718FAE881E772C2000E1D5CC /* TwitterStrategy.h */,
+				718FAE891E772C2000E1D5CC /* TwitterStrategy.m */,
+				718FAE8B1E77369100E1D5CC /* FacebookStrategy.h */,
+				718FAE8C1E77369100E1D5CC /* FacebookStrategy.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -210,8 +225,7 @@
 			children = (
 				718FAE731E758FAB00E1D5CC /* UI */,
 				71FAE4921E72EA5E0066803B /* Cells */,
-				7139D6AB1E4B188E00416D51 /* CustomAlerts.h */,
-				7139D6AC1E4B188E00416D51 /* CustomAlerts.m */,
+				718FAE811E772A1600E1D5CC /* Alerts */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -220,19 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				71FAE4891E6D85CC0066803B /* Awards */,
-				7139D6A51E4A46E100416D51 /* SheduledRuns+CoreDataClass.h */,
-				7139D6A61E4A46E100416D51 /* SheduledRuns+CoreDataClass.m */,
-				7139D6A71E4A46E100416D51 /* SheduledRuns+CoreDataProperties.h */,
-				7139D6A81E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m */,
-				714FB99F1E3FBE7E00FC6A95 /* Location+CoreDataClass.h */,
-				714FB9A01E3FBE7E00FC6A95 /* Location+CoreDataClass.m */,
-				714FB9A11E3FBE7E00FC6A95 /* Location+CoreDataProperties.h */,
-				714FB9A21E3FBE7E00FC6A95 /* Location+CoreDataProperties.m */,
-				714FB9A31E3FBE7E00FC6A95 /* Run+CoreDataClass.h */,
-				714FB9A41E3FBE7E00FC6A95 /* Run+CoreDataClass.m */,
-				714FB9A51E3FBE7E00FC6A95 /* Run+CoreDataProperties.h */,
-				714FB9A61E3FBE7E00FC6A95 /* Run+CoreDataProperties.m */,
-				714FB9911E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld */,
+				718FAE801E7729DB00E1D5CC /* Core Data */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -257,6 +259,35 @@
 				718FAE7E1E75E57100E1D5CC /* BackgroundView.m */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		718FAE801E7729DB00E1D5CC /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				7139D6A51E4A46E100416D51 /* SheduledRuns+CoreDataClass.h */,
+				7139D6A61E4A46E100416D51 /* SheduledRuns+CoreDataClass.m */,
+				7139D6A71E4A46E100416D51 /* SheduledRuns+CoreDataProperties.h */,
+				7139D6A81E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m */,
+				714FB99F1E3FBE7E00FC6A95 /* Location+CoreDataClass.h */,
+				714FB9A01E3FBE7E00FC6A95 /* Location+CoreDataClass.m */,
+				714FB9A11E3FBE7E00FC6A95 /* Location+CoreDataProperties.h */,
+				714FB9A21E3FBE7E00FC6A95 /* Location+CoreDataProperties.m */,
+				714FB9A31E3FBE7E00FC6A95 /* Run+CoreDataClass.h */,
+				714FB9A41E3FBE7E00FC6A95 /* Run+CoreDataClass.m */,
+				714FB9A51E3FBE7E00FC6A95 /* Run+CoreDataProperties.h */,
+				714FB9A61E3FBE7E00FC6A95 /* Run+CoreDataProperties.m */,
+				714FB9911E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		718FAE811E772A1600E1D5CC /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				7139D6AB1E4B188E00416D51 /* CustomAlerts.h */,
+				7139D6AC1E4B188E00416D51 /* CustomAlerts.m */,
+			);
+			name = Alerts;
 			sourceTree = "<group>";
 		};
 		71FAE47E1E6D846A0066803B /* Resources */ = {
@@ -441,10 +472,13 @@
 				71FAE48C1E6D86170066803B /* CityTrophyController.m in Sources */,
 				7141F7F21E43CB57002A909C /* ToString.m in Sources */,
 				718FAE791E759F0200E1D5CC /* CustomButton.m in Sources */,
+				718FAE8D1E77369100E1D5CC /* FacebookStrategy.m in Sources */,
 				714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */,
 				7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */,
+				718FAE8A1E772C2000E1D5CC /* TwitterStrategy.m in Sources */,
 				7171C4961E4C9351005BA23C /* CoreDataService.m in Sources */,
 				71FAE4951E72EA730066803B /* CellTrophy.m in Sources */,
+				718FAE871E772AF900E1D5CC /* Strategy.m in Sources */,
 				714FB98A1E3FBACD00FC6A95 /* AppDelegate.m in Sources */,
 				7139D6AD1E4B188E00416D51 /* CustomAlerts.m in Sources */,
 				7139D6A91E4A46E100416D51 /* SheduledRuns+CoreDataClass.m in Sources */,
