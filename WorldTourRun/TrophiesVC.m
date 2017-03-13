@@ -13,6 +13,7 @@
 #import "ToString.h"
 #import "Run+CoreDataClass.h"
 #import "TrophiesDetailsVC.h"
+#import "BackgroundView.h"
 
 @interface TrophiesVC ()
 
@@ -24,6 +25,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    BackgroundView *background = [[BackgroundView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height / 2, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self.view addSubview:background];
+    [self.view sendSubviewToBack:background];
     
     self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setDateStyle:NSDateFormatterMediumStyle];

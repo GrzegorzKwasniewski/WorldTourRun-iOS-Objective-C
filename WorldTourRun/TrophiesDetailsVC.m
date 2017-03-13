@@ -35,23 +35,8 @@
     self.runDistance.text = [ToString stringFromDistance:self.trophyStatus.trophy.distanceToGetTrophy];
     self.dateEarned.text = [NSString stringWithFormat:@"Reached on %@" , [formatter stringFromDate:self.trophyStatus.endedRun.timestamp]];
     self.trophyImage.image = [UIImage imageNamed:self.trophyStatus.trophy.cityImageName];
-    self.topPace.text = [NSString stringWithFormat:@"Best: %@, %@", [ToString stringFromAvgPace:(float)self.trophyStatus.bestRun.distance overTime:(int)self.trophyStatus.bestRun.duration], [formatter stringFromDate:self.trophyStatus.bestRun.timestamp]];
+    self.topPace.text = [NSString stringWithFormat:@"Best: %@", [ToString stringFromAvgPace:(float)self.trophyStatus.bestRun.distance overTime:(int)self.trophyStatus.bestRun.duration]];
 
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

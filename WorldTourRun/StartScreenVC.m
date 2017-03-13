@@ -11,6 +11,7 @@
 #import "ScheduleRunsVC.h"
 #import "TrophiesVC.h"
 #import "CityTrophyController.h"
+#import "BackgroundView.h"
 
 @interface StartScreenVC ()
 
@@ -22,6 +23,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    BackgroundView *background = [[BackgroundView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height / 2, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self.view addSubview:background];
+    [self.view sendSubviewToBack:background];
     
     self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
     self.bannerView.rootViewController = self;

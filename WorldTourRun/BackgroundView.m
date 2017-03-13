@@ -42,7 +42,7 @@
     CGMutablePathRef firstLayer = CGPathCreateMutable();
     
     // this is starting point for the line
-    CGPathMoveToPoint(firstLayer, nil, 0, 160);
+    CGPathMoveToPoint(firstLayer, nil, -20, 160);
     
     // and those are control points to make a curve - it's is Quadratic curve so
     // You add one control point
@@ -54,7 +54,7 @@
     CGPathAddQuadCurveToPoint(firstLayer, nil, 340, 150, 350, 150);
     CGPathAddQuadCurveToPoint(firstLayer, nil, 380, 155, 410, 145);
     CGPathAddLineToPoint(firstLayer, nil, 410, rect.size.height + 10);
-    CGPathAddLineToPoint(firstLayer, nil, -10, rect.size.height + 10);
+    CGPathAddLineToPoint(firstLayer, nil, -20, rect.size.height + 10);
     CGPathCloseSubpath(firstLayer);
     
     CGContextAddPath(context, firstLayer);
