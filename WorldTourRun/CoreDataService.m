@@ -10,6 +10,7 @@
 
 @implementation CoreDataService
 
+NSString *const RUN = @"Run";
 NSString *const SCHEDULED_RUNS = @"ScheduledRuns";
 
 -(NSMutableArray *)fetchRequestFromEntity:(NSString *)entity inManagedObjectContext:(NSManagedObjectContext *)context {

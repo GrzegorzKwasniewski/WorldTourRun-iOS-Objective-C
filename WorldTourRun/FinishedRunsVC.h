@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoreDataService.h"
 
 @interface FinishedRunsVC : UITableViewController
+
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) CoreDataService *cdService;
+@property (strong, nonatomic) NSMutableArray *userRuns;
+
+@property (strong, nonatomic) NSDate *runDate;
+@property (strong, nonatomic) NSNumber *runDuration;
+@property (strong, nonatomic) NSNumber *runDistance;
+
 
 @end

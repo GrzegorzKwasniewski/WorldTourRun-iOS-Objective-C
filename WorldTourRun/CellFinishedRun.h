@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Run+CoreDataClass.h"
+#import "ToString.h"
 
 @interface CellFinishedRun : UITableViewCell
+
+@property (nonatomic, weak) IBOutlet UILabel *runDate;
+@property (nonatomic, weak) IBOutlet UILabel *runDuration;
+@property (nonatomic, weak) IBOutlet UILabel *runDistance;
+
+-(void)configureCellWith:(Run *)userRun;
 
 @end

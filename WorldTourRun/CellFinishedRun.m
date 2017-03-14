@@ -21,4 +21,14 @@
     // Configure the view for the selected state
 }
 
+-(void)configureCellWith:(Run *)userRun {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    
+    self.runDate.text = [dateFormatter stringFromDate:userRun.timestamp];
+    self.runDuration.text = [NSString stringWithFormat:@"Duration: %@", [ToString stringFromSecondCount:userRun.duration usingLongFormat:YES]];
+    self.runDistance.text = [NSString stringWithFormat:@"Distance: %@", [ToString stringFromDistance:userRun.distance]];
+}
+
 @end

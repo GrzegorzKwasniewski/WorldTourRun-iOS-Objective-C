@@ -9,6 +9,7 @@
 #import "StartScreenVC.h"
 #import "NewRunVC.h"
 #import "ScheduleRunsVC.h"
+#import "FinishedRunsVC.h"
 #import "TrophiesVC.h"
 #import "CityTrophyController.h"
 #import "BackgroundView.h"
@@ -57,7 +58,8 @@
         ((NewRunVC *) nextVC).managedObjectContext = self.managedObjectContext;
     } else if ([nextVC isKindOfClass:[ScheduleRunsVC class]]) {
         ((ScheduleRunsVC *) nextVC).managedObjectContext = self.managedObjectContext;
-        NSLog(@"REDAME");
+    } else if ([nextVC isKindOfClass:[FinishedRunsVC class]]) {
+        ((FinishedRunsVC *) nextVC).managedObjectContext = self.managedObjectContext;
     } else if ([nextVC isKindOfClass:[TrophiesVC class]]) {
         ((TrophiesVC *) nextVC).trophiesInfo = [[CityTrophyController sharedInstance] trophiesInfo:self.usersRuns];
     }

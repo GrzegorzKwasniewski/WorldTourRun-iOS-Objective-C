@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "SheduledRuns+CoreDataClass.h"
 
+extern NSString *const RUN;
 extern NSString *const SCHEDULED_RUNS;
 
 @interface CoreDataService : NSObject
