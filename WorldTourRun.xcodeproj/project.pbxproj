@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		710160421E787B4D00996654 /* FinishedRunsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 710160411E787B4D00996654 /* FinishedRunsVC.m */; };
+		710160451E787BC100996654 /* CellFinishedRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 710160441E787BC100996654 /* CellFinishedRun.m */; };
 		7139D6A41E4A432A00416D51 /* ScheduleRunsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6A31E4A432A00416D51 /* ScheduleRunsVC.m */; };
 		7139D6A91E4A46E100416D51 /* SheduledRuns+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6A61E4A46E100416D51 /* SheduledRuns+CoreDataClass.m */; };
 		7139D6AA1E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6A81E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m */; };
@@ -49,6 +51,10 @@
 /* Begin PBXFileReference section */
 		5251D5EF45FAD95ECD4D1E21 /* libPods-WorldTourRun.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldTourRun.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B36972AAB13C475A239AF3A /* Pods-WorldTourRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldTourRun.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorldTourRun/Pods-WorldTourRun.release.xcconfig"; sourceTree = "<group>"; };
+		710160401E787B4D00996654 /* FinishedRunsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedRunsVC.h; sourceTree = "<group>"; };
+		710160411E787B4D00996654 /* FinishedRunsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishedRunsVC.m; sourceTree = "<group>"; };
+		710160431E787BC100996654 /* CellFinishedRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellFinishedRun.h; sourceTree = "<group>"; };
+		710160441E787BC100996654 /* CellFinishedRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellFinishedRun.m; sourceTree = "<group>"; };
 		7139D6A21E4A432A00416D51 /* ScheduleRunsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleRunsVC.h; sourceTree = "<group>"; };
 		7139D6A31E4A432A00416D51 /* ScheduleRunsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleRunsVC.m; sourceTree = "<group>"; };
 		7139D6A51E4A46E100416D51 /* SheduledRuns+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SheduledRuns+CoreDataClass.h"; sourceTree = "<group>"; };
@@ -219,6 +225,8 @@
 				71FAE4971E72EB020066803B /* TrophiesVC.m */,
 				718FAE701E75499D00E1D5CC /* TrophiesDetailsVC.h */,
 				718FAE711E75499D00E1D5CC /* TrophiesDetailsVC.m */,
+				710160401E787B4D00996654 /* FinishedRunsVC.h */,
+				710160411E787B4D00996654 /* FinishedRunsVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -321,6 +329,8 @@
 			children = (
 				71FAE4931E72EA730066803B /* CellTrophy.h */,
 				71FAE4941E72EA730066803B /* CellTrophy.m */,
+				710160431E787BC100996654 /* CellFinishedRun.h */,
+				710160441E787BC100996654 /* CellFinishedRun.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -466,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				714FB9A91E3FBE7E00FC6A95 /* Run+CoreDataClass.m in Sources */,
+				710160421E787B4D00996654 /* FinishedRunsVC.m in Sources */,
 				714FB9A81E3FBE7E00FC6A95 /* Location+CoreDataProperties.m in Sources */,
 				71FAE4881E6D85840066803B /* CityTrophy.m in Sources */,
 				71FAE4911E7193CE0066803B /* TrophyStatus.m in Sources */,
@@ -475,6 +486,7 @@
 				714FB9AA1E3FBE7E00FC6A95 /* Run+CoreDataProperties.m in Sources */,
 				718FAE721E75499D00E1D5CC /* TrophiesDetailsVC.m in Sources */,
 				71FAE48C1E6D86170066803B /* CityTrophyController.m in Sources */,
+				710160451E787BC100996654 /* CellFinishedRun.m in Sources */,
 				7141F7F21E43CB57002A909C /* ToString.m in Sources */,
 				718FAE791E759F0200E1D5CC /* CustomButton.m in Sources */,
 				718FAE8D1E77369100E1D5CC /* FacebookStrategy.m in Sources */,
