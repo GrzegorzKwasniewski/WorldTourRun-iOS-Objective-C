@@ -7,8 +7,6 @@
 //
 
 #import "ScheduleRunsVC.h"
-#import "SheduledRuns+CoreDataClass.h"
-#import "BackgroundView.h"
 
 @interface ScheduleRunsVC ()
 
@@ -39,6 +37,10 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(getRunReminders)
                                                  name:EKEventStoreChangedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(addRunReminder:)
+                                                 name:SET_RUN_REMINDER
+                                               object:nil];
 }
 
 - (void)dealloc {
@@ -58,30 +60,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *cellIdentifier = @"Cell";
+    static NSString *cellIdentifier = @"CellScheduledRun";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    CellScheduledRun *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    SheduledRuns *scheduledRun = [self.scheduledRuns objectAtIndex:indexPath.row];
     
-    NSManagedObject *name = [self.scheduledRuns objectAtIndex:indexPath.row];
-    self.scheduledRunName = [name valueForKey:@"name"];
-
-    cell.textLabel.text = self.scheduledRunName;
-    
-    if (![self isRunReminderSet:self.scheduledRunName]) {
-        UIButton *reminderButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        reminderButton.frame = CGRectMake(0.0, 0.0, 100.0, 30.0);
-        [reminderButton setTitle:@"Reminde me" forState:UIControlStateNormal];
-        
-        [reminderButton addTarget:self action:@selector(addRemainder) forControlEvents:UIControlEventTouchUpInside];
-        
-        cell.accessoryView = reminderButton;
+    if (![self isRunReminderSet:scheduledRun.name]) {
+        [cell configureCellForNewRunReminder:scheduledRun];
     } else {
-        cell.accessoryView = nil;
-        
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", self.scheduledRunName];
-        NSArray *reminders = [self.runReminders filteredArrayUsingPredicate:predicate];
-        EKReminder *reminder = [reminders firstObject];
-        cell.imageView.image = (reminder.isCompleted) ? [UIImage imageNamed:@"pixel_1"] : [UIImage imageNamed:@"pixel_2"];
+        [cell configureCellWithSetReminder:self.runReminders scheduledRun:scheduledRun];
     }
     return cell;
 }
@@ -110,7 +97,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    CellScheduledRun *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     NSManagedObject *name = [self.scheduledRuns objectAtIndex:indexPath.row];
     self.scheduledRunName = [name valueForKey:@"name"];
@@ -209,7 +196,7 @@
     return _calendarWithReminders;
 }
 
--(void)addRemainder {
+-(void)addRunReminder:(NSNotification *)notification  {
     
     // TODO: Try to add date later
     
@@ -217,20 +204,23 @@
         return;
     }
     
-    EKReminder *runRemainder = [EKReminder reminderWithEventStore:self.eventStore];
-    runRemainder.title = self.scheduledRunName;
-    runRemainder.calendar = self.calendarWithReminders;
-    
-    NSError *error = nil;
-    BOOL success = [self.eventStore saveReminder:runRemainder commit:YES error:&error];
-    if (!success) {
-        // handle error
+    if ([notification.name isEqualToString:SET_RUN_REMINDER]) {
+        SheduledRuns *sheduledRun = notification.object;
+        EKReminder *runRemainder = [EKReminder reminderWithEventStore:self.eventStore];
+        runRemainder.title = sheduledRun.name;
+        runRemainder.calendar = self.calendarWithReminders;
+        
+        NSError *error = nil;
+        BOOL success = [self.eventStore saveReminder:runRemainder commit:YES error:&error];
+        if (!success) {
+            // handle error
+        }
+        
+        NSString *message = (success) ? @"Reminder for Your Run was added!" : @"Something went wrong :( Reminder was not added.";
+        
+        UIAlertController *alert = [CustomAlerts createAlertWithTitle:message withMessage:@""];
+        [self presentViewController:alert animated:YES completion:NULL];
     }
-    
-    NSString *message = (success) ? @"Reminder for Your Run was added!" : @"Something went wrong :( Reminder was not added.";
-    
-    UIAlertController *alert = [CustomAlerts createAlertWithTitle:message withMessage:@""];
-    [self presentViewController:alert animated:YES completion:NULL];
 }
 
 - (void)getRunReminders {

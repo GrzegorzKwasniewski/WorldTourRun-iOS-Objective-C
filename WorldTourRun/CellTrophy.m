@@ -10,4 +10,34 @@
 
 @implementation CellTrophy
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.name.textColor = [UIColor whiteColor];
+    self.trophyDescription.textColor = [UIColor whiteColor];
+    
+    self.dateFormatter = [[NSDateFormatter alloc] init];
+    [self.dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+}
+
+-(void)configureCellWithTrophyStatus:(TrophyStatus *)trophyStatus {
+    self.name.text = trophyStatus.trophy.cityName;
+    self.trophyDescription.text = [NSString stringWithFormat:@"Earned: %@", [self.dateFormatter stringFromDate:trophyStatus.endedRun.timestamp]];
+    self.trophyImage.image = [UIImage imageNamed:trophyStatus.trophy.cityImageName];
+    self.userInteractionEnabled = YES;
+}
+
+-(void)configureEmptyCell:(TrophyStatus *)trophyStatus {
+    self.name.text = @"?????";
+    self.trophyDescription.text = [NSString stringWithFormat:@"Run %@ to Earn", [ToString stringFromDistance:trophyStatus.trophy.distanceToGetTrophy]];
+    self.trophyImage.image = [UIImage imageNamed:@"question_mark.jpg"];
+    self.userInteractionEnabled = NO;
+}
+
+
+
 @end

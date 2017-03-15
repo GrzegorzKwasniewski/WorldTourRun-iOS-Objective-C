@@ -7,13 +7,7 @@
 //
 
 #import "TrophiesVC.h"
-#import "CityTrophy.h"
-#import "TrophyStatus.h"
 #import "CellTrophy.h"
-#import "ToString.h"
-#import "Run+CoreDataClass.h"
-#import "TrophiesDetailsVC.h"
-#import "BackgroundView.h"
 
 @interface TrophiesVC ()
 
@@ -57,19 +51,9 @@
     TrophyStatus *trophyStatus = [self.trophiesInfo objectAtIndex:indexPath.row];
     
     if (trophyStatus.endedRun) {
-        cell.name.textColor = [UIColor whiteColor];
-        cell.name.text = trophyStatus.trophy.cityName;
-        cell.trophyDescription.textColor = [UIColor whiteColor];
-        cell.trophyDescription.text = [NSString stringWithFormat:@"Earned: %@", [self.dateFormatter stringFromDate:trophyStatus.endedRun.timestamp]];
-        cell.trophyImage.image = [UIImage imageNamed:trophyStatus.trophy.cityImageName];
-        cell.userInteractionEnabled = YES;
+        [cell configureCellWithTrophyStatus:trophyStatus];
     } else {
-        cell.name.textColor = [UIColor whiteColor];
-        cell.name.text = @"?????";
-        cell.trophyDescription.textColor = [UIColor whiteColor];
-        cell.trophyDescription.text = [NSString stringWithFormat:@"Run %@ to Earn", [ToString stringFromDistance:trophyStatus.trophy.distanceToGetTrophy]];
-        cell.trophyImage.image = [UIImage imageNamed:@"question_mark.jpg"];
-        cell.userInteractionEnabled = NO;
+        [cell configureEmptyCell:trophyStatus];
     }
     
     return cell;

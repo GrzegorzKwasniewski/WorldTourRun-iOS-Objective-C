@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "CoreDataService.h"
 #import "CustomAlerts.h"
+#import "CellScheduledRun.h"
+#import "SheduledRuns+CoreDataClass.h"
+#import "BackgroundView.h"
 
 @import EventKit;
 
