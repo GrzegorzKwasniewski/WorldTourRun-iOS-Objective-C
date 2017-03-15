@@ -14,6 +14,14 @@
 
 @implementation ScheduleRunsVC
 
+// lazy initializer
+- (EKEventStore *)eventStore {
+    if (!_eventStore) {
+        _eventStore = [[EKEventStore alloc]init];
+    }
+    return _eventStore;
+}
+
 #pragma mark - View State
 
 - (void)viewDidLoad {
@@ -27,16 +35,21 @@
     
     [self checkForAuthorizationStatus];
     
-    self.cdService = [[CoreDataService alloc]init];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveNewRun:) name:SAVE_NEW_RUN_EVENT object:nil];
+    self.cdService = [[CoreDataService alloc] init];
     
     self.scheduledRuns = [self.cdService fetchRequestFromEntity:SCHEDULED_RUNS inManagedObjectContext:self.managedObjectContext];
     
     [self getRunReminders];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(getRunReminders)
-                                                 name:EKEventStoreChangedNotification object:nil];
+                                                 name:EKEventStoreChangedNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(saveNewRun:)
+                                                 name:SAVE_NEW_RUN_EVENT
+                                               object:nil];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(addRunReminder:)
                                                  name:SET_RUN_REMINDER
@@ -82,39 +95,63 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
         // delte from Core Data
-        [self.cdService deleteRun:[self.scheduledRuns objectAtIndex:indexPath.row] inManagedObjectContext:self.managedObjectContext];
+        [self deleteFromCoreDataWithCell:indexPath];
         
         // delte from reminders
-        NSManagedObject *run = [self.scheduledRuns objectAtIndex:indexPath.row];
-        NSString *name = [run valueForKey:@"name"];
-        [self deleteRunReminder:name];
+        [self deleteFromRunRemindersWithCell:indexPath];
         
         // delete from array
-        [self.scheduledRuns removeObjectAtIndex:indexPath.row];
+        [self delteFromRunsArrayWithCell:indexPath];
+        
         [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
+-(void)deleteFromCoreDataWithCell:(NSIndexPath *)indexPath {
+    [self.cdService deleteRun:[self.scheduledRuns objectAtIndex:indexPath.row] inManagedObjectContext:self.managedObjectContext];
+}
+
+-(void)deleteFromRunRemindersWithCell:(NSIndexPath *)indexPath {
+    SheduledRuns *run = [self.scheduledRuns objectAtIndex:indexPath.row];
+    [self deleteRunReminder:run.name];
+}
+
+-(void)delteFromRunsArrayWithCell:(NSIndexPath *)indexPath {
+    [self.scheduledRuns removeObjectAtIndex:indexPath.row];
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellScheduledRun *cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSArray *results = [self filterRunRemindersWithCell:indexPath];
     
-    NSManagedObject *name = [self.scheduledRuns objectAtIndex:indexPath.row];
-    self.scheduledRunName = [name valueForKey:@"name"];
+    if ([results count]) {
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", self.scheduledRunName];
+        EKReminder *reminder = [results firstObject];
+        reminder.completed = !reminder.isCompleted;
+        
+        [self saveRunReminder:reminder];
+        
+        
+        // CODE REFACTOR END
+        CellScheduledRun *cell = [tableView cellForRowAtIndexPath:indexPath];
+        cell.imageView.image = (reminder.isCompleted) ? [UIImage imageNamed:@"pixel_1"] : [UIImage imageNamed:@"pixel_2"];
     
-    NSArray *results = [self.runReminders filteredArrayUsingPredicate:predicate];
-    EKReminder *reminder = [results firstObject];
-    reminder.completed = !reminder.isCompleted;
+    }
+}
+
+-(NSArray *)filterRunRemindersWithCell:(NSIndexPath *)indexPath {
+    SheduledRuns *scheduledRun = [self.scheduledRuns objectAtIndex:indexPath.row];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@",scheduledRun.name];
     
+    return [self.runReminders filteredArrayUsingPredicate:predicate];
+}
+
+-(void)saveRunReminder:(EKReminder *)reminder {
     NSError *error;
     [self.eventStore saveReminder:reminder commit:YES error:&error];
     if (error) {
         // Handle error
     }
-    
-    cell.imageView.image = (reminder.isCompleted) ? [UIImage imageNamed:@"pixel_1"] : [UIImage imageNamed:@"pixel_2"];
 }
 
 
@@ -136,14 +173,6 @@
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
         [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
-}
-
-// lazy initializer
-- (EKEventStore *)eventStore {
-    if (!_eventStore) {
-        _eventStore = [[EKEventStore alloc]init];
-    }
-    return _eventStore;
 }
 
 -(void)checkForAuthorizationStatus {
