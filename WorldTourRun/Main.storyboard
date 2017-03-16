@@ -176,10 +176,6 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="o10-6N-EXe" id="aEF-uI-Qyt"/>
-                            <outlet property="delegate" destination="o10-6N-EXe" id="dzR-aC-4NJ"/>
-                        </connections>
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4s-9d-w21" userLabel="First Responder" sceneMemberID="firstResponder"/>

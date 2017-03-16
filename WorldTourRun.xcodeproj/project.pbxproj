@@ -10,6 +10,7 @@
 		710160421E787B4D00996654 /* FinishedRunsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 710160411E787B4D00996654 /* FinishedRunsVC.m */; };
 		710160451E787BC100996654 /* CellFinishedRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 710160441E787BC100996654 /* CellFinishedRun.m */; };
 		712109861E793E3A0028CAC5 /* CellScheduledRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 712109851E793E3A0028CAC5 /* CellScheduledRun.m */; };
+		7121098A1E7AA0400028CAC5 /* FinishedRunsVCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 712109891E7AA0400028CAC5 /* FinishedRunsVCDelegate.m */; };
 		7139D6A41E4A432A00416D51 /* ScheduleRunsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6A31E4A432A00416D51 /* ScheduleRunsVC.m */; };
 		7139D6A91E4A46E100416D51 /* SheduledRuns+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6A61E4A46E100416D51 /* SheduledRuns+CoreDataClass.m */; };
 		7139D6AA1E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6A81E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m */; };
@@ -58,6 +59,8 @@
 		710160441E787BC100996654 /* CellFinishedRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellFinishedRun.m; sourceTree = "<group>"; };
 		712109841E793E3A0028CAC5 /* CellScheduledRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellScheduledRun.h; sourceTree = "<group>"; };
 		712109851E793E3A0028CAC5 /* CellScheduledRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellScheduledRun.m; sourceTree = "<group>"; };
+		712109881E7AA0400028CAC5 /* FinishedRunsVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedRunsVCDelegate.h; sourceTree = "<group>"; };
+		712109891E7AA0400028CAC5 /* FinishedRunsVCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishedRunsVCDelegate.m; sourceTree = "<group>"; };
 		7139D6A21E4A432A00416D51 /* ScheduleRunsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleRunsVC.h; sourceTree = "<group>"; };
 		7139D6A31E4A432A00416D51 /* ScheduleRunsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleRunsVC.m; sourceTree = "<group>"; };
 		7139D6A51E4A46E100416D51 /* SheduledRuns+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SheduledRuns+CoreDataClass.h"; sourceTree = "<group>"; };
@@ -140,6 +143,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		712109871E7A9FED0028CAC5 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				712109881E7AA0400028CAC5 /* FinishedRunsVCDelegate.h */,
+				712109891E7AA0400028CAC5 /* FinishedRunsVCDelegate.m */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
 		7141F7EF1E43CB11002A909C /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +261,7 @@
 			children = (
 				71FAE4891E6D85CC0066803B /* Awards */,
 				718FAE801E7729DB00E1D5CC /* Core Data */,
+				712109871E7A9FED0028CAC5 /* Delegates */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -488,6 +501,7 @@
 				7139D6AA1E4A46E100416D51 /* SheduledRuns+CoreDataProperties.m in Sources */,
 				714FB9931E3FBACD00FC6A95 /* WorldTourRun.xcdatamodeld in Sources */,
 				7141F7BE1E4119DE002A909C /* RunDetailVC.m in Sources */,
+				7121098A1E7AA0400028CAC5 /* FinishedRunsVCDelegate.m in Sources */,
 				714FB9AA1E3FBE7E00FC6A95 /* Run+CoreDataProperties.m in Sources */,
 				718FAE721E75499D00E1D5CC /* TrophiesDetailsVC.m in Sources */,
 				71FAE48C1E6D86170066803B /* CityTrophyController.m in Sources */,

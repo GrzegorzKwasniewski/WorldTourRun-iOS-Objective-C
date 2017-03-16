@@ -49,6 +49,7 @@ NSString *const SCHEDULED_RUNS = @"ScheduledRuns";
     
     NSError *error = nil;
     if (![context save:&error]) {
+        NSLog(@"README: %@", error);
         abort();
     }
 }

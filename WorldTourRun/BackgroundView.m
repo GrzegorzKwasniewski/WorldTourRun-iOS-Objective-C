@@ -11,7 +11,10 @@
 @implementation BackgroundView
 
 - (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
+    
+    CGRect frameSize = CGRectMake(0, frame.size.height / 2, frame.size.width, frame.size.height);
+    
+    self = [super initWithFrame:frameSize];
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
     }

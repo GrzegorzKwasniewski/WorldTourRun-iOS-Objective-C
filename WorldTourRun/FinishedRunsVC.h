@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreDataService.h"
+#import "FinishedRunsVCDelegate.h"
 
 @interface FinishedRunsVC : UITableViewController
 
@@ -18,6 +19,8 @@
 @property (strong, nonatomic) NSDate *runDate;
 @property (strong, nonatomic) NSNumber *runDuration;
 @property (strong, nonatomic) NSNumber *runDistance;
+
+@property (strong, nonatomic) FinishedRunsVCDelegate *tableViewDelegate;
 
 
 @end
