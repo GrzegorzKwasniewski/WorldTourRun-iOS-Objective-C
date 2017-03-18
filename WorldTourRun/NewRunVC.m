@@ -55,7 +55,7 @@ static NSString * const detailSegue = @"userRunDetails";
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     
-    self.startButton.hidden = NO;
+    self.startButton.alpha = 1;
     
     self.time.text = @"";
     self.time.hidden = YES;
@@ -63,7 +63,7 @@ static NSString * const detailSegue = @"userRunDetails";
     self.pace.hidden = YES;
     self.height.hidden = YES;
     self.runDifficulty.hidden = YES;
-    self.stopButton.hidden = YES;
+    self.stopButton.alpha = 0;
     
 }
 
@@ -73,9 +73,11 @@ static NSString * const detailSegue = @"userRunDetails";
     self.pace.hidden = NO;
     self.height.hidden = NO;
     self.runDifficulty.hidden = NO;
-    self.stopButton.hidden = NO;
     
-    self.startButton.hidden = YES;
+    [UIView animateWithDuration:1.0 animations:^{
+        self.startButton.alpha = 0;
+        self.stopButton.alpha = 1;
+    }];
     
     self.runTime = 0;
     self.runDistance = 0;
