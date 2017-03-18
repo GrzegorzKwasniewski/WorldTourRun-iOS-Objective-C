@@ -94,11 +94,11 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-        // delte from Core Data
-        [self deleteFromCoreDataWithCell:indexPath];
-        
         // delte from reminders
         [self deleteFromRunRemindersWithCell:indexPath];
+        
+        // delte from Core Data
+        [self deleteFromCoreDataWithCell:indexPath];
         
         // delete from array
         [self delteFromRunsArrayWithCell:indexPath];
@@ -159,7 +159,7 @@
 
 -(IBAction)addNewRun:(id)sender {
     
-    UIAlertController *alert = [CustomAlerts createAlertWithTitle:@"New Run Event" withMessage:@"Give Your Run a name" withNotification:SAVE_NEW_RUN_EVENT];
+    UIAlertController *alert = [CustomAlerts createAlertWithTitle:NSLocalizedString(@"New Run Event", nil) withMessage:NSLocalizedString(@"Give Your Run a name", nil) withNotification:SAVE_NEW_RUN_EVENT];
     [self presentViewController:alert animated:YES completion:NULL];
 }
 
@@ -183,7 +183,7 @@
         case EKAuthorizationStatusDenied:
         case EKAuthorizationStatusRestricted: {
             self.isEventStoreAccessGranted = NO;
-            UIAlertController *alert = [CustomAlerts createAlertWithTitle:@"This app doesn't have access" withMessage:@"You didn't allow this app to access Your Reminders"];
+            UIAlertController *alert = [CustomAlerts createAlertWithTitle:NSLocalizedString(@"This app doesn't have access", nil) withMessage:NSLocalizedString(@"You didn't allow this app to access Your Reminders", nil)];
             [self presentViewController:alert animated:YES completion:NULL];
             break;
         }
@@ -245,7 +245,7 @@
             // handle error
         }
         
-        NSString *message = (success) ? @"Reminder for Your Run was added!" : @"Something went wrong :( Reminder was not added.";
+        NSString *message = (success) ? NSLocalizedString(@"Reminder for Your Run was added!", nil) : NSLocalizedString(@"Something went wrong :( Reminder was not added.", nil);
         
         UIAlertController *alert = [CustomAlerts createAlertWithTitle:message withMessage:@""];
         [self presentViewController:alert animated:YES completion:NULL];

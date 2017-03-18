@@ -30,7 +30,7 @@ NSString *const SET_RUN_REMINDER = @"SetRunReminder";
     
     UIButton *reminderButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     reminderButton.frame = CGRectMake(0.0, 0.0, 100.0, 30.0);
-    [reminderButton setTitle:@"Reminde me" forState:UIControlStateNormal];
+    [reminderButton setTitle:NSLocalizedString(@"Reminde me", nil) forState:UIControlStateNormal];
     
     [reminderButton addTarget:self action:@selector(addRunReminder) forControlEvents:UIControlEventTouchUpInside];
     

@@ -25,12 +25,12 @@ NSString *const SAVE_NEW_RUN_EVENT = @"SAVE_NEW_RUN_EVENT";
     [alertView addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
     }];
     
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
     }];
     
-    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Save", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         if ([alertView.textFields[0].text  isEqual: @""]) {
-            textFiledValue = @"Default Name";
+            textFiledValue = NSLocalizedString(@"Default Name", nil);
         } else {
             textFiledValue = alertView.textFields[0].text;
         }
@@ -49,7 +49,7 @@ NSString *const SAVE_NEW_RUN_EVENT = @"SAVE_NEW_RUN_EVENT";
     UIAlertController *alertView = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     
     
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
     }];
     
     [alertView addAction:cancelAction];

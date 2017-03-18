@@ -129,17 +129,17 @@ static NSString * const detailSegue = @"userRunDetails";
     
     [self.locationManager stopUpdatingLocation];
     
-    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:@"Do You want to save Your run?" preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:NSLocalizedString(@"Save Your run?", nil) preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         //
     }];
     
-    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Save", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self saveNewRun];
         [self performSegueWithIdentifier:detailSegue sender:nil];
     }];
     
-    UIAlertAction *discardAction = [UIAlertAction actionWithTitle:@"Discard" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *discardAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Discard", nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         [self.navigationController popToRootViewControllerAnimated:YES];
     }];
     
@@ -153,9 +153,9 @@ static NSString * const detailSegue = @"userRunDetails";
 -(void)updateTimer {
     self.runTime++;
     self.time.text = [NSString stringWithFormat:@"%@", [ToString stringFromSecondCount:self.runTime usingLongFormat:NO]];
-    self.distance.text =  [NSString stringWithFormat:@"Distane: %@", [ToString stringFromDistance:self.runDistance]];
-    self.pace.text = [NSString stringWithFormat:@"Pace: %@", [ToString stringFromAvgPace:self.runDistance overTime:self.runTime]];
-    self.height.text = [NSString stringWithFormat:@"Height: %0.3f", self.runHeight];
+    self.distance.text =  [NSString stringWithFormat:NSLocalizedString(@"Distance: %@", nil), [ToString stringFromDistance:self.runDistance]];
+    self.pace.text = [NSString stringWithFormat:NSLocalizedString(@"Pace: %@", nil), [ToString stringFromAvgPace:self.runDistance overTime:self.runTime]];
+    self.height.text = [NSString stringWithFormat:NSLocalizedString(@"Height: %0.3f", nil), self.runHeight];
 }
 
 #pragma mark - Location Manager Functions
