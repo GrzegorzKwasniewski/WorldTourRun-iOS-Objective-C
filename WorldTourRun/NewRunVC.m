@@ -56,6 +56,7 @@ static NSString * const detailSegue = @"userRunDetails";
     [super viewWillAppear:YES];
     
     self.startButton.alpha = 1;
+    self.stopButton.alpha = 0;
     
     self.time.text = @"";
     self.time.hidden = YES;
@@ -63,7 +64,6 @@ static NSString * const detailSegue = @"userRunDetails";
     self.pace.hidden = YES;
     self.height.hidden = YES;
     self.runDifficulty.hidden = YES;
-    self.stopButton.alpha = 0;
     
 }
 
@@ -106,8 +106,7 @@ static NSString * const detailSegue = @"userRunDetails";
     
     NSMutableArray *locationsCollection = [NSMutableArray array];
     for (CLLocation *location in self.runLocations) {
-        Location *singleLocation = [NSEntityDescription insertNewObjectForEntityForName:@"Location"
-                                                                 inManagedObjectContext:self.managedObjectContext];
+        Location *singleLocation = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
         
         singleLocation.latitude = location.coordinate.latitude;
         singleLocation.longitude = location.coordinate.longitude;

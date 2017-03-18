@@ -165,14 +165,32 @@
 
 -(void)saveNewRun:(NSNotification *)notification {
     
-    if ([notification.name isEqualToString:SAVE_NEW_RUN_EVENT]) {
+    if ([notification.name isEqualToString:SAVE_NEW_RUN_EVENT] && ![self isRunNameDuplicate:notification]) {
+        
         NSString *runName = notification.object;
         [self.scheduledRuns addObject: [self.cdService addNewRunWithName:runName inManagedObjectContext:self.managedObjectContext]];
         
         NSUInteger row = [self.scheduledRuns count] - 1;
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
         [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else {
+        UIAlertController *alert = [CustomAlerts createAlertWithTitle:@"There is a run with that name" withMessage:@"You can't have two runs with the same name"];
+        [self presentViewController:alert animated:YES completion:NULL];
     }
+}
+
+-(BOOL)isRunNameDuplicate:(NSNotification *)notification {
+    
+    NSString *runName = notification.object;
+    BOOL isRunNameDuplicate = NO;
+    
+    for (SheduledRuns *run in self.scheduledRuns) {
+        if (run.name == runName) {
+            isRunNameDuplicate = YES;
+        }
+    }
+    
+    return isRunNameDuplicate;
 }
 
 -(void)checkForAuthorizationStatus {
@@ -234,9 +252,19 @@
     }
     
     if ([notification.name isEqualToString:SET_RUN_REMINDER]) {
-        SheduledRuns *sheduledRun = notification.object;
+        
+        SheduledRuns *scheduledRun = notification.object;
+        
         EKReminder *runRemainder = [EKReminder reminderWithEventStore:self.eventStore];
-        runRemainder.title = sheduledRun.name;
+        runRemainder.title = scheduledRun.name;
+        
+//        NSDate *now = [NSDate date];
+//        NSCalendar *calendar = [[NSCalendar alloc]
+//                                initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+//        NSCalendarUnit units = NSCalendarUnitYear | NSCalendarUnitMonth |NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+//        NSDateComponents *dateComponents = [calendar components:units fromDate:now];
+//        runRemainder.startDateComponents = dateComponents;
+        
         runRemainder.calendar = self.calendarWithReminders;
         
         NSError *error = nil;
@@ -249,6 +277,8 @@
         
         UIAlertController *alert = [CustomAlerts createAlertWithTitle:message withMessage:@""];
         [self presentViewController:alert animated:YES completion:NULL];
+    } else {
+        NSLog(@"README: Jest duplikat");
     }
 }
 
