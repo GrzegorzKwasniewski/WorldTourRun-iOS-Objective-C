@@ -94,11 +94,11 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-        // delte from Core Data
-        [self deleteFromCoreDataWithCell:indexPath];
-        
         // delte from reminders
         [self deleteFromRunRemindersWithCell:indexPath];
+        
+        // delte from Core Data
+        [self deleteFromCoreDataWithCell:indexPath];
         
         // delete from array
         [self delteFromRunsArrayWithCell:indexPath];
