@@ -131,9 +131,6 @@ static NSString * const detailSegue = @"userRunDetails";
     [self.locationManager stopUpdatingLocation];
     
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:NSLocalizedString(@"Save Your run?", nil) preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        //
-    }];
     
     UIAlertAction *saveAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Save", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self saveNewRun];
@@ -144,7 +141,6 @@ static NSString * const detailSegue = @"userRunDetails";
         [self.navigationController popToRootViewControllerAnimated:YES];
     }];
     
-    [actionSheet addAction:cancelAction];
     [actionSheet addAction:saveAction];
     [actionSheet addAction:discardAction];
     [self presentViewController:actionSheet animated:YES completion:NULL];
