@@ -56,13 +56,13 @@ static NSString * const detailSegue = @"userRunDetails";
     [super viewWillAppear:YES];
     
     self.startButton.hidden = NO;
-    self.welcomeMessage.hidden = NO;
     
     self.time.text = @"";
     self.time.hidden = YES;
     self.distance.hidden = YES;
     self.pace.hidden = YES;
     self.height.hidden = YES;
+    self.runDifficulty.hidden = YES;
     self.stopButton.hidden = YES;
     
 }
@@ -72,10 +72,10 @@ static NSString * const detailSegue = @"userRunDetails";
     self.distance.hidden = NO;
     self.pace.hidden = NO;
     self.height.hidden = NO;
+    self.runDifficulty.hidden = NO;
     self.stopButton.hidden = NO;
     
     self.startButton.hidden = YES;
-    self.welcomeMessage.hidden = YES;
     
     self.runTime = 0;
     self.runDistance = 0;
@@ -127,6 +127,7 @@ static NSString * const detailSegue = @"userRunDetails";
 
 - (IBAction)stopPressed:(id)sender {
     
+    [self.timer invalidate];
     [self.locationManager stopUpdatingLocation];
     
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:NSLocalizedString(@"Save Your run?", nil) preferredStyle:UIAlertControllerStyleActionSheet];
