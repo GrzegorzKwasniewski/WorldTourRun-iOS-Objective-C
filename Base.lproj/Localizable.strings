@@ -29,3 +29,6 @@
 "You didn't allow this app to access Your Reminders" = "You didn't allow this app to access Your Reminders";
 "Reminder for Your Run was added!" = "Reminder for Your Run was added!";
 "Something went wrong :( Reminder was not added" = "Something went wrong :( Reminder was not added";
+
+"There is a run with that name" = "There is a run with that name";
+"You can't have two runs with the same name" = "You can't have two runs with the same name";

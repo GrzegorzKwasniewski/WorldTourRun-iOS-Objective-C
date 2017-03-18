@@ -174,7 +174,7 @@
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
         [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else {
-        UIAlertController *alert = [CustomAlerts createAlertWithTitle:@"There is a run with that name" withMessage:@"You can't have two runs with the same name"];
+        UIAlertController *alert = [CustomAlerts createAlertWithTitle:NSLocalizedString(@"There is a run with that name", nil) withMessage:NSLocalizedString(@"You can't have two runs with the same name", nil)];
         [self presentViewController:alert animated:YES completion:NULL];
     }
 }

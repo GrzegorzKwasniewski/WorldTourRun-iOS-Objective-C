@@ -29,3 +29,6 @@
 "You didn't allow this app to access Your Reminders" = "Nie zezwoliłeś tej aplikacji na dostęp do Twojego Kalendarza";
 "Reminder for Your Run was added!" = "Przypomnienie o biegu zostało dodane do Twojego kalendarza!";
 "Something went wrong :( Reminder was not added" = "Coś poszło nie tak :( Nie udało się dodać przypomnienia";
+
+"There is a run with that name" = "Bieg o tej nazwie już istnieje";
+"You can't have two runs with the same name" = "Nazwy zaplanowanych biegów muszą się różnić";
