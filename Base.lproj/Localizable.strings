@@ -6,4 +6,26 @@
   Copyright © 2017 Grzegorz Kwaśniewski. All rights reserved.
 */
 
+"Time: %@" = "Time: %@";
 "Reminde me" = "Reminde me";
+"Distance: %@" = "Distance: %@";
+"Pace: %@" = "Pace: %@";
+"Height: %0.3f" = "Height: %0.3f";
+"Earned: %@" = "Earned: %@";
+"Run %@ to Earn" = "Run %@ to Earn";
+"Best: %@" = "Best: %@";
+
+"Cancel" = "Cancel";
+"Save" = "Save";
+"Discard" = "Discard";
+"Save Your run?" = "Save Your run?";
+
+"Default Name" = "Default Name";
+
+"New Run Event" = "New Run Event";
+"Give Your Run a name" = "Give Your Run a name";
+
+"This app doesn't have access" = "This app doesn't have access";
+"You didn't allow this app to access Your Reminders" = "You didn't allow this app to access Your Reminders";
+"Reminder for Your Run was added!" = "Reminder for Your Run was added!";
+"Something went wrong :( Reminder was not added" = "Something went wrong :( Reminder was not added";

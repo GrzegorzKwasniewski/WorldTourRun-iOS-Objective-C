@@ -33,9 +33,9 @@
         
     self.trophyName.text = self.trophyStatus.trophy.cityName;
     self.runDistance.text = [ToString stringFromDistance:self.trophyStatus.trophy.distanceToGetTrophy];
-    self.dateEarned.text = [NSString stringWithFormat:@"Reached on %@" , [formatter stringFromDate:self.trophyStatus.endedRun.timestamp]];
+    self.dateEarned.text = [NSString stringWithFormat:NSLocalizedString(@"Earned: %@", nil) , [formatter stringFromDate:self.trophyStatus.endedRun.timestamp]];
     self.trophyImage.image = [UIImage imageNamed:self.trophyStatus.trophy.cityImageName];
-    self.topPace.text = [NSString stringWithFormat:@"Best: %@", [ToString stringFromAvgPace:(float)self.trophyStatus.bestRun.distance overTime:(int)self.trophyStatus.bestRun.duration]];
+    self.topPace.text = [NSString stringWithFormat:NSLocalizedString(@"Best: %@", nil), [ToString stringFromAvgPace:(float)self.trophyStatus.bestRun.distance overTime:(int)self.trophyStatus.bestRun.duration]];
 
 }
 

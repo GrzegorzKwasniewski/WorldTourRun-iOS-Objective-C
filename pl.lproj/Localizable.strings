@@ -6,4 +6,26 @@
   Copyright © 2017 Grzegorz Kwaśniewski. All rights reserved.
 */
 
+"Time: %@" = "Czas: %@";
 "Reminde me" = "Przypomnij mi";
+"Distance: %@" = "Dystnas: %@";
+"Pace: %@" = "Prędkość: %@";
+"Height: %0.3f" = "Wysokość: %0.3f";
+"Earned: %@" = "Zdobyto: %@";
+"Run %@ to Earn" = "Zdobędziesz po %@";
+"Best: %@" = "Rekord: %@";
+
+"Cancel" = "Anuluj";
+"Save" = "Zapisz";
+"Discard" = "Porzuć";
+"Save Your run?" = "Zapisać bieg?";
+
+"Default Name" = "Zaplanowany bieg";
+
+"New Run Event" = "Zaplanuj nowy bieg";
+"Give Your Run a name" = "Jak nazwać nowy bieg?";
+
+"This app doesn't have access" = "Aplikacja nie ma dostępu";
+"You didn't allow this app to access Your Reminders" = "Nie zezwoliłeś tej aplikacji na dostęp do Twojego Kalendarza";
+"Reminder for Your Run was added!" = "Przypomnienie o biegu zostało dodane do Twojego kalendarza!";
+"Something went wrong :( Reminder was not added" = "Coś poszło nie tak :( Nie udało się dodać przypomnienia";

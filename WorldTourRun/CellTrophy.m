@@ -26,14 +26,14 @@
 
 -(void)configureCellWithTrophyStatus:(TrophyStatus *)trophyStatus {
     self.name.text = trophyStatus.trophy.cityName;
-    self.trophyDescription.text = [NSString stringWithFormat:@"Earned: %@", [self.dateFormatter stringFromDate:trophyStatus.endedRun.timestamp]];
+    self.trophyDescription.text = [NSString stringWithFormat:NSLocalizedString(@"Earned: %@", nil), [self.dateFormatter stringFromDate:trophyStatus.endedRun.timestamp]];
     self.trophyImage.image = [UIImage imageNamed:trophyStatus.trophy.cityImageName];
     self.userInteractionEnabled = YES;
 }
 
 -(void)configureEmptyCell:(TrophyStatus *)trophyStatus {
     self.name.text = @"?????";
-    self.trophyDescription.text = [NSString stringWithFormat:@"Run %@ to Earn", [ToString stringFromDistance:trophyStatus.trophy.distanceToGetTrophy]];
+    self.trophyDescription.text = [NSString stringWithFormat:NSLocalizedString(@"Run %@ to Earn", nil), [ToString stringFromDistance:trophyStatus.trophy.distanceToGetTrophy]];
     self.trophyImage.image = [UIImage imageNamed:@"question_mark.jpg"];
     self.userInteractionEnabled = NO;
 }

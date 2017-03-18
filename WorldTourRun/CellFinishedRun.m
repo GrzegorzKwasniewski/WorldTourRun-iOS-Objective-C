@@ -27,8 +27,8 @@
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     
     self.runDate.text = [dateFormatter stringFromDate:userRun.timestamp];
-    self.runDuration.text = [NSString stringWithFormat:@"Duration: %@", [ToString stringFromSecondCount:userRun.duration usingLongFormat:YES]];
-    self.runDistance.text = [NSString stringWithFormat:@"Distance: %@", [ToString stringFromDistance:userRun.distance]];
+    self.runDuration.text = [NSString stringWithFormat:NSLocalizedString(@"Time: %@", nil), [ToString stringFromSecondCount:userRun.duration usingLongFormat:YES]];
+    self.runDistance.text = [NSString stringWithFormat:NSLocalizedString(@"Distance: %@", nil), [ToString stringFromDistance:userRun.distance]];
 }
 
 @end

@@ -41,16 +41,16 @@
     
     self.mapView.delegate = self;
     
-    self.distance.text = [NSString stringWithFormat:@"Distance: %@", [ToString stringFromDistance:(float)self.userRun.distance]];
+    self.distance.text = [NSString stringWithFormat:NSLocalizedString(@"Distance: %@", nil), [ToString stringFromDistance:(float)self.userRun.distance]];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     
     self.date.text = [dateFormatter stringFromDate:self.userRun.timestamp];
     
-    self.pace.text = [NSString stringWithFormat:@"Pace: %@", [ToString stringFromAvgPace:(float)self.userRun.distance overTime:(int)self.userRun.duration]];
+    self.pace.text = [NSString stringWithFormat:NSLocalizedString(@"Height: %0.3f", nil), [ToString stringFromAvgPace:(float)self.userRun.distance overTime:(int)self.userRun.duration]];
     
-    self.time.text = [NSString stringWithFormat:@"Time: %@", [ToString stringFromSecondCount:(int)self.userRun.duration usingLongFormat:YES]];
+    self.time.text = [NSString stringWithFormat:NSLocalizedString(@"Time: %@", nil), [ToString stringFromSecondCount:(int)self.userRun.duration usingLongFormat:YES]];
     
     [self configureMapView];
 }
