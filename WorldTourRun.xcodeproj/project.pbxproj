@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		710160421E787B4D00996654 /* FinishedRunsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 710160411E787B4D00996654 /* FinishedRunsVC.m */; };
 		710160451E787BC100996654 /* CellFinishedRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 710160441E787BC100996654 /* CellFinishedRun.m */; };
-		7119D6661E7DA00A000DDDD3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7119D6651E7DA00A000DDDD3 /* Localizable.strings */; };
 		7119D6681E7DA0C9000DDDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7119D66A1E7DA0C9000DDDD3 /* Main.storyboard */; };
+		7119D6701E7DA158000DDDD3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7119D6721E7DA158000DDDD3 /* Localizable.strings */; };
 		712109861E793E3A0028CAC5 /* CellScheduledRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 712109851E793E3A0028CAC5 /* CellScheduledRun.m */; };
 		7121098A1E7AA0400028CAC5 /* FinishedRunsVCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 712109891E7AA0400028CAC5 /* FinishedRunsVCDelegate.m */; };
 		7139D6A41E4A432A00416D51 /* ScheduleRunsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139D6A31E4A432A00416D51 /* ScheduleRunsVC.m */; };
@@ -58,12 +58,13 @@
 		710160411E787B4D00996654 /* FinishedRunsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishedRunsVC.m; sourceTree = "<group>"; };
 		710160431E787BC100996654 /* CellFinishedRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellFinishedRun.h; sourceTree = "<group>"; };
 		710160441E787BC100996654 /* CellFinishedRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellFinishedRun.m; sourceTree = "<group>"; };
-		7119D6651E7DA00A000DDDD3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../Localizable.strings; sourceTree = "<group>"; };
 		7119D6671E7DA0B9000DDDD3 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7119D6691E7DA0C9000DDDD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7119D66C1E7DA0CD000DDDD3 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
 		7119D66D1E7DA0DC000DDDD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
-		7119D66F1E7DA0DE000DDDD3 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pl; path = pl.lproj/Info.plist; sourceTree = "<group>"; };
+		7119D6711E7DA158000DDDD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7119D6731E7DA17F000DDDD3 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7119D6751E7DA410000DDDD3 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pl; path = pl.lproj/Info.plist; sourceTree = "<group>"; };
 		712109841E793E3A0028CAC5 /* CellScheduledRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellScheduledRun.h; sourceTree = "<group>"; };
 		712109851E793E3A0028CAC5 /* CellScheduledRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellScheduledRun.m; sourceTree = "<group>"; };
 		712109881E7AA0400028CAC5 /* FinishedRunsVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedRunsVCDelegate.h; sourceTree = "<group>"; };
@@ -327,7 +328,7 @@
 		71FAE47E1E6D846A0066803B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7119D6651E7DA00A000DDDD3 /* Localizable.strings */,
+				7119D6721E7DA158000DDDD3 /* Localizable.strings */,
 				71FAE4811E6D853D0066803B /* cities.txt */,
 			);
 			name = Resources;
@@ -438,7 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				714FB9981E3FBACD00FC6A95 /* LaunchScreen.storyboard in Resources */,
-				7119D6661E7DA00A000DDDD3 /* Localizable.strings in Resources */,
+				7119D6701E7DA158000DDDD3 /* Localizable.strings in Resources */,
 				7141F7EE1E43C5B4002A909C /* GoogleService-Info.plist in Resources */,
 				71FAE4821E6D853D0066803B /* cities.txt in Resources */,
 				714FB9951E3FBACD00FC6A95 /* Assets.xcassets in Resources */,
@@ -554,9 +555,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				7119D66D1E7DA0DC000DDDD3 /* Base */,
-				7119D66F1E7DA0DE000DDDD3 /* pl */,
+				7119D6751E7DA410000DDDD3 /* pl */,
 			);
 			name = Info.plist;
+			sourceTree = "<group>";
+		};
+		7119D6721E7DA158000DDDD3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7119D6711E7DA158000DDDD3 /* Base */,
+				7119D6731E7DA17F000DDDD3 /* pl */,
+			);
+			name = Localizable.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		714FB9961E3FBACD00FC6A95 /* LaunchScreen.storyboard */ = {
@@ -668,7 +679,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7K692Z62S3;
-				INFOPLIST_FILE = WorldTourRun/Info.plist;
+				INFOPLIST_FILE = WorldTourRun/Base.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRun;
@@ -686,7 +697,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7K692Z62S3;
-				INFOPLIST_FILE = WorldTourRun/Info.plist;
+				INFOPLIST_FILE = WorldTourRun/Base.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRun;

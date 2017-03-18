@@ -6,73 +6,73 @@
 "5wo-S2-xOb.text" = "Label";
 
 /* Class = "UIButton"; normalTitle = "Run Remiders"; ObjectID = "7XR-4E-B1Y"; */
-"7XR-4E-B1Y.normalTitle" = "Run Remiders";
+"7XR-4E-B1Y.normalTitle" = "Przypomnienia";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "8Yi-ND-2X3"; */
 "8Yi-ND-2X3.text" = "Label";
 
 /* Class = "UILabel"; text = "Best"; ObjectID = "Cbt-4T-vGI"; */
-"Cbt-4T-vGI.text" = "Best";
+"Cbt-4T-vGI.text" = "Rekord";
 
 /* Class = "UILabel"; text = "Date"; ObjectID = "DMF-yd-Rr5"; */
-"DMF-yd-Rr5.text" = "Date";
+"DMF-yd-Rr5.text" = "Data";
 
 /* Class = "UIButton"; normalTitle = "Twitter"; ObjectID = "Dde-Bc-jvp"; */
 "Dde-Bc-jvp.normalTitle" = "Twitter";
 
 /* Class = "UILabel"; text = "Time"; ObjectID = "DuQ-Wn-jdH"; */
-"DuQ-Wn-jdH.text" = "Time";
+"DuQ-Wn-jdH.text" = "Czas";
 
 /* Class = "UIViewController"; title = "Home"; ObjectID = "DzY-UD-lEx"; */
-"DzY-UD-lEx.title" = "Home";
+"DzY-UD-lEx.title" = "Start";
 
 /* Class = "UILabel"; text = "Time"; ObjectID = "GJh-su-4dt"; */
-"GJh-su-4dt.text" = "Time";
+"GJh-su-4dt.text" = "Czas";
 
 /* Class = "UILabel"; text = "Description"; ObjectID = "GMD-tL-4IZ"; */
-"GMD-tL-4IZ.text" = "Description";
+"GMD-tL-4IZ.text" = "Opis";
 
 /* Class = "UILabel"; text = "Height"; ObjectID = "H4c-mJ-FnP"; */
-"H4c-mJ-FnP.text" = "Height";
+"H4c-mJ-FnP.text" = "Wyskość";
 
 /* Class = "UIViewController"; title = "Detail"; ObjectID = "JEX-9P-axG"; */
-"JEX-9P-axG.title" = "Detail";
+"JEX-9P-axG.title" = "Szczegóły";
 
 /* Class = "UILabel"; text = "Name"; ObjectID = "Ncg-N8-dr7"; */
-"Ncg-N8-dr7.text" = "Name";
+"Ncg-N8-dr7.text" = "Nazwa";
 
 /* Class = "UILabel"; text = "Share it"; ObjectID = "QNY-r9-Zdo"; */
-"QNY-r9-Zdo.text" = "Share it";
+"QNY-r9-Zdo.text" = "Podziel się";
 
 /* Class = "UINavigationController"; title = "Master"; ObjectID = "RMx-3f-FxP"; */
 "RMx-3f-FxP.title" = "Master";
 
 /* Class = "UILabel"; text = "Date"; ObjectID = "Uwc-u2-Sq5"; */
-"Uwc-u2-Sq5.text" = "Date";
+"Uwc-u2-Sq5.text" = "Data";
 
 /* Class = "UINavigationItem"; title = "Sheduled Runs"; ObjectID = "ViG-fF-zXh"; */
-"ViG-fF-zXh.title" = "Sheduled Runs";
+"ViG-fF-zXh.title" = "Zaplanowane biegi";
 
 /* Class = "UILabel"; text = "Pace"; ObjectID = "X2V-B9-9tK"; */
-"X2V-B9-9tK.text" = "Pace";
+"X2V-B9-9tK.text" = "Prędkość";
 
 /* Class = "UIButton"; normalTitle = "Stop"; ObjectID = "bdk-g0-mwv"; */
 "bdk-g0-mwv.normalTitle" = "Stop";
 
 /* Class = "UIButton"; normalTitle = "Finished Runs"; ObjectID = "bfv-s8-dOk"; */
-"bfv-s8-dOk.normalTitle" = "Finished Runs";
+"bfv-s8-dOk.normalTitle" = "Ukończone biegi";
 
 /* Class = "UIButton"; normalTitle = "Trophies"; ObjectID = "kpM-0d-moX"; */
-"kpM-0d-moX.normalTitle" = "Trophies";
+"kpM-0d-moX.normalTitle" = "Trofea";
 
 /* Class = "UINavigationItem"; title = "Detail"; ObjectID = "mOI-FS-AaM"; */
-"mOI-FS-AaM.title" = "Detail";
+"mOI-FS-AaM.title" = "Szczegóły";
 
 /* Class = "UIButton"; normalTitle = "Facebook"; ObjectID = "nTR-yX-z6Z"; */
 "nTR-yX-z6Z.normalTitle" = "Facebook";
 
 /* Class = "UILabel"; text = "Name"; ObjectID = "oWY-26-bMI"; */
-"oWY-26-bMI.text" = "Name";
+"oWY-26-bMI.text" = "Nazwa";
 
 /* Class = "UIButton"; normalTitle = "Start"; ObjectID = "ohO-Ja-6zG"; */
 "ohO-Ja-6zG.normalTitle" = "Start";
@@ -81,19 +81,19 @@
 "p30-1u-WQg.text" = "Label";
 
 /* Class = "UIButton"; normalTitle = "New Run"; ObjectID = "pCu-Xx-2YY"; */
-"pCu-Xx-2YY.normalTitle" = "New Run";
+"pCu-Xx-2YY.normalTitle" = "Nowy Bieg";
 
 /* Class = "UIViewController"; title = "New Run"; ObjectID = "roJ-HL-4Zn"; */
-"roJ-HL-4Zn.title" = "New Run";
+"roJ-HL-4Zn.title" = "Nowy Bieg";
 
 /* Class = "UILabel"; text = "Pace"; ObjectID = "tc2-Lp-tfK"; */
-"tc2-Lp-tfK.text" = "Pace";
+"tc2-Lp-tfK.text" = "Prędkość";
 
 /* Class = "UILabel"; text = "Distance"; ObjectID = "xXO-Ba-HOk"; */
-"xXO-Ba-HOk.text" = "Distance";
+"xXO-Ba-HOk.text" = "Dystans";
 
 /* Class = "UILabel"; text = "Distance"; ObjectID = "yUz-5U-O8x"; */
-"yUz-5U-O8x.text" = "Distance";
+"yUz-5U-O8x.text" = "Dystans";
 
 /* Class = "UILabel"; text = "Distance"; ObjectID = "ycF-MH-jry"; */
-"ycF-MH-jry.text" = "Distance";
+"ycF-MH-jry.text" = "Dystans";
