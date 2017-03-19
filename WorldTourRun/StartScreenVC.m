@@ -7,16 +7,8 @@
 //
 
 #import "StartScreenVC.h"
-#import "NewRunVC.h"
-#import "ScheduleRunsVC.h"
-#import "FinishedRunsVC.h"
-#import "TrophiesVC.h"
-#import "CityTrophyController.h"
-#import "BackgroundView.h"
 
 @interface StartScreenVC ()
-
-@property (strong, nonatomic) NSArray *usersRuns;
 
 @end
 

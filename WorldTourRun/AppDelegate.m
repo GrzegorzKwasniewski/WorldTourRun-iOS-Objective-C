@@ -19,8 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    UINavigationController *navigationCOntroller = (UINavigationController *)self.window.rootViewController;
-    StartScreenVC *controller = (StartScreenVC *)navigationCOntroller.topViewController;
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    StartScreenVC *controller = (StartScreenVC *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:62.00/255.00 green:81.00/255.00 blue:181.00/255.00 alpha:1]];
