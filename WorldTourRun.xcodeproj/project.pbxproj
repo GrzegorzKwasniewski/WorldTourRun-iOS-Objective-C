@@ -33,6 +33,8 @@
 		714FB9A91E3FBE7E00FC6A95 /* Run+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9A41E3FBE7E00FC6A95 /* Run+CoreDataClass.m */; };
 		714FB9AA1E3FBE7E00FC6A95 /* Run+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9A61E3FBE7E00FC6A95 /* Run+CoreDataProperties.m */; };
 		714FB9AD1E3FBF0A00FC6A95 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714FB9AC1E3FBF0A00FC6A95 /* MapKit.framework */; };
+		715C2D7D1E7EBA4B0053B59C /* WorldTourRunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 715C2D7C1E7EBA4B0053B59C /* WorldTourRunTests.m */; };
+		715C2D8B1E7EBA680053B59C /* WorldTourRunUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 715C2D8A1E7EBA680053B59C /* WorldTourRunUITests.m */; };
 		7171C4961E4C9351005BA23C /* CoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7171C4951E4C9351005BA23C /* CoreDataService.m */; };
 		718FAE721E75499D00E1D5CC /* TrophiesDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE711E75499D00E1D5CC /* TrophiesDetailsVC.m */; };
 		718FAE791E759F0200E1D5CC /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE781E759F0200E1D5CC /* CustomButton.m */; };
@@ -50,6 +52,23 @@
 		71FAE4981E72EB020066803B /* TrophiesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4971E72EB020066803B /* TrophiesVC.m */; };
 		E24A9D858FF30E0CD2B902D9 /* libPods-WorldTourRun.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5251D5EF45FAD95ECD4D1E21 /* libPods-WorldTourRun.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		715C2D7F1E7EBA4B0053B59C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 714FB97A1E3FBACD00FC6A95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 714FB9811E3FBACD00FC6A95;
+			remoteInfo = WorldTourRun;
+		};
+		715C2D8D1E7EBA680053B59C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 714FB97A1E3FBACD00FC6A95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 714FB9811E3FBACD00FC6A95;
+			remoteInfo = WorldTourRun;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5251D5EF45FAD95ECD4D1E21 /* libPods-WorldTourRun.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldTourRun.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +123,12 @@
 		714FB9A51E3FBE7E00FC6A95 /* Run+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Run+CoreDataProperties.h"; path = "../Run+CoreDataProperties.h"; sourceTree = "<group>"; };
 		714FB9A61E3FBE7E00FC6A95 /* Run+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Run+CoreDataProperties.m"; path = "../Run+CoreDataProperties.m"; sourceTree = "<group>"; };
 		714FB9AC1E3FBF0A00FC6A95 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		715C2D7A1E7EBA4B0053B59C /* WorldTourRunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTourRunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		715C2D7C1E7EBA4B0053B59C /* WorldTourRunTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorldTourRunTests.m; sourceTree = "<group>"; };
+		715C2D7E1E7EBA4B0053B59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		715C2D881E7EBA680053B59C /* WorldTourRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTourRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		715C2D8A1E7EBA680053B59C /* WorldTourRunUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorldTourRunUITests.m; sourceTree = "<group>"; };
+		715C2D8C1E7EBA680053B59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7171C4941E4C9351005BA23C /* CoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataService.h; sourceTree = "<group>"; };
 		7171C4951E4C9351005BA23C /* CoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataService.m; sourceTree = "<group>"; };
 		718FAE701E75499D00E1D5CC /* TrophiesDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrophiesDetailsVC.h; sourceTree = "<group>"; };
@@ -146,6 +171,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		715C2D771E7EBA4B0053B59C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		715C2D851E7EBA680053B59C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -179,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				714FB9841E3FBACD00FC6A95 /* WorldTourRun */,
+				715C2D7B1E7EBA4B0053B59C /* WorldTourRunTests */,
+				715C2D891E7EBA680053B59C /* WorldTourRunUITests */,
 				714FB9831E3FBACD00FC6A95 /* Products */,
 				714FB9AB1E3FBF0A00FC6A95 /* Frameworks */,
 				815384D090D0C49DD4F4DFD6 /* Pods */,
@@ -189,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				714FB9821E3FBACD00FC6A95 /* WorldTourRun.app */,
+				715C2D7A1E7EBA4B0053B59C /* WorldTourRunTests.xctest */,
+				715C2D881E7EBA680053B59C /* WorldTourRunUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,6 +322,24 @@
 				714FB9961E3FBACD00FC6A95 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		715C2D7B1E7EBA4B0053B59C /* WorldTourRunTests */ = {
+			isa = PBXGroup;
+			children = (
+				715C2D7C1E7EBA4B0053B59C /* WorldTourRunTests.m */,
+				715C2D7E1E7EBA4B0053B59C /* Info.plist */,
+			);
+			path = WorldTourRunTests;
+			sourceTree = "<group>";
+		};
+		715C2D891E7EBA680053B59C /* WorldTourRunUITests */ = {
+			isa = PBXGroup;
+			children = (
+				715C2D8A1E7EBA680053B59C /* WorldTourRunUITests.m */,
+				715C2D8C1E7EBA680053B59C /* Info.plist */,
+			);
+			path = WorldTourRunUITests;
 			sourceTree = "<group>";
 		};
 		718FAE731E758FAB00E1D5CC /* UI */ = {
@@ -392,6 +453,42 @@
 			productReference = 714FB9821E3FBACD00FC6A95 /* WorldTourRun.app */;
 			productType = "com.apple.product-type.application";
 		};
+		715C2D791E7EBA4B0053B59C /* WorldTourRunTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 715C2D831E7EBA4B0053B59C /* Build configuration list for PBXNativeTarget "WorldTourRunTests" */;
+			buildPhases = (
+				715C2D761E7EBA4B0053B59C /* Sources */,
+				715C2D771E7EBA4B0053B59C /* Frameworks */,
+				715C2D781E7EBA4B0053B59C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				715C2D801E7EBA4B0053B59C /* PBXTargetDependency */,
+			);
+			name = WorldTourRunTests;
+			productName = WorldTourRunTests;
+			productReference = 715C2D7A1E7EBA4B0053B59C /* WorldTourRunTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		715C2D871E7EBA680053B59C /* WorldTourRunUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 715C2D8F1E7EBA680053B59C /* Build configuration list for PBXNativeTarget "WorldTourRunUITests" */;
+			buildPhases = (
+				715C2D841E7EBA680053B59C /* Sources */,
+				715C2D851E7EBA680053B59C /* Frameworks */,
+				715C2D861E7EBA680053B59C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				715C2D8E1E7EBA680053B59C /* PBXTargetDependency */,
+			);
+			name = WorldTourRunUITests;
+			productName = WorldTourRunUITests;
+			productReference = 715C2D881E7EBA680053B59C /* WorldTourRunUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -412,6 +509,18 @@
 							};
 						};
 					};
+					715C2D791E7EBA4B0053B59C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = R35N4L2G2B;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 714FB9811E3FBACD00FC6A95;
+					};
+					715C2D871E7EBA680053B59C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = R35N4L2G2B;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 714FB9811E3FBACD00FC6A95;
+					};
 				};
 			};
 			buildConfigurationList = 714FB97D1E3FBACD00FC6A95 /* Build configuration list for PBXProject "WorldTourRun" */;
@@ -429,6 +538,8 @@
 			projectRoot = "";
 			targets = (
 				714FB9811E3FBACD00FC6A95 /* WorldTourRun */,
+				715C2D791E7EBA4B0053B59C /* WorldTourRunTests */,
+				715C2D871E7EBA680053B59C /* WorldTourRunUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -444,6 +555,20 @@
 				71FAE4821E6D853D0066803B /* cities.txt in Resources */,
 				714FB9951E3FBACD00FC6A95 /* Assets.xcassets in Resources */,
 				7119D6681E7DA0C9000DDDD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		715C2D781E7EBA4B0053B59C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		715C2D861E7EBA680053B59C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +664,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		715C2D761E7EBA4B0053B59C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				715C2D7D1E7EBA4B0053B59C /* WorldTourRunTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		715C2D841E7EBA680053B59C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				715C2D8B1E7EBA680053B59C /* WorldTourRunUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		715C2D801E7EBA4B0053B59C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 714FB9811E3FBACD00FC6A95 /* WorldTourRun */;
+			targetProxy = 715C2D7F1E7EBA4B0053B59C /* PBXContainerItemProxy */;
+		};
+		715C2D8E1E7EBA680053B59C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 714FB9811E3FBACD00FC6A95 /* WorldTourRun */;
+			targetProxy = 715C2D8D1E7EBA680053B59C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7119D66A1E7DA0C9000DDDD3 /* Main.storyboard */ = {
@@ -707,6 +861,56 @@
 			};
 			name = Release;
 		};
+		715C2D811E7EBA4B0053B59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = R35N4L2G2B;
+				INFOPLIST_FILE = WorldTourRunTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRunTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldTourRun.app/WorldTourRun";
+			};
+			name = Debug;
+		};
+		715C2D821E7EBA4B0053B59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = R35N4L2G2B;
+				INFOPLIST_FILE = WorldTourRunTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRunTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldTourRun.app/WorldTourRun";
+			};
+			name = Release;
+		};
+		715C2D901E7EBA680053B59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = R35N4L2G2B;
+				INFOPLIST_FILE = WorldTourRunUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRunUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WorldTourRun;
+			};
+			name = Debug;
+		};
+		715C2D911E7EBA680053B59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = R35N4L2G2B;
+				INFOPLIST_FILE = WorldTourRunUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRunUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WorldTourRun;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -727,6 +931,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		715C2D831E7EBA4B0053B59C /* Build configuration list for PBXNativeTarget "WorldTourRunTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				715C2D811E7EBA4B0053B59C /* Debug */,
+				715C2D821E7EBA4B0053B59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		715C2D8F1E7EBA680053B59C /* Build configuration list for PBXNativeTarget "WorldTourRunUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				715C2D901E7EBA680053B59C /* Debug */,
+				715C2D911E7EBA680053B59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
