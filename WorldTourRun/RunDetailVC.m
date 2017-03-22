@@ -130,7 +130,6 @@
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay {
     
     if ([overlay isKindOfClass:[MKPolyline class]]) {
-        NSLog(@"README");
         MKPolyline *polyLine = (MKPolyline *)overlay;
         MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
         renderer.strokeColor = [UIColor redColor];

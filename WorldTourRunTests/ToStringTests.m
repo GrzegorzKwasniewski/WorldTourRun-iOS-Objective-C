@@ -11,24 +11,35 @@
 
 @interface ToStringTests : XCTestCase
 
+@property (strong, nonatomic) NewRunVC *runVC;
+
 @end
 
 @implementation ToStringTests
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+   
+    // for example
+    self.runVC = [[NewRunVC alloc] init];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    // Always release objects form setUp
+    self.runVC = nil;
     [super tearDown];
 }
 
 -(void)testIntToStringConversion_NoLongFormat {
     
-    NSString *time = [NSString stringWithFormat:@"%@", [ToString stringFromSecondCount:26 usingLongFormat:NO]];
+    // given - preparation
+    NSString *time;
     
+    // when - execute code
+    time = [NSString stringWithFormat:@"%@", [ToString stringFromSecondCount:26 usingLongFormat:NO]];
+    
+    // then - assertion
     XCTAssertEqualObjects(time, @"00:26");
     
     time = [NSString stringWithFormat:@"%@", [ToString stringFromSecondCount:100 usingLongFormat:NO]];
