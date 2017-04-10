@@ -47,7 +47,41 @@
         
     }
     
-    return trophiesCollection;
+    NSArray *sortedCityTrophies = [self quickSort:trophiesCollection];
+    
+    return sortedCityTrophies;
+}
+
++(NSArray *)quickSort:(NSMutableArray *)unsortedDataArray {
+    
+    int quickSortCount;
+    
+    NSMutableArray *lessArray = [[NSMutableArray alloc] init];
+    NSMutableArray *greaterArray = [[NSMutableArray alloc] init];
+    
+    if ([unsortedDataArray count] <1) {
+        return nil;
+    }
+    
+    int randomPivotPoint = arc4random() % [unsortedDataArray count];
+    CityTrophy *pivotValue = [unsortedDataArray objectAtIndex:randomPivotPoint];
+    [unsortedDataArray removeObjectAtIndex:randomPivotPoint];
+    
+    for (CityTrophy *cityTrophy in unsortedDataArray) {
+        quickSortCount++; //This is required to see how many iterations does it take to sort the array using quick sort
+        if (cityTrophy.distanceToGetTrophy < pivotValue.distanceToGetTrophy) {
+            [lessArray addObject:cityTrophy];
+        } else {
+            [greaterArray addObject:cityTrophy];
+        }
+    }
+    
+    NSMutableArray *sortedArray = [[NSMutableArray alloc] init];
+    [sortedArray addObjectsFromArray:[self quickSort:lessArray]];
+    [sortedArray addObject:pivotValue];
+    [sortedArray addObjectsFromArray:[self quickSort:greaterArray]];
+    
+    return sortedArray;
 }
 
 +(CityTrophy *)parsTrophy:(NSDictionary *)dictionary {

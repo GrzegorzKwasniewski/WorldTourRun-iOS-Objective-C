@@ -945,6 +945,7 @@
 				715C2D821E7EBA4B0053B59C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		715C2D8F1E7EBA680053B59C /* Build configuration list for PBXNativeTarget "WorldTourRunUITests" */ = {
 			isa = XCConfigurationList;
@@ -953,6 +954,7 @@
 				715C2D911E7EBA680053B59C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

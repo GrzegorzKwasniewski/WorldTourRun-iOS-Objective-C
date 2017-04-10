@@ -12,5 +12,6 @@
 
 + (CityTrophyController *)sharedInstance;
 - (NSArray *)trophiesInfo:(NSArray *)userRuns;
+- (NSArray *)quickSort:(NSMutableArray *)unsortedDataArray;
 
 @end

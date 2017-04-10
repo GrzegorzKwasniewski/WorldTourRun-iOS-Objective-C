@@ -18,7 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     StartScreenVC *controller = (StartScreenVC *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
