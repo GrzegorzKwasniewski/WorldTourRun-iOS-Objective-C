@@ -11,7 +11,7 @@
 @interface ToString : NSObject
 
 + (NSString *)stringFromSecondCount:(int)seconds usingLongFormat:(BOOL)longFormat;
-+ (NSString *)stringFromAvgPace:(float)meters overTime:(int)seconds;
++ (NSString *)stringFromAverageSpeed:(float)meters overTime:(int)seconds;
 + (NSString *)stringFromDistance:(float)meters;
 
 @end

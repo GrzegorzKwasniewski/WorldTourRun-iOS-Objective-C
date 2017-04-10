@@ -153,7 +153,7 @@ static NSString * const detailSegue = @"userRunDetails";
     self.time.text = [NSString stringWithFormat:@"%@", [ToString stringFromSecondCount:self.runTime usingLongFormat:NO]];
     NSLog(@"README: %@", self.time.text);
     self.distance.text =  [NSString stringWithFormat:NSLocalizedString(@"Distance: %@", nil), [ToString stringFromDistance:self.runDistance]];
-    self.pace.text = [NSString stringWithFormat:NSLocalizedString(@"Pace: %@", nil), [ToString stringFromAvgPace:self.runDistance overTime:self.runTime]];
+    self.pace.text = [NSString stringWithFormat:NSLocalizedString(@"Pace: %@", nil), [ToString stringFromAverageSpeed:self.runDistance overTime:self.runTime]];
     self.height.text = [NSString stringWithFormat:NSLocalizedString(@"Height: %0.3f", nil), self.runHeight];
 }
 

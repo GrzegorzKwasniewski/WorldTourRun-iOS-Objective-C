@@ -48,7 +48,7 @@
     
     self.date.text = [dateFormatter stringFromDate:self.userRun.timestamp];
     
-    self.pace.text = [NSString stringWithFormat:NSLocalizedString(@"Height: %0.3f", nil), [ToString stringFromAvgPace:(float)self.userRun.distance overTime:(int)self.userRun.duration]];
+    self.pace.text = [NSString stringWithFormat:NSLocalizedString(@"Height: %0.3f", nil), [ToString stringFromAverageSpeed:(float)self.userRun.distance overTime:(int)self.userRun.duration]];
     
     self.time.text = [NSString stringWithFormat:NSLocalizedString(@"Time: %@", nil), [ToString stringFromSecondCount:(int)self.userRun.duration usingLongFormat:YES]];
     

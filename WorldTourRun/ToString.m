@@ -41,29 +41,17 @@ static float const metersInMile = 1609.344;
     }
 }
 
-+ (NSString *)stringFromAvgPace:(float)meters overTime:(int)seconds {
-    
-    float averagePace = seconds / meters;
-    
-    float multiplier;
-    NSString *unit;
++ (NSString *)stringFromAverageSpeed:(float)meters overTime:(int)seconds {
     
     if (seconds == 0 || meters == 0) {
         return @"0";
     }
     
-    if (isEuropeanMetric) {
-        unit = @"min/km";
-        multiplier = metersInKilometers;
-    } else {
-        unit = @"min/mi";
-        multiplier = metersInMile;
-    }
+    float averagePace = meters / seconds;
     
-    int paceMinute = (int) ((averagePace * multiplier) / 60);
-    int paceSeconds = (int) (averagePace * multiplier - (paceMinute * 60));
+    NSString *unit = @"m/s";
     
-    return [NSString stringWithFormat:@"%i:%02i %@", paceMinute, paceSeconds, unit];
+    return [NSString stringWithFormat:@"%0.2f %@", averagePace, unit];
 }
 
 + (NSString *)stringFromDistance:(float)meters {
