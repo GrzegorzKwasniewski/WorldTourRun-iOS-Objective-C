@@ -228,14 +228,26 @@
                                     <frame key="frameInset" width="375" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p30-1u-WQg">
-                                            <frame key="frameInset" minX="108" minY="22" width="199" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="p30-1u-WQg">
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-vu-3TR">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="84" id="qTQ-i1-GN8"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0oU-vu-3TR" firstAttribute="top" secondItem="3bJ-el-oNG" secondAttribute="top" id="0zA-ZG-0Yn"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="p30-1u-WQg" secondAttribute="trailing" id="AkW-gl-V5U"/>
+                                        <constraint firstItem="p30-1u-WQg" firstAttribute="leading" secondItem="0oU-vu-3TR" secondAttribute="trailing" constant="24" id="EpF-XB-5Vh"/>
+                                        <constraint firstItem="p30-1u-WQg" firstAttribute="top" secondItem="3bJ-el-oNG" secondAttribute="topMargin" id="TOQ-8g-U3O"/>
+                                        <constraint firstItem="0oU-vu-3TR" firstAttribute="leading" secondItem="3bJ-el-oNG" secondAttribute="leading" id="bxL-FA-5di"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="p30-1u-WQg" secondAttribute="bottom" id="dHQ-46-o4w"/>
+                                        <constraint firstAttribute="bottom" secondItem="0oU-vu-3TR" secondAttribute="bottom" id="eYE-J3-96y"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
