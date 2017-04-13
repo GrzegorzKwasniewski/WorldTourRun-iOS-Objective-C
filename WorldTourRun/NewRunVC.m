@@ -58,8 +58,7 @@ static NSString * const detailSegue = @"userRunDetails";
     self.startButton.alpha = 1;
     self.stopButton.alpha = 0;
     
-    self.time.text = @"";
-    self.time.hidden = YES;
+    self.time.text = @"00:00";
     self.distance.hidden = YES;
     self.pace.hidden = YES;
     self.height.hidden = YES;
@@ -68,7 +67,6 @@ static NSString * const detailSegue = @"userRunDetails";
 }
 
 -(IBAction)startPressed:(id)sender {
-    self.time.hidden = NO;
     self.distance.hidden = NO;
     self.pace.hidden = NO;
     self.height.hidden = NO;
@@ -152,9 +150,9 @@ static NSString * const detailSegue = @"userRunDetails";
     self.runTime++;
     self.time.text = [NSString stringWithFormat:@"%@", [ToString stringFromSecondCount:self.runTime usingLongFormat:NO]];
     NSLog(@"README: %@", self.time.text);
-    self.distance.text =  [NSString stringWithFormat:NSLocalizedString(@"Distance: %@", nil), [ToString stringFromDistance:self.runDistance]];
-    self.pace.text = [NSString stringWithFormat:NSLocalizedString(@"Pace: %@", nil), [ToString stringFromAverageSpeed:self.runDistance overTime:self.runTime]];
-    self.height.text = [NSString stringWithFormat:NSLocalizedString(@"Height: %0.3f", nil), self.runHeight];
+    self.distance.text =  [NSString stringWithFormat:NSLocalizedString(@"%@", nil), [ToString stringFromDistance:self.runDistance]];
+    self.pace.text = [NSString stringWithFormat:NSLocalizedString(@"%@", nil), [ToString stringFromAverageSpeed:self.runDistance overTime:self.runTime]];
+    self.height.text = [NSString stringWithFormat:NSLocalizedString(@"%0.3f", nil), self.runHeight];
 }
 
 #pragma mark - Location Manager Functions
@@ -221,7 +219,7 @@ static NSString * const detailSegue = @"userRunDetails";
     if ([overlay isKindOfClass:[MKPolyline class]]) {
         MKPolyline *polyLine = (MKPolyline *)overlay;
         MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
-        renderer.strokeColor = [UIColor greenColor];
+        renderer.strokeColor = UIColorFromRGB(0xFF5252);
         renderer.lineWidth = 10;
         return renderer;
     }
