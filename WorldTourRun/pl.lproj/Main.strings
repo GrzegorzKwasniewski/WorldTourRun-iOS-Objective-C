@@ -1,4 +1,10 @@
 
+/* Class = "UILabel"; text = "Distance:"; ObjectID = "3M2-df-HiW"; */
+"3M2-df-HiW.text" = "Dystans:";
+
+/* Class = "UILabel"; text = "Height:"; ObjectID = "3eR-TF-Wyn"; */
+"3eR-TF-Wyn.text" = "Wysokość:";
+
 /* Class = "UILabel"; text = "Label"; ObjectID = "5jY-X2-XhW"; */
 "5jY-X2-XhW.text" = "Label";
 
@@ -32,8 +38,8 @@
 /* Class = "UILabel"; text = "Description"; ObjectID = "GMD-tL-4IZ"; */
 "GMD-tL-4IZ.text" = "Opis";
 
-/* Class = "UILabel"; text = "Height"; ObjectID = "H4c-mJ-FnP"; */
-"H4c-mJ-FnP.text" = "Wysokość";
+/* Class = "UILabel"; text = "0"; ObjectID = "H4c-mJ-FnP"; */
+"H4c-mJ-FnP.text" = "0";
 
 /* Class = "UIViewController"; title = "Detail"; ObjectID = "JEX-9P-axG"; */
 "JEX-9P-axG.title" = "Szczegóły";
@@ -44,8 +50,17 @@
 /* Class = "UILabel"; text = "Share it"; ObjectID = "QNY-r9-Zdo"; */
 "QNY-r9-Zdo.text" = "Podziel się";
 
+/* Class = "UITableViewController"; title = "Trophies"; ObjectID = "RBK-OO-2n8"; */
+"RBK-OO-2n8.title" = "Trofea";
+
 /* Class = "UINavigationController"; title = "Master"; ObjectID = "RMx-3f-FxP"; */
 "RMx-3f-FxP.title" = "Master";
+
+/* Class = "UIViewController"; title = "Trophies Details"; ObjectID = "SzW-xl-nd3"; */
+"SzW-xl-nd3.title" = "Szczegóły";
+
+/* Class = "UILabel"; text = "Speed:"; ObjectID = "Unk-Ja-F0h"; */
+"Unk-Ja-F0h.text" = "Prędkość:";
 
 /* Class = "UILabel"; text = "Date"; ObjectID = "Uwc-u2-Sq5"; */
 "Uwc-u2-Sq5.text" = "Data";
@@ -53,8 +68,8 @@
 /* Class = "UINavigationItem"; title = "Sheduled Runs"; ObjectID = "ViG-fF-zXh"; */
 "ViG-fF-zXh.title" = "Zaplanowane biegi";
 
-/* Class = "UILabel"; text = "Pace"; ObjectID = "X2V-B9-9tK"; */
-"X2V-B9-9tK.text" = "Prędkość";
+/* Class = "UILabel"; text = "0"; ObjectID = "X2V-B9-9tK"; */
+"X2V-B9-9tK.text" = "0";
 
 /* Class = "UIButton"; normalTitle = "Stop"; ObjectID = "bdk-g0-mwv"; */
 "bdk-g0-mwv.normalTitle" = "Stop";
@@ -70,6 +85,12 @@
 
 /* Class = "UIButton"; normalTitle = "Facebook"; ObjectID = "nTR-yX-z6Z"; */
 "nTR-yX-z6Z.normalTitle" = "Facebook";
+
+/* Class = "UILabel"; text = "Removing finished run will delete associated trophies"; ObjectID = "nZq-m9-Ejh"; */
+"nZq-m9-Ejh.text" = "Usunięcie ukończonego biegu spowoduje utracenie związanych z nim trefeów";
+
+/* Class = "UITableViewController"; title = "Finished Runs"; ObjectID = "o10-6N-EXe"; */
+"o10-6N-EXe.title" = "Ukończone biegi";
 
 /* Class = "UILabel"; text = "Name"; ObjectID = "oWY-26-bMI"; */
 "oWY-26-bMI.text" = "Nazwa";
@@ -92,8 +113,8 @@
 /* Class = "UILabel"; text = "Distance"; ObjectID = "xXO-Ba-HOk"; */
 "xXO-Ba-HOk.text" = "Dystans";
 
-/* Class = "UILabel"; text = "Distance"; ObjectID = "yUz-5U-O8x"; */
-"yUz-5U-O8x.text" = "Dystans";
+/* Class = "UILabel"; text = "0"; ObjectID = "yUz-5U-O8x"; */
+"yUz-5U-O8x.text" = "0";
 
 /* Class = "UILabel"; text = "Distance"; ObjectID = "ycF-MH-jry"; */
 "ycF-MH-jry.text" = "Dystans";

@@ -36,10 +36,10 @@
                         <viewControllerLayoutGuide type="bottom" id="whA-xz-AEm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8N9-0a-G01">
-                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="jjz-ff-pKo">
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jjz-ff-pKo">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCu-Xx-2YY" customClass="CustomButton">
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.32156862749999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -123,16 +123,16 @@
             </objects>
             <point key="canvasLocation" x="708" y="-630.13493253373315"/>
         </scene>
-        <!--Finished RunsVC-->
+        <!--Finished Runs-->
         <scene sceneID="JLM-gr-fwp">
             <objects>
-                <tableViewController id="o10-6N-EXe" customClass="FinishedRunsVC" sceneMemberID="viewController">
+                <tableViewController title="Finished Runs" id="o10-6N-EXe" customClass="FinishedRunsVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" id="zKU-sz-yfE">
-                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="cL9-Jw-Iyn">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Removing finished run will delete associated trophies" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZq-m9-Ejh">
@@ -151,10 +151,10 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellFinishedRun" rowHeight="104" id="uTJ-fs-9XT" customClass="CellFinishedRun">
-                                <rect key="frame" x="0.0" y="101" width="414" height="104"/>
+                                <rect key="frame" x="0.0" y="101" width="375" height="104"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uTJ-fs-9XT" id="ryy-6o-kaN">
-                                    <frame key="frameInset" width="414" height="104"/>
+                                    <frame key="frameInset" width="375" height="104"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DZC-Wy-V6v">
@@ -212,7 +212,7 @@
             <objects>
                 <tableViewController id="BZF-6E-bzE" customClass="ScheduleRunsVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="5XY-fH-X5y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -222,10 +222,10 @@
                         <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellScheduledRun" rowHeight="65" id="hFi-OK-rcm" customClass="CellScheduledRun">
-                                <rect key="frame" x="0.0" y="92" width="414" height="65"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hFi-OK-rcm" id="3bJ-el-oNG">
-                                    <frame key="frameInset" width="414" height="65"/>
+                                    <frame key="frameInset" width="375" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="p30-1u-WQg">
@@ -275,16 +275,16 @@
             </objects>
             <point key="canvasLocation" x="1536.8" y="-1301.1994002998501"/>
         </scene>
-        <!--Detail-->
+        <!--Run Details-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
-                <viewController title="Detail" id="JEX-9P-axG" customClass="RunDetailVC" sceneMemberID="viewController">
+                <viewController title="Run Details" id="JEX-9P-axG" customClass="RunDetailVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="svH-Pt-448" customClass="CustomView">
-                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mck-7m-oPZ">
@@ -394,21 +394,21 @@
             </objects>
             <point key="canvasLocation" x="708" y="106.59670164917542"/>
         </scene>
-        <!--TrophiesVC-->
+        <!--Trophies-->
         <scene sceneID="XNm-zZ-rHT">
             <objects>
-                <tableViewController id="RBK-OO-2n8" customClass="TrophiesVC" sceneMemberID="viewController">
+                <tableViewController title="Trophies" id="RBK-OO-2n8" customClass="TrophiesVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" id="5LS-oP-pVM">
-                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTrophy" editingAccessoryType="checkmark" rowHeight="83" id="kJe-SA-qp1" customClass="CellTrophy">
-                                <rect key="frame" x="0.0" y="28" width="414" height="83"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="83"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kJe-SA-qp1" id="Qgs-Z2-TPG">
-                                    <frame key="frameInset" width="414" height="83"/>
+                                    <frame key="frameInset" width="375" height="83"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybF-7m-CkT" customClass="CustomImage">
@@ -418,7 +418,7 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3Yn-hq-3mh">
-                                            <frame key="frameInset" minX="89" minY="14" width="309" height="57"/>
+                                            <frame key="frameInset" minX="89" minY="14" width="270" height="57"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWY-26-bMI">
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
@@ -463,16 +463,16 @@
             </objects>
             <point key="canvasLocation" x="1480.8" y="115.59220389805098"/>
         </scene>
-        <!--Trophies DetailsVC-->
+        <!--Trophies Details-->
         <scene sceneID="67k-vF-iw0">
             <objects>
-                <viewController id="SzW-xl-nd3" customClass="TrophiesDetailsVC" sceneMemberID="viewController">
+                <viewController title="Trophies Details" id="SzW-xl-nd3" customClass="TrophiesDetailsVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c45-EO-1VB"/>
                         <viewControllerLayoutGuide type="bottom" id="Cf6-v8-qtH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="167-Bj-uQ1" customClass="CustomView">
-                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5K1-Y9-vSh">
@@ -537,7 +537,7 @@
                         <viewControllerLayoutGuide type="bottom" id="AGf-AK-Agt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Vbd-GU-sIA">
-                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMA-UX-6PF" customClass="CustomView">
