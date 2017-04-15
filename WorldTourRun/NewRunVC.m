@@ -47,7 +47,16 @@ static NSString * const runHigh = @"run_high";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.locationManager requestWhenInUseAuthorization];
+    
+    if (self.locationManager == nil) {
+        self.locationManager = [[CLLocationManager alloc] init];
+    }
+    
+    // TODO: Move to other place
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    //[self.locationManager requestWhenInUseAuthorization];
     self.mapView.delegate = self;
 
 }
@@ -194,15 +203,6 @@ static NSString * const runHigh = @"run_high";
 }
 
 -(void)updateLocactions {
-    
-    if (self.locationManager == nil) {
-        self.locationManager = [[CLLocationManager alloc] init];
-    }
-    
-    // TODO: Move to other place
-    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-        [self.locationManager requestWhenInUseAuthorization];
-    }
     
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
