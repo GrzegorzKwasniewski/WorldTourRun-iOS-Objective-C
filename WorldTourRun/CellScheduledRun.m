@@ -46,7 +46,7 @@ NSString *const SET_RUN_REMINDER = @"SetRunReminder";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", scheduledRun.name];
     NSArray *reminders = [runReminders filteredArrayUsingPredicate:predicate];
     EKReminder *reminder = [reminders firstObject];
-    self.imageView.image = (reminder.isCompleted) ? [UIImage imageNamed:@"pixel_1"] : [UIImage imageNamed:@"pixel_2"];
+    self.completeStatus.image = (reminder.isCompleted) ? [UIImage imageNamed:@"task_complete"] : [UIImage imageNamed:@"task_not_complete"];
     
 }
 

@@ -131,10 +131,8 @@
         
         [self saveRunReminder:reminder];
         
-        
-        // CODE REFACTOR END
         CellScheduledRun *cell = [tableView cellForRowAtIndexPath:indexPath];
-        cell.imageView.image = (reminder.isCompleted) ? [UIImage imageNamed:@"pixel_1"] : [UIImage imageNamed:@"pixel_2"];
+        cell.completeStatus.image = (reminder.isCompleted) ? [UIImage imageNamed:@"task_complete"] : [UIImage imageNamed:@"task_not_complete"];
     
     }
 }
@@ -278,7 +276,7 @@
         UIAlertController *alert = [CustomAlerts createAlertWithTitle:message withMessage:@""];
         [self presentViewController:alert animated:YES completion:NULL];
     } else {
-        NSLog(@"README: Jest duplikat");
+        // duplicate
     }
 }
 

@@ -211,7 +211,7 @@
         <scene sceneID="7eY-J1-mbQ">
             <objects>
                 <tableViewController id="BZF-6E-bzE" customClass="ScheduleRunsVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="5XY-fH-X5y">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="5XY-fH-X5y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -233,24 +233,25 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-vu-3TR">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-vu-3TR">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="84" id="qTQ-i1-GN8"/>
+                                                <constraint firstAttribute="width" constant="55" id="qTQ-i1-GN8"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="0oU-vu-3TR" firstAttribute="top" secondItem="3bJ-el-oNG" secondAttribute="top" id="0zA-ZG-0Yn"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="p30-1u-WQg" secondAttribute="trailing" id="AkW-gl-V5U"/>
-                                        <constraint firstItem="p30-1u-WQg" firstAttribute="leading" secondItem="0oU-vu-3TR" secondAttribute="trailing" constant="24" id="EpF-XB-5Vh"/>
+                                        <constraint firstItem="p30-1u-WQg" firstAttribute="leading" secondItem="0oU-vu-3TR" secondAttribute="trailing" constant="20" id="EpF-XB-5Vh"/>
+                                        <constraint firstAttribute="bottom" secondItem="0oU-vu-3TR" secondAttribute="bottom" constant="5" id="FUN-Rc-N47"/>
+                                        <constraint firstItem="0oU-vu-3TR" firstAttribute="leading" secondItem="3bJ-el-oNG" secondAttribute="leading" constant="10" id="Qgq-S1-SFP"/>
                                         <constraint firstItem="p30-1u-WQg" firstAttribute="top" secondItem="3bJ-el-oNG" secondAttribute="topMargin" id="TOQ-8g-U3O"/>
-                                        <constraint firstItem="0oU-vu-3TR" firstAttribute="leading" secondItem="3bJ-el-oNG" secondAttribute="leading" id="bxL-FA-5di"/>
+                                        <constraint firstItem="0oU-vu-3TR" firstAttribute="top" secondItem="3bJ-el-oNG" secondAttribute="top" constant="5" id="dGy-XZ-51Z"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="p30-1u-WQg" secondAttribute="bottom" id="dHQ-46-o4w"/>
-                                        <constraint firstAttribute="bottom" secondItem="0oU-vu-3TR" secondAttribute="bottom" id="eYE-J3-96y"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="completeStatus" destination="0oU-vu-3TR" id="0Su-Zc-XZl"/>
                                     <outlet property="runName" destination="p30-1u-WQg" id="WnU-ij-deB"/>
                                 </connections>
                             </tableViewCell>

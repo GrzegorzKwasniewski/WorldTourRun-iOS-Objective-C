@@ -16,6 +16,8 @@ extern NSString *const SET_RUN_REMINDER;
 @interface CellScheduledRun : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *runName;
+@property (weak, nonatomic) IBOutlet UIImageView *completeStatus;
+
 
 @property (strong, nonatomic) SheduledRuns *scheduledRun;
 
