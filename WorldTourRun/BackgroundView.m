@@ -55,9 +55,9 @@
     CGPathAddCurveToPoint(firstLayer, nil, 190, 210, 200, 70, 303, 125);
     
     CGPathAddQuadCurveToPoint(firstLayer, nil, 340, 150, 350, 150);
-    CGPathAddQuadCurveToPoint(firstLayer, nil, 380, 155, 410, 145);
-    CGPathAddLineToPoint(firstLayer, nil, 410, rect.size.height + 10);
-    CGPathAddLineToPoint(firstLayer, nil, -20, rect.size.height + 10);
+    CGPathAddQuadCurveToPoint(firstLayer, nil, 380, 155, 420, 145);
+    CGPathAddLineToPoint(firstLayer, nil, 420, rect.size.height + 50);
+    CGPathAddLineToPoint(firstLayer, nil, -20, rect.size.height + 50);
     CGPathCloseSubpath(firstLayer);
     
     CGContextAddPath(context, firstLayer);
