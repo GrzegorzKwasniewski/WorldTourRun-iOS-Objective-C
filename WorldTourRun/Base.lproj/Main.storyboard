@@ -127,7 +127,7 @@
         <scene sceneID="JLM-gr-fwp">
             <objects>
                 <tableViewController title="Finished Runs" id="o10-6N-EXe" customClass="FinishedRunsVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" id="zKU-sz-yfE">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" id="zKU-sz-yfE">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
