@@ -44,6 +44,7 @@
 		718FAE8A1E772C2000E1D5CC /* TwitterStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE891E772C2000E1D5CC /* TwitterStrategy.m */; };
 		718FAE8D1E77369100E1D5CC /* FacebookStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE8C1E77369100E1D5CC /* FacebookStrategy.m */; };
 		718FAE901E774F8000E1D5CC /* CustomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE8F1E774F8000E1D5CC /* CustomImage.m */; };
+		71F8F5DD1EA113F800B157D4 /* DebugUIViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F8F5DC1EA113F800B157D4 /* DebugUIViews.m */; };
 		71FAE4821E6D853D0066803B /* cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71FAE4811E6D853D0066803B /* cities.txt */; };
 		71FAE4881E6D85840066803B /* CityTrophy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4871E6D85840066803B /* CityTrophy.m */; };
 		71FAE48C1E6D86170066803B /* CityTrophyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE48B1E6D86170066803B /* CityTrophyController.m */; };
@@ -147,6 +148,7 @@
 		718FAE8C1E77369100E1D5CC /* FacebookStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookStrategy.m; sourceTree = "<group>"; };
 		718FAE8E1E774F8000E1D5CC /* CustomImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImage.h; sourceTree = "<group>"; };
 		718FAE8F1E774F8000E1D5CC /* CustomImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImage.m; sourceTree = "<group>"; };
+		71F8F5DC1EA113F800B157D4 /* DebugUIViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugUIViews.m; sourceTree = "<group>"; };
 		71FAE4811E6D853D0066803B /* cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities.txt; sourceTree = "<group>"; };
 		71FAE4861E6D85840066803B /* CityTrophy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTrophy.h; sourceTree = "<group>"; };
 		71FAE4871E6D85840066803B /* CityTrophy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTrophy.m; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				714FB9941E3FBACD00FC6A95 /* Assets.xcassets */,
 				7119D66E1E7DA0DC000DDDD3 /* Info.plist */,
 				7141F7ED1E43C5B4002A909C /* GoogleService-Info.plist */,
+				71F8F5DC1EA113F800B157D4 /* DebugUIViews.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				718FAE8D1E77369100E1D5CC /* FacebookStrategy.m in Sources */,
 				714FB98D1E3FBACD00FC6A95 /* StartScreenVC.m in Sources */,
 				7141F7BB1E407B39002A909C /* NewRunVC.m in Sources */,
+				71F8F5DD1EA113F800B157D4 /* DebugUIViews.m in Sources */,
 				718FAE8A1E772C2000E1D5CC /* TwitterStrategy.m in Sources */,
 				7171C4961E4C9351005BA23C /* CoreDataService.m in Sources */,
 				71FAE4951E72EA730066803B /* CellTrophy.m in Sources */,
