@@ -12,6 +12,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Location+CoreDataClass.h"
 #import "ToString.h"
+#import "CustomAlerts.h"
 #import <MapKit/MapKit.h>
 
 static NSString * const detailSegue = @"userRunDetails";
@@ -56,7 +57,7 @@ static NSString * const runHigh = @"run_high";
     if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         [self.locationManager requestWhenInUseAuthorization];
     }
-    //[self.locationManager requestWhenInUseAuthorization];
+
     self.mapView.delegate = self;
 
 }
@@ -116,26 +117,34 @@ static NSString * const runHigh = @"run_high";
 
 -(IBAction)startPressed:(id)sender {
     
-    self.navigationItem.hidesBackButton = YES;
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
     
-    self.distance.hidden = NO;
-    self.pace.hidden = NO;
-    self.height.hidden = NO;
-    self.runDifficulty.hidden = NO;
-    
-    [UIView animateWithDuration:1.0 animations:^{
-        self.startButton.alpha = 0;
-        self.stopButton.alpha = 1;
-    }];
-    
-    self.runTime = 0;
-    self.runDistance = 0;
-    self.runLocations =  [NSMutableArray array];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
-    
-    [self updateLocactions];
-    
-    self.mapView.hidden = NO;
+    if (status == kCLAuthorizationStatusDenied) {
+        UIAlertController *alertView = [CustomAlerts createAlertWithTitle:@"Access to Your location is denied" withMessage:@"You can change this in Privacy > Location Services settings on Your device"];
+        
+        [self presentViewController:alertView animated:YES completion:NULL];
+    } else {
+        self.navigationItem.hidesBackButton = YES;
+        
+        self.distance.hidden = NO;
+        self.pace.hidden = NO;
+        self.height.hidden = NO;
+        self.runDifficulty.hidden = NO;
+        
+        [UIView animateWithDuration:1.0 animations:^{
+            self.startButton.alpha = 0;
+            self.stopButton.alpha = 1;
+        }];
+        
+        self.runTime = 0;
+        self.runDistance = 0;
+        self.runLocations =  [NSMutableArray array];
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+        
+        [self updateLocactions];
+        
+        self.mapView.hidden = NO;
+    }
 }
 
 - (IBAction)stopPressed:(id)sender {
