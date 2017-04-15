@@ -167,7 +167,7 @@
 
         self.mapView.hidden = YES;
         
-        UIAlertController *alertView = [CustomAlerts createAlertWithTitle:@"Oh no!" withMessage:@"There is on data to display"];
+        UIAlertController *alertView = [CustomAlerts createAlertWithTitle:@"Oh no!" withMessage:@"There is no data to display"];
         
         [self presentViewController:alertView animated:YES completion:NULL];
         
