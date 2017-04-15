@@ -15,6 +15,8 @@
 #import <MapKit/MapKit.h>
 
 static NSString * const detailSegue = @"userRunDetails";
+static NSString * const runLow = @"run_low";
+static NSString * const runHigh = @"run_high";
 
 @interface NewRunVC () <CLLocationManagerDelegate, MKMapViewDelegate>
 
@@ -149,7 +151,6 @@ static NSString * const detailSegue = @"userRunDetails";
 -(void)updateTimer {
     self.runTime++;
     self.time.text = [NSString stringWithFormat:@"%@", [ToString stringFromSecondCount:self.runTime usingLongFormat:NO]];
-    NSLog(@"README: %@", self.time.text);
     self.distance.text =  [NSString stringWithFormat:NSLocalizedString(@"%@", nil), [ToString stringFromDistance:self.runDistance]];
     self.pace.text = [NSString stringWithFormat:NSLocalizedString(@"%@", nil), [ToString stringFromAverageSpeed:self.runDistance overTime:self.runTime]];
     self.height.text = [NSString stringWithFormat:NSLocalizedString(@"%0.3f", nil), self.runHeight];
@@ -172,8 +173,8 @@ static NSString * const detailSegue = @"userRunDetails";
                 
                 float heightDifference = self.runHeight - singleLoaction.altitude;
                 
-                // if difference in heights is greater than 0.5 m, than this is hard run
-                self.runDifficulty.image = (heightDifference > 0.5) ? [UIImage imageNamed:@"pixel_1"] : [UIImage imageNamed:@"pixel_2"];
+                // if difference in heights is greater than 0.5 m, than this is a hard run
+                self.runDifficulty.image = (heightDifference > 0.5) ? [UIImage imageNamed:runHigh] : [UIImage imageNamed:runLow];
                 
                 CLLocationCoordinate2D coords[2];
                 coords[0] = ((CLLocation *)self.runLocations.lastObject).coordinate;
