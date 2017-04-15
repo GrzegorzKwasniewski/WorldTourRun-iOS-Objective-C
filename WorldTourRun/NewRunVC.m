@@ -77,27 +77,6 @@ static NSString * const runHigh = @"run_high";
     
 }
 
--(IBAction)startPressed:(id)sender {
-    self.distance.hidden = NO;
-    self.pace.hidden = NO;
-    self.height.hidden = NO;
-    self.runDifficulty.hidden = NO;
-    
-    [UIView animateWithDuration:1.0 animations:^{
-        self.startButton.alpha = 0;
-        self.stopButton.alpha = 1;
-    }];
-    
-    self.runTime = 0;
-    self.runDistance = 0;
-    self.runLocations =  [NSMutableArray array];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
-    
-    [self updateLocactions];
-    
-    self.mapView.hidden = NO;
-}
-
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
@@ -135,8 +114,34 @@ static NSString * const runHigh = @"run_high";
     
 }
 
+-(IBAction)startPressed:(id)sender {
+    
+    self.navigationItem.hidesBackButton = YES;
+    
+    self.distance.hidden = NO;
+    self.pace.hidden = NO;
+    self.height.hidden = NO;
+    self.runDifficulty.hidden = NO;
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        self.startButton.alpha = 0;
+        self.stopButton.alpha = 1;
+    }];
+    
+    self.runTime = 0;
+    self.runDistance = 0;
+    self.runLocations =  [NSMutableArray array];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+    
+    [self updateLocactions];
+    
+    self.mapView.hidden = NO;
+}
+
 - (IBAction)stopPressed:(id)sender {
     
+    self.navigationItem.hidesBackButton = NO;
+
     [self.timer invalidate];
     [self.locationManager stopUpdatingLocation];
     
