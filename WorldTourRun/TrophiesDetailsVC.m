@@ -32,7 +32,7 @@
     [formatter setDateStyle:NSDateFormatterMediumStyle];
         
     self.trophyName.text = self.trophyStatus.trophy.cityName;
-    self.runDistance.text = [ToString stringFromDistance:self.trophyStatus.trophy.distanceToGetTrophy];
+    self.runDistance.text = [NSString stringWithFormat:NSLocalizedString(@"Distance: %@", nil), [ToString stringFromDistance:self.trophyStatus.trophy.distanceToGetTrophy]];
     self.dateEarned.text = [NSString stringWithFormat:NSLocalizedString(@"Earned: %@", nil) , [formatter stringFromDate:self.trophyStatus.endedRun.timestamp]];
     self.trophyImage.image = [UIImage imageNamed:self.trophyStatus.trophy.cityImageName];
     self.topPace.text = [NSString stringWithFormat:NSLocalizedString(@"Best: %@", nil), [ToString stringFromAverageSpeed:(float)self.trophyStatus.bestRun.distance overTime:(int)self.trophyStatus.bestRun.duration]];
