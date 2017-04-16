@@ -121,8 +121,8 @@
     regionToSet.center.latitude = (minimumLatitude + maximumLatitiude) / 2.0f;
     regionToSet.center.longitude = (minimumLongitude + maximumLongitude) / 2.0f;
     
-    regionToSet.span.latitudeDelta = (maximumLatitiude - minimumLatitude) * 1.1;
-    regionToSet.span.longitudeDelta = (maximumLongitude - minimumLongitude) * 1.1;
+    regionToSet.span.latitudeDelta = (maximumLatitiude - minimumLatitude) * 1.3;
+    regionToSet.span.longitudeDelta = (maximumLongitude - minimumLongitude) * 1.3;
     
     return regionToSet;
 }
