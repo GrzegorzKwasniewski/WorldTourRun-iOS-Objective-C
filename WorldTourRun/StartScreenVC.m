@@ -17,12 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //BackgroundView *background = [[BackgroundView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height / 2, self.view.bounds.size.width, self.view.bounds.size.height)];
-    
-    //[self.view addSubview:background];
-    //[self.view sendSubviewToBack:background];
-    
-    self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
+    self.bannerView.adUnitID = @"ca-app-pub-1657846570640547/9857116910";
     self.bannerView.rootViewController = self;
     [self.bannerView loadRequest:[GADRequest request]];
 }

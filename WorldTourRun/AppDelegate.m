@@ -36,7 +36,7 @@
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
     [FIRApp configure];
-    [GADMobileAds configureWithApplicationID:@"ca-app-pub-3940256099942544~1458002511"];
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-1657846570640547~8380383711"];
     
     return YES;
 }
