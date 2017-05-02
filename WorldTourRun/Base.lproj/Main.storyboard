@@ -39,7 +39,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="J8b-xF-YXs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="J8b-xF-YXs">
+                                <frame key="frameInset" minX="20" minY="40" width="374" height="160"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="FpI-FS-jjg"/>
@@ -93,7 +94,7 @@
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.27058823529999998" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.76078431369999999" green="0.27058823529999998" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="J46-AT-05N"/>
+                                    <constraint firstAttribute="height" constant="250" id="J46-AT-05N"/>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jha-K4-48R" customClass="GADBannerView">
@@ -108,12 +109,12 @@
                             <constraint firstItem="whA-xz-AEm" firstAttribute="top" secondItem="jjz-ff-pKo" secondAttribute="bottom" constant="120" id="Dc1-yl-Siv"/>
                             <constraint firstItem="jjz-ff-pKo" firstAttribute="leading" secondItem="8N9-0a-G01" secondAttribute="leadingMargin" constant="20" id="FVD-Jq-rFy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J8b-xF-YXs" secondAttribute="trailing" id="FhB-1U-xYr"/>
-                            <constraint firstItem="J8b-xF-YXs" firstAttribute="top" secondItem="bSc-l9-ijS" secondAttribute="bottom" id="Gyt-2J-Osg"/>
                             <constraint firstItem="whA-xz-AEm" firstAttribute="top" secondItem="Jha-K4-48R" secondAttribute="bottom" id="LpV-sp-52F"/>
                             <constraint firstItem="Jha-K4-48R" firstAttribute="leading" secondItem="8N9-0a-G01" secondAttribute="leading" id="Ovl-vY-YrQ"/>
                             <constraint firstItem="J8b-xF-YXs" firstAttribute="leading" secondItem="8N9-0a-G01" secondAttribute="leadingMargin" id="Z8y-Gw-IXU"/>
                             <constraint firstAttribute="trailing" secondItem="Jha-K4-48R" secondAttribute="trailing" id="cPa-uz-hD8"/>
-                            <constraint firstItem="jjz-ff-pKo" firstAttribute="top" secondItem="J8b-xF-YXs" secondAttribute="bottom" constant="30" id="cij-xU-KFK"/>
+                            <constraint firstItem="jjz-ff-pKo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="J8b-xF-YXs" secondAttribute="bottom" constant="30" id="cij-xU-KFK"/>
+                            <constraint firstItem="J8b-xF-YXs" firstAttribute="top" secondItem="bSc-l9-ijS" secondAttribute="bottom" id="sAH-Sk-gr0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jjz-ff-pKo" secondAttribute="trailing" constant="20" id="xjg-ew-Re8"/>
                         </constraints>
                     </view>
@@ -296,7 +297,8 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="41S-gd-vWS"/>
                                 </constraints>
                             </mapView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gpu-l5-yYc">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gpu-l5-yYc">
+                                <frame key="frameInset" width="288" height="152"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I6x-W6-Q6a">
                                         <subviews>
@@ -588,7 +590,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMA-UX-6PF" customClass="CustomView">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMA-UX-6PF" customClass="CustomView">
+                                <frame key="frameInset" width="1000" height="1000"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7qy-bq-xhb">
                                         <subviews>
@@ -668,7 +671,9 @@
                                     <constraint firstItem="GJh-su-4dt" firstAttribute="leading" secondItem="SMA-UX-6PF" secondAttribute="leading" id="yd0-L6-LDT"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2Bg-s9-t4r"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2Bg-s9-t4r">
+                                <frame key="frameInset" width="1000" height="1000"/>
+                            </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VzM-t8-IDg">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohO-Ja-6zG" customClass="CustomButton">
