@@ -33,7 +33,6 @@
 		714FB9A91E3FBE7E00FC6A95 /* Run+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9A41E3FBE7E00FC6A95 /* Run+CoreDataClass.m */; };
 		714FB9AA1E3FBE7E00FC6A95 /* Run+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 714FB9A61E3FBE7E00FC6A95 /* Run+CoreDataProperties.m */; };
 		714FB9AD1E3FBF0A00FC6A95 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714FB9AC1E3FBF0A00FC6A95 /* MapKit.framework */; };
-		715C2D8B1E7EBA680053B59C /* WorldTourRunUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 715C2D8A1E7EBA680053B59C /* WorldTourRunUITests.m */; };
 		715C2D951E7F20200053B59C /* ToStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 715C2D941E7F20200053B59C /* ToStringTests.m */; };
 		7171C4961E4C9351005BA23C /* CoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7171C4951E4C9351005BA23C /* CoreDataService.m */; };
 		718FAE721E75499D00E1D5CC /* TrophiesDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE711E75499D00E1D5CC /* TrophiesDetailsVC.m */; };
@@ -51,6 +50,7 @@
 		71FAE4911E7193CE0066803B /* TrophyStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4901E7193CE0066803B /* TrophyStatus.m */; };
 		71FAE4951E72EA730066803B /* CellTrophy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4941E72EA730066803B /* CellTrophy.m */; };
 		71FAE4981E72EB020066803B /* TrophiesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4971E72EB020066803B /* TrophiesVC.m */; };
+		B2F498AF1EB9C6CB0018A3B4 /* WorldTourRunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F498AE1EB9C6CB0018A3B4 /* WorldTourRunUITests.swift */; };
 		E24A9D858FF30E0CD2B902D9 /* libPods-WorldTourRun.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5251D5EF45FAD95ECD4D1E21 /* libPods-WorldTourRun.a */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +62,7 @@
 			remoteGlobalIDString = 714FB9811E3FBACD00FC6A95;
 			remoteInfo = WorldTourRun;
 		};
-		715C2D8D1E7EBA680053B59C /* PBXContainerItemProxy */ = {
+		B2F498B11EB9C6CB0018A3B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 714FB97A1E3FBACD00FC6A95 /* Project object */;
 			proxyType = 1;
@@ -126,9 +126,6 @@
 		714FB9AC1E3FBF0A00FC6A95 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		715C2D7A1E7EBA4B0053B59C /* WorldTourRunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTourRunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		715C2D7E1E7EBA4B0053B59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		715C2D881E7EBA680053B59C /* WorldTourRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTourRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		715C2D8A1E7EBA680053B59C /* WorldTourRunUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorldTourRunUITests.m; sourceTree = "<group>"; };
-		715C2D8C1E7EBA680053B59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		715C2D941E7F20200053B59C /* ToStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToStringTests.m; sourceTree = "<group>"; };
 		7171C4941E4C9351005BA23C /* CoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataService.h; sourceTree = "<group>"; };
 		7171C4951E4C9351005BA23C /* CoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataService.m; sourceTree = "<group>"; };
@@ -160,6 +157,9 @@
 		71FAE4941E72EA730066803B /* CellTrophy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTrophy.m; sourceTree = "<group>"; };
 		71FAE4961E72EB020066803B /* TrophiesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrophiesVC.h; sourceTree = "<group>"; };
 		71FAE4971E72EB020066803B /* TrophiesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrophiesVC.m; sourceTree = "<group>"; };
+		B2F498AC1EB9C6CB0018A3B4 /* WorldTourRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTourRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2F498AE1EB9C6CB0018A3B4 /* WorldTourRunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTourRunUITests.swift; sourceTree = "<group>"; };
+		B2F498B01EB9C6CB0018A3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E413F6C04DE9F3AC703E51D8 /* Pods-WorldTourRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldTourRun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldTourRun/Pods-WorldTourRun.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,7 +180,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		715C2D851E7EBA680053B59C /* Frameworks */ = {
+		B2F498A91EB9C6CB0018A3B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -221,7 +221,7 @@
 			children = (
 				714FB9841E3FBACD00FC6A95 /* WorldTourRun */,
 				715C2D7B1E7EBA4B0053B59C /* WorldTourRunTests */,
-				715C2D891E7EBA680053B59C /* WorldTourRunUITests */,
+				B2F498AD1EB9C6CB0018A3B4 /* WorldTourRunUITests */,
 				714FB9831E3FBACD00FC6A95 /* Products */,
 				714FB9AB1E3FBF0A00FC6A95 /* Frameworks */,
 				815384D090D0C49DD4F4DFD6 /* Pods */,
@@ -233,7 +233,7 @@
 			children = (
 				714FB9821E3FBACD00FC6A95 /* WorldTourRun.app */,
 				715C2D7A1E7EBA4B0053B59C /* WorldTourRunTests.xctest */,
-				715C2D881E7EBA680053B59C /* WorldTourRunUITests.xctest */,
+				B2F498AC1EB9C6CB0018A3B4 /* WorldTourRunUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -336,15 +336,6 @@
 			path = WorldTourRunTests;
 			sourceTree = "<group>";
 		};
-		715C2D891E7EBA680053B59C /* WorldTourRunUITests */ = {
-			isa = PBXGroup;
-			children = (
-				715C2D8A1E7EBA680053B59C /* WorldTourRunUITests.m */,
-				715C2D8C1E7EBA680053B59C /* Info.plist */,
-			);
-			path = WorldTourRunUITests;
-			sourceTree = "<group>";
-		};
 		718FAE731E758FAB00E1D5CC /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +424,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B2F498AD1EB9C6CB0018A3B4 /* WorldTourRunUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B2F498AE1EB9C6CB0018A3B4 /* WorldTourRunUITests.swift */,
+				B2F498B01EB9C6CB0018A3B4 /* Info.plist */,
+			);
+			path = WorldTourRunUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -474,22 +474,22 @@
 			productReference = 715C2D7A1E7EBA4B0053B59C /* WorldTourRunTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		715C2D871E7EBA680053B59C /* WorldTourRunUITests */ = {
+		B2F498AB1EB9C6CB0018A3B4 /* WorldTourRunUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 715C2D8F1E7EBA680053B59C /* Build configuration list for PBXNativeTarget "WorldTourRunUITests" */;
+			buildConfigurationList = B2F498B31EB9C6CB0018A3B4 /* Build configuration list for PBXNativeTarget "WorldTourRunUITests" */;
 			buildPhases = (
-				715C2D841E7EBA680053B59C /* Sources */,
-				715C2D851E7EBA680053B59C /* Frameworks */,
-				715C2D861E7EBA680053B59C /* Resources */,
+				B2F498A81EB9C6CB0018A3B4 /* Sources */,
+				B2F498A91EB9C6CB0018A3B4 /* Frameworks */,
+				B2F498AA1EB9C6CB0018A3B4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				715C2D8E1E7EBA680053B59C /* PBXTargetDependency */,
+				B2F498B21EB9C6CB0018A3B4 /* PBXTargetDependency */,
 			);
 			name = WorldTourRunUITests;
 			productName = WorldTourRunUITests;
-			productReference = 715C2D881E7EBA680053B59C /* WorldTourRunUITests.xctest */;
+			productReference = B2F498AC1EB9C6CB0018A3B4 /* WorldTourRunUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -498,6 +498,7 @@
 		714FB97A1E3FBACD00FC6A95 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Grzegorz Kwaśniewski";
 				TargetAttributes = {
@@ -518,9 +519,9 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 714FB9811E3FBACD00FC6A95;
 					};
-					715C2D871E7EBA680053B59C = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = R35N4L2G2B;
+					B2F498AB1EB9C6CB0018A3B4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7K692Z62S3;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 714FB9811E3FBACD00FC6A95;
 					};
@@ -542,7 +543,7 @@
 			targets = (
 				714FB9811E3FBACD00FC6A95 /* WorldTourRun */,
 				715C2D791E7EBA4B0053B59C /* WorldTourRunTests */,
-				715C2D871E7EBA680053B59C /* WorldTourRunUITests */,
+				B2F498AB1EB9C6CB0018A3B4 /* WorldTourRunUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -568,7 +569,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		715C2D861E7EBA680053B59C /* Resources */ = {
+		B2F498AA1EB9C6CB0018A3B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -676,11 +677,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		715C2D841E7EBA680053B59C /* Sources */ = {
+		B2F498A81EB9C6CB0018A3B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				715C2D8B1E7EBA680053B59C /* WorldTourRunUITests.m in Sources */,
+				B2F498AF1EB9C6CB0018A3B4 /* WorldTourRunUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,10 +693,10 @@
 			target = 714FB9811E3FBACD00FC6A95 /* WorldTourRun */;
 			targetProxy = 715C2D7F1E7EBA4B0053B59C /* PBXContainerItemProxy */;
 		};
-		715C2D8E1E7EBA680053B59C /* PBXTargetDependency */ = {
+		B2F498B21EB9C6CB0018A3B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 714FB9811E3FBACD00FC6A95 /* WorldTourRun */;
-			targetProxy = 715C2D8D1E7EBA680053B59C /* PBXContainerItemProxy */;
+			targetProxy = B2F498B11EB9C6CB0018A3B4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -897,26 +898,37 @@
 			};
 			name = Release;
 		};
-		715C2D901E7EBA680053B59C /* Debug */ = {
+		B2F498B41EB9C6CB0018A3B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = R35N4L2G2B;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = 7K692Z62S3;
 				INFOPLIST_FILE = WorldTourRunUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRunUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = incodewebelieve.com.WorldTourRunUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = WorldTourRun;
 			};
 			name = Debug;
 		};
-		715C2D911E7EBA680053B59C /* Release */ = {
+		B2F498B51EB9C6CB0018A3B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = R35N4L2G2B;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = 7K692Z62S3;
 				INFOPLIST_FILE = WorldTourRunUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.incodewebelieve.WorldTourRunUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = incodewebelieve.com.WorldTourRunUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = WorldTourRun;
 			};
 			name = Release;
@@ -951,14 +963,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		715C2D8F1E7EBA680053B59C /* Build configuration list for PBXNativeTarget "WorldTourRunUITests" */ = {
+		B2F498B31EB9C6CB0018A3B4 /* Build configuration list for PBXNativeTarget "WorldTourRunUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				715C2D901E7EBA680053B59C /* Debug */,
-				715C2D911E7EBA680053B59C /* Release */,
+				B2F498B41EB9C6CB0018A3B4 /* Debug */,
+				B2F498B51EB9C6CB0018A3B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
