@@ -28,9 +28,25 @@ class WorldTourRunUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test_Navigation_MainVC_To_NewRunVC() {
+        
+        let app = XCUIApplication()
+        let newRunVCButton = app.buttons["New Run"]
+        
+        XCTAssertEqual(newRunVCButton.value as! String, "")
+        
+        newRunVCButton.tap()
+        
+        XCTAssertEqual(newRunVCButton.exists, false)
+
+        let backButton = app.navigationBars["New Run"].children(matching: .button).matching(identifier: "Back").element(boundBy: 0)
+        
+        XCTAssertEqual(backButton.value as! String, "")
+        
+        backButton.tap()
+        
+        XCTAssertEqual(backButton.exists, false)
+        
     }
     
 }
