@@ -430,8 +430,8 @@
 		B2F498AD1EB9C6CB0018A3B4 /* WorldTourRunUITests */ = {
 			isa = PBXGroup;
 			children = (
-				71DC82931EBB1DAB0022B513 /* NewRunUITests.swift */,
 				B2F498AE1EB9C6CB0018A3B4 /* ViewControllersNavigationUITests.swift */,
+				71DC82931EBB1DAB0022B513 /* NewRunUITests.swift */,
 				B2F498B61EB9C9710018A3B4 /* Info.plist */,
 			);
 			path = WorldTourRunUITests;

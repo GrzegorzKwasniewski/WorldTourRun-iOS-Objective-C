@@ -9,6 +9,8 @@
 import XCTest
 
 class ViewControllersNavigationUITests: XCTestCase {
+    
+    let app = XCUIApplication()
         
     override func setUp() {
         super.setUp()
@@ -25,7 +27,6 @@ class ViewControllersNavigationUITests: XCTestCase {
     
     func test_Navigation_MainVC_To_NewRunVC() {
         
-        let app = XCUIApplication()
         let newRunVCButton = app.buttons["New Run"]
         
         XCTAssertEqual(newRunVCButton.value as! String, "")
@@ -46,7 +47,6 @@ class ViewControllersNavigationUITests: XCTestCase {
     
     func test_Navigation_MainVC_To_FinishedRunsVC() {
         
-        let app = XCUIApplication()
         let finishedRunsVCButton = app.buttons["Finished Runs"]
         
         XCTAssertEqual(finishedRunsVCButton.value as! String, "")
@@ -67,7 +67,6 @@ class ViewControllersNavigationUITests: XCTestCase {
     
     func test_Navigation_MainVC_To_TrophiesVC() {
         
-        let app = XCUIApplication()
         let trophiesVCButton = app.buttons["Trophies"]
         
         XCTAssertEqual(trophiesVCButton.value as! String, "")
@@ -77,6 +76,26 @@ class ViewControllersNavigationUITests: XCTestCase {
         XCTAssertEqual(trophiesVCButton.exists, false)
         
         let backButton = app.navigationBars["Trophies"].children(matching: .button).matching(identifier: "Back").element(boundBy: 0)
+        
+        XCTAssertEqual(backButton.value as! String, "")
+        
+        backButton.tap()
+        
+        XCTAssertEqual(backButton.exists, false)
+        
+    }
+    
+    func test_Navigation_MainVC_To_RunRemindersVC() {
+        
+        let runRemindersVCButton = app.buttons["Run Reminders"]
+        
+        XCTAssertEqual(runRemindersVCButton.value as! String, "")
+        
+        runRemindersVCButton.tap()
+        
+        XCTAssertEqual(runRemindersVCButton.exists, false)
+        
+        let backButton = app.navigationBars["Run Reminders"].children(matching: .button).matching(identifier: "Back").element(boundBy: 0)
         
         XCTAssertEqual(backButton.value as! String, "")
         
