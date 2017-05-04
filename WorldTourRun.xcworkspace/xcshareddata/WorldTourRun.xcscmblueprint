@@ -1,28 +1,37 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7307B6184162C31EBF21C042758B0C32CEF8B185",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7307B6184162C31EBF21C042758B0C32CEF8B185+++E0E0FEF",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "7307B6184162C31EBF21C042758B0C32CEF8B185" : 9223372036854775807
+    "7307B6184162C31EBF21C042758B0C32CEF8B185+++2EE91FE" : 9223372036854775807,
+    "7307B6184162C31EBF21C042758B0C32CEF8B185+++2423EF1" : 9223372036854775807,
+    "7307B6184162C31EBF21C042758B0C32CEF8B185+++E0E0FEF" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0D90DB21-2B13-4C0E-915E-D16DECBEE751",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "7307B6184162C31EBF21C042758B0C32CEF8B185" : ""
+    "7307B6184162C31EBF21C042758B0C32CEF8B185+++2EE91FE" : "",
+    "7307B6184162C31EBF21C042758B0C32CEF8B185+++2423EF1" : "",
+    "7307B6184162C31EBF21C042758B0C32CEF8B185+++E0E0FEF" : "WorldTourRun-iOS-Objective-C\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "WorldTourRun",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WorldTourRun.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/GrzegorzKwasniewski\/WorldTourRun-iOS-Objective-C.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7307B6184162C31EBF21C042758B0C32CEF8B185"
-    },
-    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/github.com:GrzegorzKwasniewski\/WorldTourRun-iOS-Objective-C.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7307B6184162C31EBF21C042758B0C32CEF8B185"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7307B6184162C31EBF21C042758B0C32CEF8B185+++2423EF1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/GrzegorzKwasniewski\/WorldTourRun-iOS-Objective-C.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7307B6184162C31EBF21C042758B0C32CEF8B185+++2EE91FE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/GrzegorzKwasniewski\/WorldTourRun-iOS-Objective-C.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7307B6184162C31EBF21C042758B0C32CEF8B185+++E0E0FEF"
     }
   ]
 }

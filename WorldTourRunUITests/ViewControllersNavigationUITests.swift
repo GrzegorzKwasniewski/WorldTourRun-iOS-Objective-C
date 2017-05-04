@@ -8,23 +8,18 @@
 
 import XCTest
 
-class WorldTourRunUITests: XCTestCase {
+class ViewControllersNavigationUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+
         XCUIApplication().launch()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
@@ -40,6 +35,27 @@ class WorldTourRunUITests: XCTestCase {
         XCTAssertEqual(newRunVCButton.exists, false)
 
         let backButton = app.navigationBars["New Run"].children(matching: .button).matching(identifier: "Back").element(boundBy: 0)
+        
+        XCTAssertEqual(backButton.value as! String, "")
+        
+        backButton.tap()
+        
+        XCTAssertEqual(backButton.exists, false)
+        
+    }
+    
+    func test_Navigation_MainVC_To_FinishedRunsVC() {
+        
+        let app = XCUIApplication()
+        let finishedRunsVCButton = app.buttons["Finished Runs"]
+        
+        XCTAssertEqual(finishedRunsVCButton.value as! String, "")
+        
+        finishedRunsVCButton.tap()
+        
+        XCTAssertEqual(finishedRunsVCButton.exists, false)
+        
+        let backButton = app.navigationBars["Finished Runs"].children(matching: .button).matching(identifier: "Back").element(boundBy: 0)
         
         XCTAssertEqual(backButton.value as! String, "")
         
