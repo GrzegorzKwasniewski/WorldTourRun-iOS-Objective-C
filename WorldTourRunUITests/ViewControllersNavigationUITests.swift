@@ -65,4 +65,25 @@ class ViewControllersNavigationUITests: XCTestCase {
         
     }
     
+    func test_Navigation_MainVC_To_TrophiesVC() {
+        
+        let app = XCUIApplication()
+        let trophiesVCButton = app.buttons["Trophies"]
+        
+        XCTAssertEqual(trophiesVCButton.value as! String, "")
+        
+        trophiesVCButton.tap()
+        
+        XCTAssertEqual(trophiesVCButton.exists, false)
+        
+        let backButton = app.navigationBars["Trophies"].children(matching: .button).matching(identifier: "Back").element(boundBy: 0)
+        
+        XCTAssertEqual(backButton.value as! String, "")
+        
+        backButton.tap()
+        
+        XCTAssertEqual(backButton.exists, false)
+        
+    }
+    
 }
