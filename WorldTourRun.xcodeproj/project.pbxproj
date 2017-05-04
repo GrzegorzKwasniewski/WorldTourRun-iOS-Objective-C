@@ -43,6 +43,7 @@
 		718FAE8A1E772C2000E1D5CC /* TwitterStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE891E772C2000E1D5CC /* TwitterStrategy.m */; };
 		718FAE8D1E77369100E1D5CC /* FacebookStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE8C1E77369100E1D5CC /* FacebookStrategy.m */; };
 		718FAE901E774F8000E1D5CC /* CustomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 718FAE8F1E774F8000E1D5CC /* CustomImage.m */; };
+		71DC82941EBB1DAB0022B513 /* NewRunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC82931EBB1DAB0022B513 /* NewRunUITests.swift */; };
 		71F8F5DD1EA113F800B157D4 /* DebugUIViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F8F5DC1EA113F800B157D4 /* DebugUIViews.m */; };
 		71FAE4821E6D853D0066803B /* cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71FAE4811E6D853D0066803B /* cities.txt */; };
 		71FAE4881E6D85840066803B /* CityTrophy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4871E6D85840066803B /* CityTrophy.m */; };
@@ -146,6 +147,7 @@
 		718FAE8C1E77369100E1D5CC /* FacebookStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookStrategy.m; sourceTree = "<group>"; };
 		718FAE8E1E774F8000E1D5CC /* CustomImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImage.h; sourceTree = "<group>"; };
 		718FAE8F1E774F8000E1D5CC /* CustomImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImage.m; sourceTree = "<group>"; };
+		71DC82931EBB1DAB0022B513 /* NewRunUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunUITests.swift; sourceTree = "<group>"; };
 		71F8F5DC1EA113F800B157D4 /* DebugUIViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugUIViews.m; sourceTree = "<group>"; };
 		71FAE4811E6D853D0066803B /* cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities.txt; sourceTree = "<group>"; };
 		71FAE4861E6D85840066803B /* CityTrophy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTrophy.h; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 		B2F498AD1EB9C6CB0018A3B4 /* WorldTourRunUITests */ = {
 			isa = PBXGroup;
 			children = (
+				71DC82931EBB1DAB0022B513 /* NewRunUITests.swift */,
 				B2F498AE1EB9C6CB0018A3B4 /* ViewControllersNavigationUITests.swift */,
 				B2F498B61EB9C9710018A3B4 /* Info.plist */,
 			);
@@ -683,6 +686,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71DC82941EBB1DAB0022B513 /* NewRunUITests.swift in Sources */,
 				B2F498AF1EB9C6CB0018A3B4 /* ViewControllersNavigationUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
