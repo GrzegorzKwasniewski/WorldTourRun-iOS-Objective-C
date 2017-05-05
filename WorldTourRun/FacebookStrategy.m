@@ -16,7 +16,7 @@
     
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
         
-        SLComposeViewController * tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        SLComposeViewController * tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         [tweetSheet setInitialText:[NSString stringWithFormat:@"My new run stats: Distance: %0.2f Time: %hd", userRunDetails.distance, userRunDetails.duration]];
         return tweetSheet;
     }
