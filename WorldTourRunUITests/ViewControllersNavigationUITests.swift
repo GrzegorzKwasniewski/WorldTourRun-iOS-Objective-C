@@ -45,6 +45,47 @@ class ViewControllersNavigationUITests: XCTestCase {
         
     }
     
+    func test_Navigation_MainVC_To_RunDetailsVC() {
+        
+        let newRunButton = app.buttons["New Run"]
+        
+        newRunButton.tap()
+        
+        let startButton = app.buttons["Start"]
+        
+        XCTAssertEqual(startButton.isEnabled, true)
+        XCTAssertEqual(startButton.isSelected, false)
+        
+        startButton.tap()
+        
+        let stopButton = app.buttons["Stop"]
+        
+        XCTAssertEqual(stopButton.isEnabled, true)
+        
+        stopButton.tap()
+        
+        XCTAssertEqual(stopButton.isSelected, false)
+        
+        let saveSheetButton = app.sheets.buttons["Save"]
+        
+        saveSheetButton.tap()
+        
+        XCTAssertEqual(saveSheetButton.exists, false)
+        
+        let backToNewRunButton = app.navigationBars["Detail"].buttons["New Run"]
+        
+        backToNewRunButton.tap()
+        
+        XCTAssertEqual(backToNewRunButton.exists, false)
+        
+        let backButton = app.navigationBars["New Run"].children(matching: .button).matching(identifier: "Back").element(boundBy: 0)
+        
+        backButton.tap()
+        
+        XCTAssertEqual(backButton.exists, false)
+        
+    }
+    
     func test_Navigation_MainVC_To_FinishedRunsVC() {
         
         let finishedRunsVCButton = app.buttons["Finished Runs"]
