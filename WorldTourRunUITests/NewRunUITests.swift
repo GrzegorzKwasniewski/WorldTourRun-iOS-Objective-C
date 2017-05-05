@@ -113,4 +113,40 @@ class NewRunUITests: XCTestCase {
 
         app.navigationBars["Twitter"].buttons["Post"].tap()
     }
+    
+    
+    func test_PostingNewRunToFacebook() {
+        
+        let newRunButton = app.buttons["New Run"]
+        newRunButton.tap()
+        
+        let startButton = app.buttons["Start"]
+        
+        XCTAssertEqual(startButton.isEnabled, true)
+        XCTAssertEqual(startButton.isSelected, false)
+        
+        startButton.tap()
+        
+        let stopButton = app.buttons["Stop"]
+        
+        XCTAssertEqual(stopButton.isEnabled, true)
+        
+        stopButton.tap()
+        
+        XCTAssertEqual(stopButton.isSelected, false)
+        
+        let saveSheetButton = app.sheets.buttons["Save"]
+        saveSheetButton.tap()
+        
+        XCTAssertEqual(saveSheetButton.exists, false)
+        
+        let facebookButton = app.buttons["Facebook"]
+        
+        XCTAssertEqual(facebookButton.isEnabled, true)
+        XCTAssertEqual(facebookButton.isSelected, false)
+        
+        facebookButton.tap()
+        
+        app.navigationBars["Facebook"].buttons["Post"].tap()
+    }
 }
