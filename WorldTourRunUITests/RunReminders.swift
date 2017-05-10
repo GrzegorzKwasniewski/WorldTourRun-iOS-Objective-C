@@ -23,6 +23,19 @@ class RunReminders: XCTestCase {
         super.tearDown()
     }
     
+    func test_GrantPermissionToAccesReminders() {
+        
+        let app = XCUIApplication()
+        app.buttons["Run Reminders"].tap()
+        
+        let permissionAlert = app.alerts["“WorldTourRun” Would Like to Access Your Reminders"]
+        
+        if permissionAlert.exists {
+            permissionAlert.buttons["OK"].tap()
+        }
+        
+    }
+    
     func test_AddNewRunReminder() {
         
         let app = XCUIApplication()
