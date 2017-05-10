@@ -112,8 +112,6 @@
                     trophyStatus.endedRun = userRun;
                 }
                 
-                double endedRunSpeed = (double)trophyStatus.endedRun.distance / (double)trophyStatus.endedRun.duration;
-                
                 double userRunSpeed = (double)userRun.distance / (double)userRun.duration;
                 
                 if (!trophyStatus.bestRun) {
