@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "715C2D871E7EBA680053B59C"
+               BlueprintIdentifier = "B2F498AB1EB9C6CB0018A3B4"
                BuildableName = "WorldTourRunUITests.xctest"
                BlueprintName = "WorldTourRunUITests"
                ReferencedContainer = "container:WorldTourRun.xcodeproj">
