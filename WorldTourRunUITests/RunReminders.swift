@@ -32,6 +32,9 @@ class RunReminders: XCTestCase {
         let newRunEventAlert = app.alerts["New Run Event"]
         newRunEventAlert.collectionViews.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .textField).element.typeText("run")
         newRunEventAlert.buttons["Save"].tap()
+        
+        XCTAssertEqual(app.tables.cells.count, 1)
+        
         app.tables.buttons["Reminde me"].tap()
         app.alerts["Reminder for Your Run was added!"].buttons["OK"].tap()
         
