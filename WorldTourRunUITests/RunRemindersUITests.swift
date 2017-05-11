@@ -64,4 +64,22 @@ class RunRemindersUITests: XCTestCase {
         app.alerts["Reminder for Your Run was added!"].buttons["OK"].tap()
     
     }
+    
+    func test_DeleteRunReminder() {
+        
+        app.buttons["Run Reminders"].tap()
+        
+        let cell = app.tables.cells.element(boundBy: 0)
+        
+        if cell.exists {
+            
+            XCTAssertEqual(app.tables.cells.count, 1)
+            
+            cell.swipeLeft()
+            cell.children(matching: .button).matching(identifier: "Delete").element(boundBy: 0).tap()
+            
+            XCTAssertEqual(app.tables.cells.count, 0)
+
+        }
+    }
 }
