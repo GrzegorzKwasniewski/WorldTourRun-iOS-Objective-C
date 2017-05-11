@@ -23,7 +23,7 @@ class FinishedRunsUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func test_DeleteFinishedRun() {
         
         let app = XCUIApplication()
         app.buttons["Finished Runs"].tap()
@@ -33,6 +33,7 @@ class FinishedRunsUITests: XCTestCase {
         if cell.exists {
             cell.swipeLeft()
             cell.children(matching: .button).matching(identifier: "Delete").element(boundBy: 0).tap()
+
         }
     }
 }
