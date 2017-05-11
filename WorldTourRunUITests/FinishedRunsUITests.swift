@@ -33,7 +33,9 @@ class FinishedRunsUITests: XCTestCase {
         if cell.exists {
             cell.swipeLeft()
             cell.children(matching: .button).matching(identifier: "Delete").element(boundBy: 0).tap()
-
+            
+            // another way
+            //cell.children(matching: .button).matching(NSPredicate(format: "label BEGINSWITH 'Delete'")).element.tap()
         }
     }
 }
