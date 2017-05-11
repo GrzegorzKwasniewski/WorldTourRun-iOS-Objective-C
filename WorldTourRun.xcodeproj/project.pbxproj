@@ -51,7 +51,7 @@
 		71FAE4911E7193CE0066803B /* TrophyStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4901E7193CE0066803B /* TrophyStatus.m */; };
 		71FAE4951E72EA730066803B /* CellTrophy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4941E72EA730066803B /* CellTrophy.m */; };
 		71FAE4981E72EB020066803B /* TrophiesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE4971E72EB020066803B /* TrophiesVC.m */; };
-		B27BA1811EC3736400EA5E96 /* RunReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BA1801EC3736400EA5E96 /* RunReminders.swift */; };
+		B27BA1811EC3736400EA5E96 /* RunRemindersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BA1801EC3736400EA5E96 /* RunRemindersUITests.swift */; };
 		B2F498AF1EB9C6CB0018A3B4 /* ViewControllersNavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F498AE1EB9C6CB0018A3B4 /* ViewControllersNavigationUITests.swift */; };
 		E24A9D858FF30E0CD2B902D9 /* libPods-WorldTourRun.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5251D5EF45FAD95ECD4D1E21 /* libPods-WorldTourRun.a */; };
 /* End PBXBuildFile section */
@@ -160,7 +160,7 @@
 		71FAE4941E72EA730066803B /* CellTrophy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTrophy.m; sourceTree = "<group>"; };
 		71FAE4961E72EB020066803B /* TrophiesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrophiesVC.h; sourceTree = "<group>"; };
 		71FAE4971E72EB020066803B /* TrophiesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrophiesVC.m; sourceTree = "<group>"; };
-		B27BA1801EC3736400EA5E96 /* RunReminders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunReminders.swift; sourceTree = "<group>"; };
+		B27BA1801EC3736400EA5E96 /* RunRemindersUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunRemindersUITests.swift; sourceTree = "<group>"; };
 		B2F498AC1EB9C6CB0018A3B4 /* WorldTourRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTourRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F498AE1EB9C6CB0018A3B4 /* ViewControllersNavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersNavigationUITests.swift; sourceTree = "<group>"; };
 		B2F498B61EB9C9710018A3B4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -433,7 +433,7 @@
 			children = (
 				B2F498AE1EB9C6CB0018A3B4 /* ViewControllersNavigationUITests.swift */,
 				71DC82931EBB1DAB0022B513 /* NewRunUITests.swift */,
-				B27BA1801EC3736400EA5E96 /* RunReminders.swift */,
+				B27BA1801EC3736400EA5E96 /* RunRemindersUITests.swift */,
 				B2F498B61EB9C9710018A3B4 /* Info.plist */,
 			);
 			path = WorldTourRunUITests;
@@ -687,7 +687,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B27BA1811EC3736400EA5E96 /* RunReminders.swift in Sources */,
+				B27BA1811EC3736400EA5E96 /* RunRemindersUITests.swift in Sources */,
 				71DC82941EBB1DAB0022B513 /* NewRunUITests.swift in Sources */,
 				B2F498AF1EB9C6CB0018A3B4 /* ViewControllersNavigationUITests.swift in Sources */,
 			);

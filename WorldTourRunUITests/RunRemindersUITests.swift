@@ -1,5 +1,5 @@
 //
-//  RunReminders.swift
+//  RunRemindersUITests.swift
 //  WorldTourRun
 //
 //  Created by Grzegorz on 10/05/2017.
@@ -8,7 +8,9 @@
 
 import XCTest
 
-class RunReminders: XCTestCase {
+class RunRemindersUITests: XCTestCase {
+    
+    var app = XCUIApplication()
         
     override func setUp() {
         super.setUp()
@@ -16,7 +18,7 @@ class RunReminders: XCTestCase {
         continueAfterFailure = false
 
         XCUIApplication().launch()
-
+        
     }
     
     override func tearDown() {
@@ -25,7 +27,6 @@ class RunReminders: XCTestCase {
     
     func test_GrantPermissionToAccesReminders() {
         
-        let app = XCUIApplication()
         app.buttons["Run Reminders"].tap()
         
         let permissionAlert = app.alerts["“WorldTourRun” Would Like to Access Your Reminders"]
@@ -38,7 +39,6 @@ class RunReminders: XCTestCase {
     
     func test_DenyPermissionToAccesReminders() {
         
-        let app = XCUIApplication()
         app.buttons["Run Reminders"].tap()
         
         let permissionAlert = app.alerts["“WorldTourRun” Would Like to Access Your Reminders"]
@@ -51,7 +51,6 @@ class RunReminders: XCTestCase {
     
     func test_AddNewRunReminder() {
         
-        let app = XCUIApplication()
         app.buttons["Run Reminders"].tap()
         app.navigationBars["Run Reminders"].buttons["Add"].tap()
         
@@ -63,8 +62,6 @@ class RunReminders: XCTestCase {
         
         app.tables.buttons["Reminde me"].tap()
         app.alerts["Reminder for Your Run was added!"].buttons["OK"].tap()
-        
-        
-    }
     
+    }
 }
