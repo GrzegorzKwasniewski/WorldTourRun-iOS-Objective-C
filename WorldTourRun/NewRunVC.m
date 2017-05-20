@@ -55,7 +55,7 @@ static NSString * const runHigh = @"run_high";
     
     // TODO: Move to other place
     if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-        [self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager requestAlwaysAuthorization];
     }
 
     self.mapView.delegate = self;
