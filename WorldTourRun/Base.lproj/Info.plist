@@ -31,8 +31,6 @@
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>To get info about Your run World Tour Run App need access to Your location .</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>To get info about Your run World Tour Run App need access to Your location .</string>
 	<key>NSRemindersUsageDescription</key>
