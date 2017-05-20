@@ -185,6 +185,12 @@ static NSString * const runHigh = @"run_high";
     
     for (CLLocation *singleLoaction in locations) {
         
+        MKCoordinateRegion region =
+        MKCoordinateRegionMakeWithDistance(singleLoaction.coordinate, 500, 500);
+        [self.mapView setRegion:region animated:YES];
+
+        self.mapView.showsUserLocation = YES;
+        
         NSDate *eventDate = singleLoaction.timestamp;
         
         NSTimeInterval timeInterval = [eventDate timeIntervalSinceNow];
@@ -222,7 +228,7 @@ static NSString * const runHigh = @"run_high";
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     self.locationManager.activityType = CLActivityTypeFitness;
     
-    self.locationManager.distanceFilter = 15;
+    //self.locationManager.distanceFilter = 15;
     
     [self.locationManager startUpdatingLocation];
 }
