@@ -32,7 +32,7 @@
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>World Tour Run need access to Your location.</string>
+	<string>To get info about Your run World Tour Run App need access to Your location .</string>
 	<key>NSRemindersUsageDescription</key>
 	<string></string>
 	<key>UIBackgroundModes</key>
