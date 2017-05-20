@@ -54,7 +54,7 @@ static NSString * const runHigh = @"run_high";
     }
     
     // TODO: Move to other place
-    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+    if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
         [self.locationManager requestAlwaysAuthorization];
     }
 
