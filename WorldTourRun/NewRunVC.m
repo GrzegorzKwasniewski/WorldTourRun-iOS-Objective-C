@@ -176,7 +176,7 @@ static NSString * const runHigh = @"run_high";
     self.time.text = [NSString stringWithFormat:@"%@", [ToString stringFromSecondCount:self.runTime usingLongFormat:NO]];
     self.distance.text =  [NSString stringWithFormat:NSLocalizedString(@"%@", nil), [ToString stringFromDistance:self.runDistance]];
     self.pace.text = [NSString stringWithFormat:NSLocalizedString(@"%@", nil), [ToString stringFromAverageSpeed:self.runDistance overTime:self.runTime]];
-    self.height.text = [NSString stringWithFormat:NSLocalizedString(@"%0.3f", nil), self.runHeight];
+    self.height.text = [NSString stringWithFormat:NSLocalizedString(@"%0.1f AMSL", nil), self.runHeight];
 }
 
 #pragma mark - Location Manager Functions
