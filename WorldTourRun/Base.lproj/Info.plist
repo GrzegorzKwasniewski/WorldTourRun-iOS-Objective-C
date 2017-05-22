@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.0.1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -32,9 +32,13 @@
 		<true/>
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>To get info about Your run World Tour Run App need access to Your location .</string>
+	<string>To get info about Your run World Tour Run App need access to Your location.</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>World Tour Run would like to use bluetooth.</string>
 	<key>NSRemindersUsageDescription</key>
-	<string></string>
+    <string>World Tour Run would like to use Reminders to schedule new runs for You.</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>World Tour Run would like to use calendar.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
