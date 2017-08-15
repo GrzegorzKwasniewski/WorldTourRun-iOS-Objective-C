@@ -4,7 +4,7 @@ World Tour Run
 <p></p>
 <p>App for tracking users runs. I have bulid it to better understand how Objective-C works.</p>
 <p></p>
-<p>It'a a good starting point if You want to learn basic about:</p>
+<p>It'a a good starting point if You want to learn basics about:</p>
 
   - iOS development
   - Objective-C
