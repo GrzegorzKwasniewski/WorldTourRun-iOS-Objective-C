@@ -4,6 +4,14 @@ World Tour Run
 <p></p>
 <p>App for tracking users runs. I have bulid it to better understand how Objective-C works.</p>
 <p></p>
+<p>It'a a good starting point if You want to learn basic about:</p>
+
+  - iOS development
+  - Objective-C
+  - Core Data
+  - Core Location
+  - EKEventStore
+  - UI testing with XCTest
 
 [![iOS app on AppStore](http://www.grzegorzkwasniewski.com/wp-content/uploads/2017/08/app-store-icon.png)](https://itunes.apple.com/us/app/world-tour-run/id1239035521?l=pl&ls=1&mt=8)
 
