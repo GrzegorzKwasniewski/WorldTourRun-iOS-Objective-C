@@ -12,11 +12,15 @@ World Tour Run
   - Core Location
   - EKEventStore
   - UI testing with XCTest
+  
+  Download app
+  =============
 
 [![iOS app on AppStore](http://www.grzegorzkwasniewski.com/wp-content/uploads/2017/08/app-store-icon.png)](https://itunes.apple.com/us/app/world-tour-run/id1239035521?l=pl&ls=1&mt=8)
 
-### Screenshots:
-
+Screenshots:
+ =============
+ 
 ![alt tag](http://www.grzegorzkwasniewski.com/wp-content/uploads/2017/08/wtr_01.jpeg) 
 ![alt tag](http://www.grzegorzkwasniewski.com/wp-content/uploads/2017/08/wtr_02.jpeg) 
 ![alt tag](http://www.grzegorzkwasniewski.com/wp-content/uploads/2017/08/wtr_03.jpeg) 
@@ -24,7 +28,7 @@ World Tour Run
 
 
 License
--------
+ =============
     MIT License
 
     Copyright (c) 2017 Grzegorz Kwaœniewski
